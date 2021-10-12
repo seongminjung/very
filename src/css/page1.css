@@ -1,0 +1,34 @@
+.p1-hero__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+}
+
+.p1-hero__1 {
+  font-family: Noto Sans;
+  font-weight: 400;
+  font-size: 18px;
+}
+.p1-hero__2 {
+  font-family: Noto Sans;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #ffffff, #050505);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 75px;
+}
+
+.p1-social {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.p1-social__img {
+  width: 40px;
+}

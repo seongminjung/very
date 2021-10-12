@@ -1,0 +1,28 @@
+.p2-pagenumber {
+  font-family: Noto Sans;
+  font-weight: 600;
+  font-size: 25px;
+  position: absolute;
+  top: 50px;
+}
+.p2-title {
+  font-family: Noto Sans;
+  font-weight: 700;
+  font-size: 120px;
+  text-indent: -178px;
+  position: absolute;
+  top: 100px;
+}
+
+.p2-flex {
+  display: flex;
+}
+
+.p2-video img {
+  width: 40%;
+}
+
+.p2-hashtag {
+  display: flex;
+  justify-content: space-between;
+}

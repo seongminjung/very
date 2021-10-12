@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import AppRouter from "components/Router";
+import Loading from "routes/Loading";
+import "css/reset.css";
+import "css/app.css";
+import { faBars, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faBars, faCaretDown);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [init, setInit] = useState(false);
+  useEffect(() => {
+    setInit(true);
+  }, []);
+  return <>{init ? <AppRouter /> : <Loading />}</>;
 }
 
 export default App;
