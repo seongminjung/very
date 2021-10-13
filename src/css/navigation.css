@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 13vh;
 }
 
 .nav-logo {
@@ -19,10 +18,15 @@
   display: flex;
   gap: 5px;
   color: #cccccc;
+  align-items: center;
 }
 
 .nav-link__item p {
   font-size: 2vh;
   font-family: NotoSans;
   font-weight: 600;
+}
+
+.nav-menu {
+  font-size: 20px;
 }

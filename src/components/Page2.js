@@ -1,12 +1,20 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/page2.css";
+import page2numbar from "img/main/page2numbar.png";
 import videoimg from "img/main/img2.png";
+import page2detail from "img/main/page2detail.png";
 
 const Page2 = () => {
   return (
     <div className="page_wrapper">
-      <p className="p2-pagenumber">02.</p>
+      <div className="nav">
+        <div>
+          <img src={page2numbar} alt="bar" />
+          <p className="p2-pagenumber">02.</p>
+        </div>
+        <FontAwesomeIcon icon="bars" className="nav-menu" />
+      </div>
       <p className="p2-title">About Us</p>
       <div className="p2-flex">
         <div className="p2-video">
@@ -25,6 +33,11 @@ const Page2 = () => {
             발판을 마련해 드리는 것이 과거로부터 지금까지 이어져 온 VERY의
             목표입니다.
           </p>
+          <img
+            className="p2-detail__img"
+            src={page2detail}
+            alt="page2 detail"
+          />
         </div>
       </div>
     </div>
