@@ -1,12 +1,12 @@
 .p2-pagenumber {
-  font-family: Noto Sans;
+  font-family: NotoSans;
   font-weight: 600;
   font-size: 25px;
   position: absolute;
   top: 50px;
 }
 .p2-title {
-  font-family: Noto Sans;
+  font-family: NotoSans;
   font-weight: 700;
   font-size: 120px;
   text-indent: -178px;

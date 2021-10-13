@@ -11,6 +11,8 @@ const Home = () => {
       <ReactFullpage
         licenseKey={process.env.REACT_APP_FULLPAGE_KEY}
         scrollingSpeed={1000} /* Options here */
+        verticalCentered={false}
+        navigation={true}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

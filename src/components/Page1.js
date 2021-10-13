@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navigation from "components/Navigation";
 import "css/page1.css";
 import img0 from "img/main/img0.png";
@@ -17,7 +17,7 @@ const Page1 = () => {
         <p className="p1-hero__1">VERY</p>
         <p className="p1-hero__2">Experience</p>
         <p className="p1-hero__2">is open to every</p>
-        <p className="p1-hero__2">one.</p>
+        <p className="p1-hero__2 p1h2last">one.</p>
         <p className="p1-hero__3">VERY는 팀프로젝트를 통해 실전 창업 경험을</p>
         <p className="p1-hero__3">
           제공하고 창업가로 성장하실 여러분의 발판을 마련합니다.
