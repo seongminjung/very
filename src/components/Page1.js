@@ -1,5 +1,4 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navigation from "components/Navigation";
 import "css/page1.css";
 import img0 from "img/main/img0.png";
@@ -10,7 +9,7 @@ import youtube from "img/main/youtube.png";
 
 const Page1 = () => {
   return (
-    <div className="page_wrapper">
+    <div className="page-wrapper">
       <Navigation />
       <div className="p1-hero">
         <img className="p1-hero__img" src={img0} alt="img0" />

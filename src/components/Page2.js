@@ -1,16 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/page2.css";
-import page2numbar from "img/main/page2numbar.png";
+import subpagenumbar from "img/main/subpagenumbar-white.png";
 import videoimg from "img/main/img2.png";
 import page2detail from "img/main/page2detail.png";
 
 const Page2 = () => {
   return (
-    <div className="page_wrapper">
+    <div className="page-wrapper">
       <div className="nav">
         <div>
-          <img src={page2numbar} alt="bar" />
+          <img src={subpagenumbar} alt="bar" />
           <p className="p2-pagenumber">02.</p>
         </div>
         <FontAwesomeIcon icon="bars" className="nav-menu" />
