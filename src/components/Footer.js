@@ -31,9 +31,15 @@ const Footer = () => {
                 <FontAwesomeIcon icon="caret-down" />
               </div>
             </Link>
+            <Link to="/awards">
+              <div className="footer-link__item">
+                <p>Awards</p>
+                <FontAwesomeIcon icon="caret-down" />
+              </div>
+            </Link>
             <Link to="/alumni">
               <div className="footer-link__item">
-                <p>Alumni Members</p>
+                <p>Alumni</p>
                 <FontAwesomeIcon icon="caret-down" />
               </div>
             </Link>

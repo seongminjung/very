@@ -23,15 +23,21 @@ const Navigation = () => {
             <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
-        <Link to="about">
+        <Link to="/about">
           <div className="nav-link__item">
             <p>About Us</p>
             <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
+        <Link to="/awards">
+          <div className="nav-link__item">
+            <p>Awards</p>
+            <FontAwesomeIcon icon="caret-down" />
+          </div>
+        </Link>
         <Link to="/alumni">
           <div className="nav-link__item">
-            <p>Alumni Members</p>
+            <p>Alumni</p>
             <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>

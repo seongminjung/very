@@ -1,77 +1,75 @@
+.ab4-relative {
+  position: relative;
+}
+
+.ab4-nav {
+  padding-top: 120px;
+}
+
 .ab4-pagenumber {
   font-family: NotoSans;
   font-weight: 600;
-  font-size: 25px;
-  margin-top: -5px;
-  margin-left: -1px;
+  font-size: 32px;
+  margin-top: 8px;
 }
 
 .ab4-title {
   font-family: NotoSans;
   font-weight: 700;
-  font-size: 6.38vh;
+  font-size: 60px;
   text-align: center;
-  margin-top: 6.81vh;
+  margin-top: 60px;
 }
 
-.ab4-background__flex {
+.ab4-background__wrapper {
   position: absolute;
-  top: 30.32vh;
+  top: 357px;
   left: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .ab4-background {
-  width: 100vw;
-  height: 28.1vh;
+  width: 98.9vw;
+  height: 264px;
 }
 
-.ab4-bars {
-  display: flex;
-  justify-content: center;
-}
-
-.ab4-bars div {
-  width: 16.51vw;
-  height: 0.74vh;
-}
-
-.ab4-bar1,
-.ab4-bar3 {
-  background-color: #c9c9c9;
-}
-
-.ab4-bar2 {
-  background-color: #0074e8;
-}
-
-.ab4-icons {
-  margin-top: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.49vw;
-}
-
-.ab4-icon__wrapper img {
+.ab4-icon__wrapper {
   position: relative;
-  width: 24.25vh;
-  height: 24.25vh;
+  width: 317px;
+  height: 300px;
+  text-align: center;
 }
 
-.ab4-details__flex {
+.ab4-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  transition: 0.2s ease-in-out;
+}
+
+.ab4-values__flex {
   display: flex;
   justify-content: center;
-  margin-top: 10.64vh;
-  margin-bottom: 7.14vh;
+  margin-top: 25px;
+  margin-bottom: 75px;
 }
 
-.ab4-detail {
-  box-sizing: border-box;
-  text-align: center;
-  width: 33.72vh;
-  padding: 0 1.55vw;
+.ab4-value:hover .ab4-detail__title {
+  color: #0074e8;
+  transition: 0.2s ease-in-out;
+}
+
+.ab4-value:hover .ab4-detail {
+  border-top-color: #0074e8;
+  transition: 0.2s ease-in-out;
+}
+
+.ab4-value:hover .ab4-icon {
+  width: 300px;
+  height: 300px;
+  transition: 0.2s ease-in-out;
 }
 
 .ab4dcenter {
@@ -79,20 +77,28 @@
   border-right: 1px dashed #adadad;
 }
 
-.ab4dcenter .ab4-detail__title {
-  color: #0074e8;
+.ab4-detail {
+  box-sizing: border-box;
+  text-align: center;
+  width: 317px;
+  border-top: 7px solid #c9c9c9;
+  transition: 0.2s ease-in-out;
 }
 
 .ab4-detail__title {
   font-family: NotoSansKR;
   font-weight: 700;
-  font-size: 2.13vh;
-  margin-bottom: 3.51vh;
+  font-size: 20px;
+  margin-top: 60px;
+  padding: 0 35px 32px;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  transition: 0.2s ease-in-out;
 }
 
 .ab4_detail__description {
   font-family: NotoSansKR;
   font-weight: 500;
-  font-size: 1.7vh;
-  line-height: 3.51vh;
+  font-size: 16px;
+  line-height: 33px;
+  padding: 0 35px;
 }
