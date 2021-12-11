@@ -1,9 +1,12 @@
+.footer-borderline {
+  border-bottom: 1px solid #707070;
+}
+
 .footer-top {
-  padding: 3.19vh 10.4vw;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #707070;
 }
 
 .footer-link {
@@ -13,59 +16,58 @@
 
 .footer-link__item {
   font-family: NotoSans;
+  font-weight: 600;
   display: flex;
   gap: 5px;
   color: #cccccc;
   align-items: center;
-  font-size: 1.91vh;
+  font-size: 18px;
 }
 
 .footer-top__description {
   font-family: NotoSans;
-  font-size: 1.57vh;
+  font-size: 14.72px;
 }
 
 .footer-middle {
-  padding: 3.19vh 0 7.45vh;
+  padding: 30px 0 62px;
 }
 
 .footer-middle__row {
-  padding: 0 10.4vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .fmrow1 {
-  margin-bottom: 2.13vh;
+  margin-bottom: 20px;
 }
 
 .fmrow1 p:first-child {
   font-family: NotoSans;
-  font-size: 1.91vh;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .fmrow1 p:last-child {
   font-family: NotoSansKR;
-  font-size: 1.49vh;
+  font-size: 14px;
 }
 
 .fmrow2 {
-  margin-bottom: 4.79vh;
+  margin-bottom: 50px;
 }
 
-.fmrow2 p:first-child,
-.fmrow2 p:last-child,
+.fmrow2 p,
 .fmrow3 p {
   font-family: NotoSans;
-  font-size: 1.49vh;
+  font-size: 14px;
 }
 
 .footer-social {
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  gap: 40px;
 }
 
 .footer-social__img {

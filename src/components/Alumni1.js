@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "components/Navigation";
 import img0 from "img/sub/img1.png";
-import "css/al1.css";
+import "css/alumni1.css";
 
 const Al1 = () => {
   return (

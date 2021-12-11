@@ -1,43 +1,136 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import "css/page2.css";
-import subpagenumbar from "img/main/subpagenumbar-white.png";
-import videoimg from "img/main/img2.png";
-import page2detail from "img/main/page2detail.png";
 
 const Page2 = () => {
   return (
-    <div className="page-wrapper">
-      <div className="nav">
+    <div className="container">
+      <div className="p2-sub__grid">
+        <p className="p2-sub__grid-r1">창립 연도</p>
+        <p className="p2-sub__grid-r1">공모전 입상 수</p>
+        <p className="p2-sub__grid-r1">알럼나이 기업 수</p>
         <div>
-          <img src={subpagenumbar} alt="bar" />
-          <p className="p2-pagenumber">02.</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
         </div>
-        <FontAwesomeIcon icon="bars" className="nav-menu" />
-      </div>
-      <p className="p2-title">About Us</p>
-      <div className="p2-flex">
-        <div className="p2-video">
-          <img src={videoimg} alt="videoimg" />
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
         </div>
-        <div className="p2-text">
-          <div className="p2-hashtag">
-            <p># 팀프로젝트</p>
-            <p># 실전 창업 경험</p>
-            <p># 성장의 발판</p>
-          </div>
-          <p className="p2-detail">
-            VERY는 1997년 창립된 동아리로 교수님들과 중소기업진흥청의 지원을
-            받아 제1공학관 A119호에서 시작되었습니다. 매주 정기 세션과 팀
-            프로젝트를 통해 실전 창업 경험을 제공하고 창업가로 성장하실 여러분의
-            발판을 마련해 드리는 것이 과거로부터 지금까지 이어져 온 VERY의
-            목표입니다.
-          </p>
-          <img
-            className="p2-detail__img"
-            src={page2detail}
-            alt="page2 detail"
-          />
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
+        </div>
+        <div className="p2-sub__grid-r3">1997</div>
+        <div className="p2-sub__grid-r3">106</div>
+        <div className="p2-sub__grid-r3">36</div>
+        <div className="p2-sub__grid-r4">
+          <Link to="/about" className="p2-sub__btn-border">
+            <div className="p2-sub__btn-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.19"
+                height="5.523"
+                viewBox="0 0 20.19 5.523"
+              >
+                <path
+                  id="패스_115"
+                  data-name="패스 115"
+                  d="M275.074,3093.5h18.434l-4.561-4.316"
+                  transform="translate(-274.574 -3088.477)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <p className="p2-sub__btn-text">자세히 보기</p>
+          </Link>
+        </div>
+        <div className="p2-sub__grid-r4">
+          <Link to="/" className="p2-sub__btn-border">
+            <div className="p2-sub__btn-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.19"
+                height="5.523"
+                viewBox="0 0 20.19 5.523"
+              >
+                <path
+                  id="패스_115"
+                  data-name="패스 115"
+                  d="M275.074,3093.5h18.434l-4.561-4.316"
+                  transform="translate(-274.574 -3088.477)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <p className="p2-sub__btn-text">자세히 보기</p>
+          </Link>
+        </div>
+        <div className="p2-sub__grid-r4">
+          <Link to="/alumni" className="p2-sub__btn-border">
+            <div className="p2-sub__btn-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.19"
+                height="5.523"
+                viewBox="0 0 20.19 5.523"
+              >
+                <path
+                  id="패스_115"
+                  data-name="패스 115"
+                  d="M275.074,3093.5h18.434l-4.561-4.316"
+                  transform="translate(-274.574 -3088.477)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                />
+              </svg>
+            </div>
+            <p className="p2-sub__btn-text">자세히 보기</p>
+          </Link>
         </div>
       </div>
     </div>

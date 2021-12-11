@@ -4,25 +4,16 @@
 }
 
 .page2 {
-  color: #ffffff;
-  background-color: #1085f9;
+  color: #4f4f4f;
+  background-color: #f1f1f1;
 }
 
 .page3 {
-  color: #7c7c7c;
-  background-color: #ffffff;
-}
-
-.page3-sub {
   color: #4f4f4f;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
 
 .footer {
   color: #ffffff;
   background-color: #000000;
-}
-
-.page-wrapper {
-  padding: 7.45vh 10.4vw;
 }

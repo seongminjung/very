@@ -17,10 +17,18 @@ const Navigation = () => {
             <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
-        <div className="nav-link__item">
-          <p>About Us</p>
-          <FontAwesomeIcon icon="caret-down" />
-        </div>
+        <Link to="/recruit">
+          <div className="nav-link__item">
+            <p>Recruit</p>
+            <FontAwesomeIcon icon="caret-down" />
+          </div>
+        </Link>
+        <Link to="about">
+          <div className="nav-link__item">
+            <p>About Us</p>
+            <FontAwesomeIcon icon="caret-down" />
+          </div>
+        </Link>
         <Link to="/alumni">
           <div className="nav-link__item">
             <p>Alumni Members</p>

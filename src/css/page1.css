@@ -1,17 +1,20 @@
 .p1-hero__img {
   position: absolute;
-  top: 50%;
+  top: 460px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 34vh;
+  width: 320px;
+  height: 320px;
+}
+
+.p1-hero {
+  margin-top: 139px;
 }
 
 .p1-hero__1 {
   font-family: NotoSans;
   font-weight: 400;
   font-size: 18px;
-  margin-top: 13vh;
-  margin-bottom: 3.2vh;
   color: #cccccc;
 }
 .p1-hero__2 {
@@ -21,27 +24,27 @@
   background-clip: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 8vh;
-  line-height: 9.5vh;
+  font-size: 55px;
+  margin-top: 20px;
 }
 
-.p1h2last {
-  margin-bottom: 4.25vh;
+.p1h3first {
+  margin-top: 20px;
 }
 
 .p1-hero__3 {
-  font-size: 2vh;
   font-family: NotoSansKR;
   font-weight: 400;
-  line-height: 3.5vh;
+  font-size: 16px;
+  line-height: 33px;
   color: #cccccc;
 }
 
 .p1-social {
   display: flex;
-  justify-content: space-between;
-  width: 250px;
-  margin-top: 17vh;
+  gap: 40px;
+  margin-top: 155px;
+  padding-bottom: 100px;
 }
 
 .p1-social__img {

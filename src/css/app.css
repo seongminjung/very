@@ -33,3 +33,12 @@
   src: url("fonts/NotoSansKR/NotoSansKR-Bold.otf") format("opentype");
   font-weight: 700;
 }
+
+.container {
+  width: 1520px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}

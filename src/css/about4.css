@@ -1,0 +1,98 @@
+.ab4-pagenumber {
+  font-family: NotoSans;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: -5px;
+  margin-left: -1px;
+}
+
+.ab4-title {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 6.38vh;
+  text-align: center;
+  margin-top: 6.81vh;
+}
+
+.ab4-background__flex {
+  position: absolute;
+  top: 30.32vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ab4-background {
+  width: 100vw;
+  height: 28.1vh;
+}
+
+.ab4-bars {
+  display: flex;
+  justify-content: center;
+}
+
+.ab4-bars div {
+  width: 16.51vw;
+  height: 0.74vh;
+}
+
+.ab4-bar1,
+.ab4-bar3 {
+  background-color: #c9c9c9;
+}
+
+.ab4-bar2 {
+  background-color: #0074e8;
+}
+
+.ab4-icons {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.49vw;
+}
+
+.ab4-icon__wrapper img {
+  position: relative;
+  width: 24.25vh;
+  height: 24.25vh;
+}
+
+.ab4-details__flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 10.64vh;
+  margin-bottom: 7.14vh;
+}
+
+.ab4-detail {
+  box-sizing: border-box;
+  text-align: center;
+  width: 33.72vh;
+  padding: 0 1.55vw;
+}
+
+.ab4dcenter {
+  border-left: 1px dashed #adadad;
+  border-right: 1px dashed #adadad;
+}
+
+.ab4dcenter .ab4-detail__title {
+  color: #0074e8;
+}
+
+.ab4-detail__title {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 2.13vh;
+  margin-bottom: 3.51vh;
+}
+
+.ab4_detail__description {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-size: 1.7vh;
+  line-height: 3.51vh;
+}

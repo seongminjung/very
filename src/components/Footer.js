@@ -9,33 +9,43 @@ import "css/footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-top">
-        <div className="footer-link">
-          <Link to="/">
-            <div className="footer-link__item">
-              <p>Home</p>
-              <FontAwesomeIcon icon="caret-down" />
-            </div>
-          </Link>
-          <div className="footer-link__item">
-            <p>About Us</p>
-            <FontAwesomeIcon icon="caret-down" />
+    <div className="">
+      <div className="container-fluid footer-borderline">
+        <div className="container footer-top">
+          <div className="footer-link">
+            <Link to="/">
+              <div className="footer-link__item">
+                <p>Home</p>
+                <FontAwesomeIcon icon="caret-down" />
+              </div>
+            </Link>
+            <Link to="/recruit">
+              <div className="footer-link__item">
+                <p>Recruit</p>
+                <FontAwesomeIcon icon="caret-down" />
+              </div>
+            </Link>
+            <Link to="/about">
+              <div className="footer-link__item">
+                <p>About Us</p>
+                <FontAwesomeIcon icon="caret-down" />
+              </div>
+            </Link>
+            <Link to="/alumni">
+              <div className="footer-link__item">
+                <p>Alumni Members</p>
+                <FontAwesomeIcon icon="caret-down" />
+              </div>
+            </Link>
           </div>
-          <Link to="/alumni">
-            <div className="footer-link__item">
-              <p>Alumni Members</p>
-              <FontAwesomeIcon icon="caret-down" />
-            </div>
-          </Link>
-        </div>
-        <div>
-          <p className="footer-top__description">
-            Our Experiences Are Parts Of Ourselves.
-          </p>
+          <div>
+            <p className="footer-top__description">
+              Experience is open to everyone.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="footer-middle">
+      <div className="container footer-middle">
         <div className="footer-middle__row fmrow1">
           <p>CONTACT</p>
           <p>회장 | 010-4129-3273</p>

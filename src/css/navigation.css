@@ -2,10 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 70px;
 }
 
 .nav-logo {
-  height: 5.1vh;
+  width: 116px;
+  height: 48px;
 }
 
 .nav-link {
@@ -22,12 +24,14 @@
 }
 
 .nav-link__item p {
-  font-size: 2vh;
+  font-size: 18px;
   font-family: NotoSans;
   font-weight: 600;
+  line-height: 33px;
 }
 
 .nav-menu {
-  font-size: 20px;
+  font-size: 33px;
   color: #cccccc;
+  padding-left: 16px;
 }

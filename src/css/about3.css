@@ -1,0 +1,58 @@
+.p2-pagenumber {
+  font-family: NotoSans;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: -5px;
+  margin-left: -1px;
+}
+
+.p2-title {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 16vh;
+  margin-top: 5.32vh;
+  text-indent: -12vw;
+}
+
+.p2-flex {
+  display: flex;
+  align-items: flex-end;
+}
+
+.p2-flex div:first-child {
+  flex: 0 0 39.6vw;
+}
+
+.p2-video img {
+  width: 43vw;
+  margin-top: -5vh;
+  margin-left: -3.125vw;
+}
+
+.p2-text {
+  margin-left: 1.3vw;
+  margin-right: 8.96vw;
+  margin-bottom: 10vh;
+}
+
+.p2-hashtag {
+  font-size: 2.5vh;
+  font-family: NotoSansKR;
+  font-weight: 700;
+  line-height: 3.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p2-detail {
+  font-size: 1.8vh;
+  font-family: NotoSansKR;
+  font-weight: 400;
+  line-height: 3.5vh;
+  margin-top: 2.77vh;
+}
+
+.p2-detail__img {
+  margin-top: 4.26vh;
+  width: 100%;
+}
