@@ -4,6 +4,7 @@ import About2 from "components/About2";
 import About3 from "components/About3";
 import About4 from "components/About4";
 import About5 from "components/About5";
+import About6 from "components/About6";
 import Footer from "components/Footer";
 import "css/about.css";
 
@@ -24,6 +25,9 @@ const About = () => {
       </div>
       <div className="about5">
         <About5 />
+      </div>
+      <div className="about6">
+        <About6 />
       </div>
       <div className="footer">
         <Footer />

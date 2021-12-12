@@ -4,7 +4,8 @@ import Home from "routes/Home";
 import Recruit from "routes/Recruit";
 import About from "routes/About";
 import Awards from "routes/Awards";
-import Alumni from "routes/Alumni";
+import Companies from "routes/Companies";
+import ClubOfficers from "routes/ClubOfficers";
 
 const AppRouter = ({ userObj, refreshUser }) => {
   return (
@@ -22,8 +23,11 @@ const AppRouter = ({ userObj, refreshUser }) => {
         <Route exact path="/awards">
           <Awards />
         </Route>
-        <Route exact path="/alumni">
-          <Alumni />
+        <Route exact path="/companies">
+          <Companies />
+        </Route>
+        <Route exact path="/clubofficers">
+          <ClubOfficers />
         </Route>
       </Switch>
     </BrowserRouter>

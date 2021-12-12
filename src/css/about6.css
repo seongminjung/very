@@ -1,0 +1,19 @@
+.ab6-text {
+  padding-top: 44px;
+  padding-left: 300px;
+}
+
+.ab6-text__title {
+  font-family: NotoSansKr;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.ab6-text__detail {
+  margin-top: 65px;
+  font-family: NotoSansKr;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 145px;
+  line-height: 33px;
+}

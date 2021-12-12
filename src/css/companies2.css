@@ -1,0 +1,98 @@
+.c2-search__wrapper {
+  padding-top: 170px;
+}
+
+.c2-search__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 790px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 20px 0 30px;
+  box-sizing: border-box;
+  margin: 0 auto 0;
+  background-color: rgb(226, 226, 226);
+}
+
+.c2-search__text {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.c2-search__btn {
+  width: 40px;
+}
+
+.c2-result__title {
+  text-align: center;
+  margin-top: 95px;
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.c2-result__bar {
+  margin: 30px auto 0;
+  width: 300px;
+  height: 5px;
+  border-radius: 0.26vh;
+  background-color: #1085f9;
+}
+
+.c2-result__grid {
+  margin-top: 43px;
+  padding-bottom: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.c2-result__alumni {
+  text-align: center;
+}
+
+.c2-result__logo-background {
+  position: relative;
+  background-color: #d3d3d3;
+  height: 263px;
+}
+
+.c2-result__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.13vw;
+}
+
+.c2-result__text-background {
+  background-color: #ffffff;
+}
+
+.c2-result__alumni-bar {
+  padding-top: 17px;
+}
+
+.c2-result__alumni-name {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 2.66vh;
+  padding-top: 5px;
+  color: #0074e8;
+}
+
+.c2-result__alumni-detail {
+  /* display: none; */
+  font-family: NotoSansKR;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0 37px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  padding-bottom: 5.32vh;
+}
