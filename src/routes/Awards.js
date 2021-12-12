@@ -1,16 +1,18 @@
 import React from "react";
+import Companies1 from "components/Companies1";
+import Companies2 from "components/Companies2";
 import Footer from "components/Footer";
-import "css/awards.css";
+import "css/companies.css";
 
-const Awards = () => {
+const Companies = () => {
   return (
     <div>
-      {/* <div className="about1">
-        <About1 />
+      <div className="companies1">
+        <Companies1 />
       </div>
-      <div className="about2">
-        <About2 />
-      </div> */}
+      <div className="companies2">
+        <Companies2 />
+      </div>
       <div className="footer">
         <Footer />
       </div>
@@ -18,4 +20,4 @@ const Awards = () => {
   );
 };
 
-export default Awards;
+export default Companies;
