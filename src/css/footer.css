@@ -99,6 +99,11 @@
   font-size: 14px;
 }
 
+.fmrow3 p {
+  line-height: 20px;
+  text-align: right;
+}
+
 .footer-social {
   display: flex;
   justify-content: space-between;

@@ -77,7 +77,11 @@ const Footer = () => {
             <img className="footer-social__img" src={blog} alt="blog" />
             <img className="footer-social__img" src={youtube} alt="blog" />
           </div>
-          <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
+          <p>
+            Developed by VERY 33기 정성민
+            <br />
+            &copy; 2021, VERY, ALL RIGHTS RESERVED.
+          </p>
         </div>
       </div>
     </div>

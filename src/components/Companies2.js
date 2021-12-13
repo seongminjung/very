@@ -17,7 +17,11 @@ const Companies2 = () => {
       <div className="c2-result__grid">
         <div className="c2-result__alumni">
           <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
+            <img
+              className="c2-result__logo"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+              alt="logo"
+            />
           </div>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
@@ -39,7 +43,8 @@ const Companies2 = () => {
             <p className="c2-result__alumni-name">Google</p>
             <p className="c2-result__alumni-detail">
               VERY가 추구하는 가장 이로운 가치는 실제로 창업 실전 프로젝트를
-              경험하고, 이러한 경험들을 공유합니다.{" "}
+              경험하고, 이러한 경험들을 공유합니다. VERY가 추구하는 가장 이로운
+              가치는 실제로 창업 실전 프로젝트를 실행
             </p>
           </div>
         </div>
