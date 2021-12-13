@@ -27,10 +27,10 @@ const ClubOfficers3 = () => {
     },
   };
   const CustomLeftArrow = ({ onClick, ...rest }) => {
-    const {
-      onMove,
-      carouselState: { currentSlide, deviceType },
-    } = rest;
+    // const {
+    //   onMove,
+    //   carouselState: { currentSlide, deviceType },
+    // } = rest;
     return (
       <img
         src={leftarrow}
@@ -41,10 +41,10 @@ const ClubOfficers3 = () => {
     );
   };
   const CustomRightArrow = ({ onClick, ...rest }) => {
-    const {
-      onMove,
-      carouselState: { currentSlide, deviceType },
-    } = rest;
+    // const {
+    //   onMove,
+    //   carouselState: { currentSlide, deviceType },
+    // } = rest;
     return (
       <img
         src={rightarrow}
