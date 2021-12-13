@@ -41,7 +41,7 @@ const About2 = () => {
         <p className="ab2-namecard__detail">VERY 34기 회장</p>
       </div>
       <div className="ab2-profile">
-        <img src={profile} alt="profile image" />
+        <img src={profile} alt="profile" />
       </div>
     </div>
   );

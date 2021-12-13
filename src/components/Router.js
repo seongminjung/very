@@ -6,10 +6,12 @@ import About from "routes/About";
 import Awards from "routes/Awards";
 import Companies from "routes/Companies";
 import ClubOfficers from "routes/ClubOfficers";
+import ScrollToTop from "components/ScrollToTop";
 
 const AppRouter = ({ userObj, refreshUser }) => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
           <Home />

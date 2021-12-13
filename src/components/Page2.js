@@ -85,7 +85,7 @@ const Page2 = () => {
           </Link>
         </div>
         <div className="p2-sub__grid-r4">
-          <Link to="/" className="p2-sub__btn-border">
+          <Link to="/awards" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ const Page2 = () => {
           </Link>
         </div>
         <div className="p2-sub__grid-r4">
-          <Link to="/alumni" className="p2-sub__btn-border">
+          <Link to="/companies" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,17 +1,17 @@
 import React from "react";
 import Navigation from "components/Navigation";
-import "css/about1.css";
+import "css/recruit1.css";
 
-const About1 = () => {
+const Recruit1 = () => {
   return (
     <>
       <div className="container">
         <Navigation />
-        <p className="ab1-title">- About VERY -</p>
+        <p className="r1-title">- Recruit -</p>
       </div>
-      <div className="ab1-stripe" />
+      <div className="r1-bluestrip" />
     </>
   );
 };
 
-export default About1;
+export default Recruit1;

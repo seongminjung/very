@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "img/logo.png";
 import "css/navigation.css";
 
 const Navigation = () => {
+  const [opened, setOpened] = useState(false);
+  const toggle = () => setOpened((prev) => !prev);
   return (
     <div className="nav">
       <Link to="/">
@@ -35,12 +37,20 @@ const Navigation = () => {
             <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
-        <Link to="/alumni">
-          <div className="nav-link__item">
-            <p>Alumni</p>
-            <FontAwesomeIcon icon="caret-down" />
-          </div>
-        </Link>
+        <div className="nav-link__item nav-ac" onClick={toggle}>
+          <p>Alumni</p>
+          <FontAwesomeIcon icon="caret-down" />
+          {opened && (
+            <div className="nav-ac__flex">
+              <Link to="/companies">
+                <p className="nav-ac__item">Companines</p>
+              </Link>
+              <Link to="/clubofficers">
+                <p className="nav-ac__item">Club Officers</p>
+              </Link>
+            </div>
+          )}
+        </div>
         <FontAwesomeIcon icon="bars" className="nav-menu" />
       </div>
     </div>

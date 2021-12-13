@@ -22,6 +22,41 @@
   color: #cccccc;
   align-items: center;
   font-size: 18px;
+  transition: 0.1s ease-in-out;
+}
+
+.footer-link__item:hover {
+  color: #ffffff;
+  transition: 0.1s ease-in-out;
+}
+
+.footer-ac {
+  position: relative;
+  cursor: pointer;
+}
+
+.footer-ac .footer-ac__flex {
+  position: absolute;
+  top: 50px;
+  left: -90px;
+  width: 174px;
+}
+
+.footer-ac .footer-ac__item {
+  font-family: NotoSans;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  transition: 0.1s ease-in-out;
+}
+
+.footer-ac .footer-ac__item:hover {
+  background-color: #d4d4d4;
+  transition: 0.1s ease-in-out;
 }
 
 .footer-top__description {

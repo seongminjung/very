@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/about3.css";
 import yonseimark from "img/main/yonseimark.png";
 

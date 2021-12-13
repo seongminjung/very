@@ -21,6 +21,12 @@
   gap: 5px;
   color: #cccccc;
   align-items: center;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-link__item:hover {
+  color: #ffffff;
+  transition: 0.1s ease-in-out;
 }
 
 .nav-link__item p {
@@ -28,6 +34,35 @@
   font-family: NotoSans;
   font-weight: 600;
   line-height: 33px;
+}
+
+.nav-ac {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-ac .nav-ac__flex {
+  position: absolute;
+  top: 50px;
+  left: -90px;
+  width: 174px;
+}
+
+.nav-ac .nav-ac__item {
+  font-family: NotoSans;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-ac .nav-ac__item:hover {
+  background-color: #d4d4d4;
+  transition: 0.1s ease-in-out;
 }
 
 .nav-menu {

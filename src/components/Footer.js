@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import blog from "img/main/blog.png";
@@ -8,6 +8,8 @@ import youtube from "img/main/youtube.png";
 import "css/footer.css";
 
 const Footer = () => {
+  const [opened, setOpened] = useState(false);
+  const toggle = () => setOpened((prev) => !prev);
   return (
     <div className="">
       <div className="container-fluid footer-borderline">
@@ -37,12 +39,20 @@ const Footer = () => {
                 <FontAwesomeIcon icon="caret-down" />
               </div>
             </Link>
-            <Link to="/alumni">
-              <div className="footer-link__item">
-                <p>Alumni</p>
-                <FontAwesomeIcon icon="caret-down" />
-              </div>
-            </Link>
+            <div className="footer-link__item footer-ac" onClick={toggle}>
+              <p>Alumni</p>
+              <FontAwesomeIcon icon="caret-down" />
+              {opened && (
+                <div className="footer-ac__flex">
+                  <Link to="/companies">
+                    <p className="footer-ac__item">Companines</p>
+                  </Link>
+                  <Link to="/clubofficers">
+                    <p className="footer-ac__item">Club Officers</p>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
           <div>
             <p className="footer-top__description">
