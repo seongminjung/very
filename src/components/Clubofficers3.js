@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "css/clubofficers3.css";
 import coprofile from "img/sub/coprofile.png";
 import leftarrow from "img/sub/leftarrow.png";
 import rightarrow from "img/sub/rightarrow.png";
+import About2 from "components/About2";
+
+// 지금은 하드코딩으로 34, 33, 32기 구분
+// 나중에 각 기수별로 어떻게 선택해서 펼쳐지게 할지 고민
+// 지금처럼 useState 써서 할지 아니면 그냥 일단 로딩은 해놓고 display: none으로 한 다음에 클릭하면 display만 바꿀지
 
 const ClubOfficers3 = () => {
+  const [opened34, setOpened34] = useState(false);
+  const [opened33, setOpened33] = useState(false);
+  const [opened32, setOpened32] = useState(false);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -54,6 +62,9 @@ const ClubOfficers3 = () => {
       />
     );
   };
+  const toggle34 = () => setOpened34((prev) => !prev);
+  const toggle33 = () => setOpened33((prev) => !prev);
+  const toggle32 = () => setOpened32((prev) => !prev);
   return (
     <div className="container">
       <p className="co3-title">Prior Club Officers</p>
@@ -157,26 +168,54 @@ const ClubOfficers3 = () => {
             </div>
           </Carousel>
         </div>
-        <div className="co3-gen__extend-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28.239"
-            height="16.487"
-            viewBox="0 0 28.239 16.487"
-          >
-            <path
-              id="패스_143"
-              data-name="패스 143"
-              d="M6610,6183.809l10.452-10.013L6610,6162.638"
-              transform="translate(6187.343 -6606.465) rotate(90)"
-              fill="none"
-              stroke="#707070"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="5"
-            />
-          </svg>
-        </div>
+        {opened34 ? (
+          <>
+            <div className="about2">
+              <About2 />
+            </div>
+            <div className="co3-gen__extend-button" onClick={toggle34}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28.239"
+                height="16.486"
+                viewBox="0 0 28.239 16.486"
+              >
+                <path
+                  id="패스_144"
+                  data-name="패스 144"
+                  d="M0,0,10.451,10.013,0,21.171"
+                  transform="translate(3.535 12.951) rotate(-90)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="5"
+                />
+              </svg>
+            </div>
+          </>
+        ) : (
+          <div className="co3-gen__extend-button" onClick={toggle34}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28.239"
+              height="16.487"
+              viewBox="0 0 28.239 16.487"
+            >
+              <path
+                id="패스_143"
+                data-name="패스 143"
+                d="M6610,6183.809l10.452-10.013L6610,6162.638"
+                transform="translate(6187.343 -6606.465) rotate(90)"
+                fill="none"
+                stroke="#707070"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+        )}
       </div>
       <div className="co3-gen">
         <p className="co3-gen__number">33기</p>
@@ -277,26 +316,54 @@ const ClubOfficers3 = () => {
             </div>
           </Carousel>
         </div>
-        <div className="co3-gen__extend-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28.239"
-            height="16.487"
-            viewBox="0 0 28.239 16.487"
-          >
-            <path
-              id="패스_143"
-              data-name="패스 143"
-              d="M6610,6183.809l10.452-10.013L6610,6162.638"
-              transform="translate(6187.343 -6606.465) rotate(90)"
-              fill="none"
-              stroke="#707070"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="5"
-            />
-          </svg>
-        </div>
+        {opened33 ? (
+          <>
+            <div className="about2">
+              <About2 />
+            </div>
+            <div className="co3-gen__extend-button" onClick={toggle33}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28.239"
+                height="16.486"
+                viewBox="0 0 28.239 16.486"
+              >
+                <path
+                  id="패스_144"
+                  data-name="패스 144"
+                  d="M0,0,10.451,10.013,0,21.171"
+                  transform="translate(3.535 12.951) rotate(-90)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="5"
+                />
+              </svg>
+            </div>
+          </>
+        ) : (
+          <div className="co3-gen__extend-button" onClick={toggle33}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28.239"
+              height="16.487"
+              viewBox="0 0 28.239 16.487"
+            >
+              <path
+                id="패스_143"
+                data-name="패스 143"
+                d="M6610,6183.809l10.452-10.013L6610,6162.638"
+                transform="translate(6187.343 -6606.465) rotate(90)"
+                fill="none"
+                stroke="#707070"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+        )}
       </div>
       <div className="co3-gen">
         <p className="co3-gen__number">32기</p>
@@ -397,26 +464,54 @@ const ClubOfficers3 = () => {
             </div>
           </Carousel>
         </div>
-        <div className="co3-gen__extend-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28.239"
-            height="16.487"
-            viewBox="0 0 28.239 16.487"
-          >
-            <path
-              id="패스_143"
-              data-name="패스 143"
-              d="M6610,6183.809l10.452-10.013L6610,6162.638"
-              transform="translate(6187.343 -6606.465) rotate(90)"
-              fill="none"
-              stroke="#707070"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="5"
-            />
-          </svg>
-        </div>
+        {opened32 ? (
+          <>
+            <div className="about2">
+              <About2 />
+            </div>
+            <div className="co3-gen__extend-button" onClick={toggle32}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28.239"
+                height="16.486"
+                viewBox="0 0 28.239 16.486"
+              >
+                <path
+                  id="패스_144"
+                  data-name="패스 144"
+                  d="M0,0,10.451,10.013,0,21.171"
+                  transform="translate(3.535 12.951) rotate(-90)"
+                  fill="none"
+                  stroke="#707070"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="5"
+                />
+              </svg>
+            </div>
+          </>
+        ) : (
+          <div className="co3-gen__extend-button" onClick={toggle32}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28.239"
+              height="16.487"
+              viewBox="0 0 28.239 16.487"
+            >
+              <path
+                id="패스_143"
+                data-name="패스 143"
+                d="M6610,6183.809l10.452-10.013L6610,6162.638"
+                transform="translate(6187.343 -6606.465) rotate(90)"
+                fill="none"
+                stroke="#707070"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+        )}
       </div>
       <div className="co3-pagenumber">
         <p>1</p>

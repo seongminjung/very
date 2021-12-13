@@ -84,6 +84,7 @@
   height: 60px;
   line-height: 60px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .co3-pagenumber {
