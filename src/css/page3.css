@@ -1,8 +1,16 @@
-.p3-title {
+.p3-cooperates {
+  margin-top: 60px;
+  margin-left: 190px;
+  margin-bottom: 260px;
+}
+
+.p3-cooperates__title {
   font-family: NotoSansKR;
   font-weight: 700;
   font-size: 21px;
-  margin-top: 60px;
-  margin-left: 190px;
-  margin-bottom: 370px;
+}
+
+.p3-cooperates__logo {
+  width: 130px;
+  margin-top: 68px;
 }
