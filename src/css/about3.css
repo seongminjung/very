@@ -1,3 +1,7 @@
+.ab3-relative {
+  position: relative;
+}
+
 .ab3-nav {
   padding-top: 120px;
 }
@@ -7,6 +11,24 @@
   font-weight: 600;
   font-size: 32px;
   margin-top: 8px;
+}
+
+.ab3-hashtag {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  text-align: right;
+  font-size: 21px;
+  font-family: NotoSansKR;
+  font-weight: 700;
+}
+
+.ab3-hashtag p {
+  margin-top: 30px;
+}
+
+.ab3-hashtag p:first-child {
+  margin-top: 20px;
 }
 
 .ab3-title {
@@ -20,30 +42,14 @@
 .ab3-flex {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   margin-top: 80px;
   padding-bottom: 142px;
-}
-
-.ab3-flex div:first-child {
-  flex: 0 0 50%;
 }
 
 .ab3-flex img {
   width: 700px;
   height: 388px;
-}
-
-.ab3-text {
-  margin-left: 110px;
-}
-
-.ab3-hashtag {
-  font-size: 21px;
-  font-family: NotoSansKR;
-  font-weight: 700;
-  line-height: 33px;
-  display: flex;
-  gap: 12px;
 }
 
 .ab3-detail {
@@ -52,6 +58,6 @@
   font-weight: 400;
   line-height: 33px;
   margin-top: 90px;
-  margin-left: 12px;
-  width: 520px;
+  width: 480px;
+  text-align: right;
 }

@@ -1,16 +1,36 @@
-.p3-cooperates {
-  margin-top: 60px;
-  margin-left: 190px;
+.p3-contactus {
+  margin-top: 120px;
   margin-bottom: 260px;
+  text-align: center;
+}
+
+.p3-contactus__title {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.p3-cooperates {
+  margin-top: 120px;
+  text-align: center;
 }
 
 .p3-cooperates__title {
   font-family: NotoSansKR;
   font-weight: 700;
   font-size: 21px;
+  margin-bottom: 20px;
 }
 
-.p3-cooperates__logo {
-  width: 130px;
-  margin-top: 68px;
+.p3-cooperates__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 65px 200px 166px;
+  row-gap: 80px;
+}
+
+.p3-cooperates__img {
+  max-width: 130px;
+  max-height: 100px;
 }

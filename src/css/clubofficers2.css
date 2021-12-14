@@ -6,6 +6,7 @@
   text-align: center;
   background-color: #ffffff;
   width: 300px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
 }
 
 .co2-headofficer__wrapper .co2-officer {

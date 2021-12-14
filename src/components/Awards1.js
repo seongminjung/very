@@ -8,7 +8,7 @@ const Awards1 = () => {
       <div className="container">
         <Navigation />
         <div className="a1-hero">
-          <p className="a1-hero__1">공모전 입상 수</p>
+          <p className="a1-hero__1">Awards</p>
           <p className="a1-hero__2">공모전 입상</p>
           <p className="a1-hero__3">
             VERY는 다양한 무대의 주역에 자리해 왔습니다.
@@ -19,7 +19,7 @@ const Awards1 = () => {
       </div>
       <div className="a1-stripe">
         <div>
-          <p className="a1-stripe__text">알럼나이 기업 수</p>
+          <p className="a1-stripe__text">공모전 입상 수</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="23"

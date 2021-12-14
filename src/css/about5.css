@@ -18,9 +18,13 @@
 }
 
 .ab5-images__flex {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   gap: 64px;
   margin-top: 87px;
   padding-bottom: 95px;
 }
+
+/* .ab5-images__left {
+  width: 50%;
+} */

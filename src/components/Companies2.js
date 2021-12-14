@@ -12,17 +12,19 @@ const Companies2 = () => {
           <img className="c2-search__btn" src={magnifier} alt="search" />
         </div>
       </div>
-      <p className="c2-result__title">Alumni Members</p>
+      <p className="c2-result__title">Alumni Companies</p>
       <div className="c2-result__bar" />
       <div className="c2-result__grid">
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img
-              className="c2-result__logo"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img
+                className="c2-result__logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+                alt="logo"
+              />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -49,9 +51,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -77,9 +81,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -105,9 +111,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -133,9 +141,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -161,9 +171,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -189,9 +201,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg
@@ -217,9 +231,11 @@ const Companies2 = () => {
           </div>
         </div>
         <div className="c2-result__alumni">
-          <div className="c2-result__logo-background">
-            <img className="c2-result__logo" src={logo} alt="logo" />
-          </div>
+          <a href="https://www.google.com" target="_blank" rel="noreferrer">
+            <div className="c2-result__logo-background">
+              <img className="c2-result__logo" src={logo} alt="logo" />
+            </div>
+          </a>
           <div className="c2-result__text-background">
             <div className="c2-result__alumni-bar">
               <svg

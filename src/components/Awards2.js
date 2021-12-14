@@ -12,7 +12,7 @@ const Awards2 = () => {
           <img className="a2-search__btn" src={magnifier} alt="search" />
         </div>
       </div>
-      <p className="a2-result__title">Alumni Members</p>
+      <p className="a2-result__title">Awards</p>
       <div className="a2-result__bar" />
       <div className="a2-result__grid">
         <div className="a2-result__alumni">

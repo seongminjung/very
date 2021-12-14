@@ -58,13 +58,12 @@
   overflow: hidden;
 }
 
-.c2-result__alumni:hover .c2-result__logo-background {
-  height: 41px;
+.c2-result__text-background:hover {
+  top: 41px;
   transition: 0.4s ease-in-out;
 }
 
 .c2-result__logo-background {
-  position: relative;
   background-color: #d3d3d3;
   height: 263px;
   line-height: 263px;
@@ -74,14 +73,25 @@
 
 .c2-result__logo {
   margin: 0 auto;
-  max-width: 200px;
+  width: 200px;
   max-height: 150px;
   vertical-align: middle;
+  transition: 0.1s ease-in-out;
+}
+
+.c2-result__logo-background:hover .c2-result__logo {
+  transform: scale(1.2);
+  transition: 0.1s ease-in-out;
 }
 
 .c2-result__text-background {
+  position: absolute;
+  top: 263px;
+  left: 0;
   background-color: #ffffff;
   height: 312px;
+  transition: 0.4s ease-in-out;
+  /* box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.16); */
 }
 
 .c2-result__alumni-bar {

@@ -16,25 +16,21 @@ const Navigation = () => {
         <Link to="/">
           <div className="nav-link__item">
             <p>Home</p>
-            <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
         <Link to="/recruit">
           <div className="nav-link__item">
             <p>Recruit</p>
-            <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
         <Link to="/about">
           <div className="nav-link__item">
             <p>About Us</p>
-            <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
         <Link to="/awards">
           <div className="nav-link__item">
             <p>Awards</p>
-            <FontAwesomeIcon icon="caret-down" />
           </div>
         </Link>
         <div className="nav-link__item nav-ac" onClick={toggle}>
@@ -51,7 +47,6 @@ const Navigation = () => {
             </div>
           )}
         </div>
-        <FontAwesomeIcon icon="bars" className="nav-menu" />
       </div>
     </div>
   );

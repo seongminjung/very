@@ -4,7 +4,7 @@ import yonseimark from "img/main/yonseimark.png";
 
 const About3 = () => {
   return (
-    <div className="container">
+    <div className="container ab3-relative">
       <div className="ab3-nav">
         <div>
           <svg
@@ -28,16 +28,16 @@ const About3 = () => {
         </div>
       </div>
       <p className="ab3-title">History</p>
+      <div className="ab3-hashtag">
+        <p># 중소기업청 후원</p>
+        <p># 연세벤쳐창업연구회</p>
+        <p># VERY의 뿌리</p>
+      </div>
       <div className="ab3-flex">
         <div>
           <img src={yonseimark} alt="yonseimark" />
         </div>
         <div className="ab3-text">
-          <div className="ab3-hashtag">
-            <p># 중소기업청 후원</p>
-            <p># 연세벤쳐창업연구회</p>
-            <p># VERY의 뿌리</p>
-          </div>
           <p className="ab3-detail">
             VERY는 1997년 창립된 연세대학교 공과대학 동아리로 교수님들과
             중소기업진흥청˙중소기업진흥공단의 후원을 받아 "연세벤쳐창업연구회"

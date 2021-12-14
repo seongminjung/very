@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "components/Navigation";
 import "css/page1.css";
 import img0 from "img/main/img0.png";
-import blog from "img/main/blog.png";
 import facebook from "img/main/facebook.png";
 import instagram from "img/main/instagram.png";
 import youtube from "img/main/youtube.png";
@@ -27,7 +26,6 @@ const Page1 = () => {
       <div className="p1-social">
         <img className="p1-social__img" src={facebook} alt="blog" />
         <img className="p1-social__img" src={instagram} alt="blog" />
-        <img className="p1-social__img" src={blog} alt="blog" />
         <img className="p1-social__img" src={youtube} alt="blog" />
       </div>
     </div>
