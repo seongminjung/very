@@ -2,9 +2,9 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "css/about5.css";
-import logo1 from "img/main/logo-knowledge.png";
-import logo2 from "img/main/logo-network.png";
-import logo3 from "img/main/logo-experience.png";
+// import logo1 from "img/main/logo-knowledge.png";
+// import logo2 from "img/main/logo-network.png";
+// import logo3 from "img/main/logo-experience.png";
 import logofix from "img/main/logo-fix.png";
 
 const About5 = () => {
