@@ -1,0 +1,19 @@
+.r5-text {
+  text-align: center;
+  padding-top: 65px;
+}
+
+.r5-text__title {
+  font-family: NotoSansKr;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.r5-text__detail {
+  margin-top: 40px;
+  font-family: NotoSansKr;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 100px;
+  line-height: 33px;
+}

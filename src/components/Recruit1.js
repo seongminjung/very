@@ -9,7 +9,7 @@ const Recruit1 = () => {
         <Navigation />
         <p className="r1-title">- Recruit -</p>
       </div>
-      <div className="r1-bluestrip" />
+      {/* <div className="r1-bluestrip" /> */}
     </>
   );
 };

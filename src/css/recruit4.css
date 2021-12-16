@@ -1,0 +1,30 @@
+.r4-nav {
+  padding-top: 120px;
+}
+
+.r4-pagenumber {
+  font-family: NotoSans;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.r4-title {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.r4-images__flex {
+  /* display: flex;
+  justify-content: center; */
+  gap: 64px;
+  margin-top: 87px;
+  padding-bottom: 95px;
+}
+
+/* .r4-images__left {
+  width: 50%;
+} */
