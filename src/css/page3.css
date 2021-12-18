@@ -52,8 +52,12 @@
 .p3-detail__text {
   display: grid;
   grid-template-columns: 108px 300px;
-  align-items: center;
+  margin-top: 8px;
   margin-left: 110px;
+}
+
+.p3-detail__text p:nth-child(4) {
+  line-height: 24px;
 }
 
 .p3-detail__text-left {
