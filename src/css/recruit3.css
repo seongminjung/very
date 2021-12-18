@@ -1,7 +1,3 @@
-.r3-relative {
-  position: relative;
-}
-
 .r3-nav {
   padding-top: 120px;
 }
@@ -21,84 +17,68 @@
   margin-top: 60px;
 }
 
-.r3-background__wrapper {
-  position: absolute;
-  top: 357px;
-  left: 0;
-}
-
-.r3-background {
-  width: 98.9vw;
-  height: 264px;
-}
-
-.r3-icon__wrapper {
-  position: relative;
-  width: 317px;
-  height: 300px;
-  text-align: center;
-}
-
-.r3-icon {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  height: 250px;
-  transition: 0.2s ease-in-out;
-}
-
-.r3-values__flex {
+.r3-profess__flex {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 75px;
+  gap: 10px;
+  margin-top: 115px;
+  padding-bottom: 224px;
 }
 
-.r3-value:hover .r3-detail__title {
+.r3-process__date {
+  width: 264px;
+  height: 264px;
+  border: 5px solid #707070;
+  border-radius: 132px;
+  box-sizing: border-box;
   color: #0074e8;
   transition: 0.2s ease-in-out;
 }
 
-.r3-value:hover .r3-detail {
-  border-top-color: #0074e8;
-  transition: 0.2s ease-in-out;
+.r3-process__date p:first-child {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: 55px;
 }
 
-.r3-value:hover .r3-icon {
-  width: 300px;
-  height: 300px;
-  transition: 0.2s ease-in-out;
-}
-
-.r3dcenter {
-  border-left: 1px dashed #adadad;
-  border-right: 1px dashed #adadad;
-}
-
-.r3-detail {
-  box-sizing: border-box;
+.r3-process__date p:last-child {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 60px;
   text-align: center;
-  width: 317px;
-  border-top: 7px solid #c9c9c9;
-  transition: 0.2s ease-in-out;
 }
 
-.r3-detail__title {
+.r3-process__arrow {
+  margin-top: 100px;
+}
+
+.r3-process__detail {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.r3-process__detail p {
+  display: inline-block;
   font-family: NotoSansKR;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
-  padding: 0 35px 32px;
-  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 0 25px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 23px;
   transition: 0.2s ease-in-out;
 }
 
-.r3_detail__description {
-  font-family: NotoSansKR;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 33px;
-  padding: 0 35px;
+.r3-process__content:hover .r3-process__date {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+.r3-process__content:hover .r3-process__detail p {
+  background-color: #ffffff;
+  color: #0074e8;
+  transition: 0.2s ease-in-out;
 }

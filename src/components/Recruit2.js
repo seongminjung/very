@@ -40,10 +40,9 @@ const Recruit2 = () => {
           people
           <br /> who:
         </p>
-        <div className="r2-text">
-          <p className="r2-detail">But most of all...</p>
-        </div>
+        <p className="r2-detail">But most of all...</p>
       </div>
+      <p className="r2-hero"># Passion for the Business</p>
     </div>
   );
 };

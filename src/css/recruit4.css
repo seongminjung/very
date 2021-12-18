@@ -1,30 +1,37 @@
-.r4-nav {
-  padding-top: 120px;
-}
-
-.r4-pagenumber {
-  font-family: NotoSans;
-  font-weight: 600;
-  font-size: 32px;
-  margin-top: 8px;
-}
-
 .r4-title {
   font-family: NotoSans;
   font-weight: 700;
   font-size: 60px;
   text-align: center;
-  margin-top: 60px;
+  padding-top: 120px;
 }
 
-.r4-images__flex {
-  /* display: flex;
-  justify-content: center; */
-  gap: 64px;
-  margin-top: 87px;
-  padding-bottom: 95px;
+.r4-door {
+  position: relative;
+  margin-top: 65px;
+  text-align: center;
 }
 
-/* .r4-images__left {
-  width: 50%;
-} */
+.r4-clickhere {
+  position: absolute;
+  top: 84px;
+  left: 877px;
+  text-align: left;
+}
+
+.r4-clickhere p {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 7px;
+}
+
+.r4-detail {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 65px;
+}

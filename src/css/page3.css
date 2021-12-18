@@ -1,7 +1,6 @@
 .p3-contactus {
   margin-top: 120px;
-  margin-bottom: 260px;
-  text-align: center;
+  margin-bottom: 177px;
 }
 
 .p3-contactus__title {
@@ -9,6 +8,61 @@
   font-weight: 700;
   font-size: 21px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.p3-contactus__bar {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.p3-detail__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.p3-detail__image {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  gap: 35px;
+  padding-right: 110px;
+  border-right: 0.5px solid #919191;
+}
+
+.p3-detail__image img {
+  width: 126px;
+  height: 184px;
+}
+
+.p3-detail__image div p:first-child {
+  font-family: NotoSans;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.p3-detail__image div p:last-child {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.p3-detail__text {
+  display: grid;
+  grid-template-columns: 108px 300px;
+  margin-left: 110px;
+}
+
+.p3-detail__text-left {
+  font-family: NotoSans;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.p3-detail__text-right {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .p3-cooperates {
