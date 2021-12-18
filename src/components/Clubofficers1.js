@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "components/Navigation";
-import cobackground from "img/sub/cobackground.png";
+import cobackground from "img/picture/cobackground.png";
 import "css/clubofficers1.css";
 
 const ClubOfficers1 = () => {

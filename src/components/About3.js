@@ -1,6 +1,6 @@
 import React from "react";
 import "css/about3.css";
-import yonseimark from "img/main/yonseimark.png";
+import yonseimark from "img/picture/yonseimark.png";
 
 const About3 = () => {
   return (

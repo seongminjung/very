@@ -1,9 +1,9 @@
 import React from "react";
 import "css/about4.css";
-import ab4background from "img/main/ab4background.png";
-import icon1 from "img/main/icon1.png";
-import icon2 from "img/main/icon2.png";
-import icon3 from "img/main/icon3.png";
+import ab4background from "img/asset/ab4background.png";
+import icon1 from "img/asset/icon1.png";
+import icon2 from "img/asset/icon2.png";
+import icon3 from "img/asset/icon3.png";
 
 const About4 = () => {
   return (

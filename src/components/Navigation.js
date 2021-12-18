@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "img/logo.png";
+import logo from "img/logo/logo-row-white.png";
 import "css/navigation.css";
 
 const Navigation = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import "css/clubofficers2.css";
-import coprofile from "img/sub/coprofile.png";
+import coprofile from "img/picture/coprofile.png";
 
 const ClubOfficers2 = () => {
   return (

@@ -1,17 +1,17 @@
 import React from "react";
 import Navigation from "components/Navigation";
 import "css/page1.css";
-import img0 from "img/main/img0.png";
-import facebook from "img/main/facebook.png";
-import instagram from "img/main/instagram.png";
-import youtube from "img/main/youtube.png";
+import moon from "img/picture/moon.png";
+import facebook from "img/asset/facebook.png";
+import instagram from "img/asset/instagram.png";
+import youtube from "img/asset/youtube.png";
 
 const Page1 = () => {
   return (
     <div className="container">
       <Navigation />
       <div className="p1-hero">
-        <img className="p1-hero__img" src={img0} alt="img0" />
+        <img className="p1-hero__img" src={moon} alt="moon" />
         <p className="p1-hero__1">VERY</p>
         <p className="p1-hero__2">Experience</p>
         <p className="p1-hero__2">is open to every</p>

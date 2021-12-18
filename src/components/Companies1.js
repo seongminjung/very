@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "components/Navigation";
-import cbackground from "img/sub/cbackground.png";
+import cbackground from "img/picture/cbackground.png";
 import "css/companies1.css";
 
 const Companies1 = () => {

@@ -5,7 +5,7 @@ import "css/about5.css";
 // import logo1 from "img/main/logo-knowledge.png";
 // import logo2 from "img/main/logo-network.png";
 // import logo3 from "img/main/logo-experience.png";
-import logofix from "img/main/logo-fix.png";
+import logofix from "img/asset/logo-fix.png";
 
 const About5 = () => {
   const responsive = {

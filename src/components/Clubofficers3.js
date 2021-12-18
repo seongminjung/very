@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "css/clubofficers3.css";
-import coprofile from "img/sub/coprofile.png";
-import leftarrow from "img/sub/leftarrow.png";
-import rightarrow from "img/sub/rightarrow.png";
+import coprofile from "img/picture/coprofile.png";
+import leftarrow from "img/asset/leftarrow.png";
+import rightarrow from "img/asset/rightarrow.png";
 import About2 from "components/About2";
 
 // 지금은 하드코딩으로 34, 33, 32기 구분

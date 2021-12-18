@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import facebook from "img/main/facebook.png";
-import instagram from "img/main/instagram.png";
-import youtube from "img/main/youtube.png";
+import facebook from "img/asset/facebook.png";
+import instagram from "img/asset/instagram.png";
+import youtube from "img/asset/youtube.png";
 import "css/footer.css";
 
 const Footer = () => {

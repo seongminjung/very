@@ -1,6 +1,6 @@
 import React from "react";
-import abackground from "img/sub/abackground.png";
-import magnifier from "img/sub/magnifier.png";
+import ablockbackground from "img/picture/ablockbackground.png";
+import search from "img/asset/search.png";
 import "css/awards2.css";
 
 const Awards2 = () => {
@@ -9,7 +9,7 @@ const Awards2 = () => {
       <div className="a2-search__wrapper">
         <div className="a2-search__flex">
           <p className="a2-search__text">Search</p>
-          <img className="a2-search__btn" src={magnifier} alt="search" />
+          <img className="a2-search__btn" src={search} alt="search" />
         </div>
       </div>
       <p className="a2-result__title">Awards</p>
@@ -19,8 +19,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -66,8 +66,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -106,8 +106,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -146,8 +146,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -186,8 +186,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -226,8 +226,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -266,8 +266,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리
@@ -306,8 +306,8 @@ const Awards2 = () => {
           <div className="a2-result__logo-background">
             <img
               className="a2-result__logo"
-              src={abackground}
-              alt="abackground"
+              src={ablockbackground}
+              alt="ablockbackground"
             />
             <p className="a2-result__logo-text">
               15기 김둘리

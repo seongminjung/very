@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "img/logo.png";
-import magnifier from "img/sub/magnifier.png";
+import logo from "img/logo/logo-row-white.png";
+import search from "img/asset/search.png";
 import "css/companies2.css";
 
 const Companies2 = () => {
@@ -9,7 +9,7 @@ const Companies2 = () => {
       <div className="c2-search__wrapper">
         <div className="c2-search__flex">
           <p className="c2-search__text">Search</p>
-          <img className="c2-search__btn" src={magnifier} alt="search" />
+          <img className="c2-search__btn" src={search} alt="search" />
         </div>
       </div>
       <p className="c2-result__title">Alumni Companies</p>
