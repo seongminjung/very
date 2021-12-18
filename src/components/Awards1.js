@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "components/Navigation";
+import abackground from "img/picture/abackground.png";
 import "css/awards1.css";
 
 const Awards1 = () => {
@@ -8,6 +9,7 @@ const Awards1 = () => {
       <div className="container">
         <Navigation />
         <div className="a1-hero">
+          <img className="a1-hero__img" src={abackground} alt="abackground" />
           <p className="a1-hero__1">Awards</p>
           <p className="a1-hero__2">공모전 입상</p>
           <p className="a1-hero__3">
@@ -35,7 +37,7 @@ const Awards1 = () => {
             />
           </svg>
         </div>
-        <p className="a1-stripe__number">36</p>
+        <p className="a1-stripe__number">106</p>
       </div>
     </>
   );

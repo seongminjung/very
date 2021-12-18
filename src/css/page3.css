@@ -45,12 +45,14 @@
   font-family: NotoSansKR;
   font-weight: 400;
   font-size: 15px;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
 .p3-detail__text {
   display: grid;
   grid-template-columns: 108px 300px;
+  align-items: center;
   margin-left: 110px;
 }
 
