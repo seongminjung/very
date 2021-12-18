@@ -6,7 +6,8 @@ import "css/navigation.css";
 
 const Navigation = () => {
   const [opened, setOpened] = useState(false);
-  const toggle = () => setOpened((prev) => !prev);
+  const onMouseOver = () => setOpened(true);
+  const onMouseLeave = () => setOpened(false);
   return (
     <div className="nav">
       <Link to="/">
@@ -33,20 +34,28 @@ const Navigation = () => {
             <p>Awards</p>
           </div>
         </Link>
-        <div className="nav-link__item nav-ac" onClick={toggle}>
-          <p>Alumni</p>
-          <FontAwesomeIcon icon="caret-down" />
-          {opened && (
-            <div className="nav-ac__flex">
-              <Link to="/companies">
-                <p className="nav-ac__item">Companines</p>
-              </Link>
-              <Link to="/clubofficers">
-                <p className="nav-ac__item">Club Officers</p>
-              </Link>
+        <Link to="/companies">
+          <div
+            className="nav-link__item"
+            onMouseOver={onMouseOver}
+            onMouseLeave={onMouseLeave}
+          >
+            <div className="nav-tab">
+              <p>Alumni</p>
+              <FontAwesomeIcon icon="caret-down" />
             </div>
-          )}
-        </div>
+            {opened && (
+              <div className="nav-tab__wrapper">
+                <Link to="/companies">
+                  <p className="nav-tab__item">Companines</p>
+                </Link>
+                <Link to="/clubofficers">
+                  <p className="nav-tab__item">Club Officers</p>
+                </Link>
+              </div>
+            )}
+          </div>
+        </Link>
       </div>
     </div>
   );

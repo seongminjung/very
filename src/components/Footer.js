@@ -62,9 +62,13 @@ const Footer = () => {
           <p>very.official.kr@gmail.com</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
-            <img className="footer-social__img" src={facebook} alt="blog" />
-            <img className="footer-social__img" src={instagram} alt="blog" />
-            <img className="footer-social__img" src={youtube} alt="blog" />
+            <img className="footer-social__img" src={facebook} alt="facebook" />
+            <img
+              className="footer-social__img"
+              src={instagram}
+              alt="instagram"
+            />
+            <img className="footer-social__img" src={youtube} alt="youtube" />
           </div>
         </div>
         <div className="footer-middle__right">
