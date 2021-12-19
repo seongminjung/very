@@ -16,12 +16,12 @@ const Awards2 = () => {
   }, []);
   return (
     <div className="container">
-      <div className="a2-search__wrapper">
+      {/* <div className="a2-search__wrapper">
         <div className="a2-search__flex">
           <p className="a2-search__text">Search</p>
           <img className="a2-search__btn" src={search} alt="search" />
         </div>
-      </div>
+      </div> */}
       <p className="a2-result__title">Awards</p>
       <div className="a2-result__bar" />
       <div className="a2-result__grid">

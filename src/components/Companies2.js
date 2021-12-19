@@ -15,12 +15,12 @@ const Companies2 = () => {
   }, []);
   return (
     <div className="container">
-      <div className="c2-search__wrapper">
+      {/* <div className="c2-search__wrapper">
         <div className="c2-search__flex">
           <p className="c2-search__text">Search</p>
           <img className="c2-search__btn" src={search} alt="search" />
         </div>
-      </div>
+      </div> */}
       <p className="c2-result__title">Alumni Companies</p>
       <div className="c2-result__bar" />
       <div className="c2-result__grid">
