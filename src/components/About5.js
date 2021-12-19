@@ -32,7 +32,7 @@ const About5 = () => {
               fill="none"
               stroke="#7c7c7c"
               stroke-miterlimit="10"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
           <p className="ab5-pagenumber">03.</p>

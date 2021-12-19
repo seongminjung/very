@@ -1,12 +1,14 @@
 .ab6-text {
-  text-align: center;
   padding-top: 65px;
+  width: 840px;
+  margin: 0 auto;
 }
 
 .ab6-text__title {
   font-family: NotoSansKr;
   font-size: 21px;
   font-weight: 700;
+  text-align: center;
 }
 
 .ab6-text__detail {

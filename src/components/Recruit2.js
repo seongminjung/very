@@ -20,7 +20,7 @@ const Recruit2 = () => {
               fill="none"
               stroke="#fff"
               stroke-miterlimit="10"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
           <p className="r2-pagenumber">01.</p>

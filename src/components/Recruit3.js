@@ -22,7 +22,7 @@ const Recruit3 = () => {
                 fill="none"
                 stroke="#7c7c7c"
                 stroke-miterlimit="10"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </svg>
             <p className="r3-pagenumber">02.</p>

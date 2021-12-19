@@ -91,6 +91,7 @@
   display: flex;
   justify-content: center;
   gap: 28px;
+  margin-top: 76px;
   padding-top: 11px;
   padding-bottom: 164px;
 }

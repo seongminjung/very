@@ -22,7 +22,7 @@ const Recruit4 = () => {
               transform="translate(2635.07 5665.998) rotate(90)"
               fill="#fff"
               stroke="#000"
-              stroke-width="1"
+              strokeWidth="1"
             />
           </svg>
           <p>Click here</p>

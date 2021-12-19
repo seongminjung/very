@@ -93,8 +93,8 @@ const Page2 = () => {
                   transform="translate(-274.574 -3088.477)"
                   fill="none"
                   stroke="#707070"
-                  stroke-linecap="round"
-                  stroke-width="1"
+                  strokeLinecap="round"
+                  strokeWidth="1"
                 />
               </svg>
             </div>
@@ -117,8 +117,8 @@ const Page2 = () => {
                   transform="translate(-274.574 -3088.477)"
                   fill="none"
                   stroke="#707070"
-                  stroke-linecap="round"
-                  stroke-width="1"
+                  strokeLinecap="round"
+                  strokeWidth="1"
                 />
               </svg>
             </div>
@@ -141,8 +141,8 @@ const Page2 = () => {
                   transform="translate(-274.574 -3088.477)"
                   fill="none"
                   stroke="#707070"
-                  stroke-linecap="round"
-                  stroke-width="1"
+                  strokeLinecap="round"
+                  strokeWidth="1"
                 />
               </svg>
             </div>

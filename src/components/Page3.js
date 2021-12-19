@@ -77,7 +77,7 @@ const Page3 = () => {
         </div>
         <div className="p3-cooperates__grid">
           {partners.map((partner) => (
-            <div className="p3-cooperates__item">
+            <div className="p3-cooperates__item" key={partner.name}>
               <a href={partner.url} target="_blank" rel="noreferrer">
                 <img
                   className="p3-cooperates__img"

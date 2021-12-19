@@ -25,7 +25,7 @@ const About4 = () => {
                 fill="none"
                 stroke="#7c7c7c"
                 stroke-miterlimit="10"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </svg>
             <p className="ab4-pagenumber">02.</p>
@@ -48,7 +48,8 @@ const About4 = () => {
               <p className="ab4-detail__title">Knowledge</p>
               <p className="ab4_detail__description">
                 실전에서 활용할 수 있는 각종 지식들을 다양한 Case들을 활용하여
-                습득합니다. 이로써 창업가로서 경험할 수 있는 범위를 확장합니다.
+                습득합니다. 이로써 창업가로서 경험할 수 &nbsp;있는 범위를
+                확장합니다.
               </p>
             </div>
           </div>

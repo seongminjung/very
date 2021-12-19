@@ -35,28 +35,28 @@ const ClubOfficers2 = () => {
                 y2="0.5"
                 gradientUnits="objectBoundingBox"
               >
-                <stop offset="0" stop-color="#dd983d" />
-                <stop offset="0.035" stop-color="#dd993e" />
-                <stop offset="0.047" stop-color="#df9f45" />
-                <stop offset="0.056" stop-color="#e3aa51" />
-                <stop offset="0.063" stop-color="#e9b962" />
-                <stop offset="0.07" stop-color="#f0cc78" />
-                <stop offset="0.073" stop-color="#f6db88" />
-                <stop offset="0.203" stop-color="#f5d986" />
-                <stop offset="0.25" stop-color="#f2d37f" />
-                <stop offset="0.284" stop-color="#eec873" />
-                <stop offset="0.311" stop-color="#e8b862" />
-                <stop offset="0.334" stop-color="#e0a44c" />
-                <stop offset="0.354" stop-color="#d68c32" />
-                <stop offset="0.362" stop-color="#d28126" />
-                <stop offset="0.494" stop-color="#cb6b1b" />
-                <stop offset="0.674" stop-color="#c55619" />
-                <stop offset="0.719" stop-color="#cd711b" />
-                <stop offset="0.78" stop-color="#d4872b" />
-                <stop offset="0.831" stop-color="#d78d31" />
-                <stop offset="0.904" stop-color="#cb8226" />
-                <stop offset="0.958" stop-color="#ad6614" />
-                <stop offset="1" stop-color="#86410c" />
+                <stop offset="0" stopColor="#dd983d" />
+                <stop offset="0.035" stopColor="#dd993e" />
+                <stop offset="0.047" stopColor="#df9f45" />
+                <stop offset="0.056" stopColor="#e3aa51" />
+                <stop offset="0.063" stopColor="#e9b962" />
+                <stop offset="0.07" stopColor="#f0cc78" />
+                <stop offset="0.073" stopColor="#f6db88" />
+                <stop offset="0.203" stopColor="#f5d986" />
+                <stop offset="0.25" stopColor="#f2d37f" />
+                <stop offset="0.284" stopColor="#eec873" />
+                <stop offset="0.311" stopColor="#e8b862" />
+                <stop offset="0.334" stopColor="#e0a44c" />
+                <stop offset="0.354" stopColor="#d68c32" />
+                <stop offset="0.362" stopColor="#d28126" />
+                <stop offset="0.494" stopColor="#cb6b1b" />
+                <stop offset="0.674" stopColor="#c55619" />
+                <stop offset="0.719" stopColor="#cd711b" />
+                <stop offset="0.78" stopColor="#d4872b" />
+                <stop offset="0.831" stopColor="#d78d31" />
+                <stop offset="0.904" stopColor="#cb8226" />
+                <stop offset="0.958" stopColor="#ad6614" />
+                <stop offset="1" stopColor="#86410c" />
               </linearGradient>
             </defs>
             <g
@@ -244,28 +244,28 @@ const ClubOfficers2 = () => {
                 y2="0.5"
                 gradientUnits="objectBoundingBox"
               >
-                <stop offset="0" stop-color="#dd983d" />
-                <stop offset="0.035" stop-color="#dd993e" />
-                <stop offset="0.047" stop-color="#df9f45" />
-                <stop offset="0.056" stop-color="#e3aa51" />
-                <stop offset="0.063" stop-color="#e9b962" />
-                <stop offset="0.07" stop-color="#f0cc78" />
-                <stop offset="0.073" stop-color="#f6db88" />
-                <stop offset="0.203" stop-color="#f5d986" />
-                <stop offset="0.25" stop-color="#f2d37f" />
-                <stop offset="0.284" stop-color="#eec873" />
-                <stop offset="0.311" stop-color="#e8b862" />
-                <stop offset="0.334" stop-color="#e0a44c" />
-                <stop offset="0.354" stop-color="#d68c32" />
-                <stop offset="0.362" stop-color="#d28126" />
-                <stop offset="0.494" stop-color="#cb6b1b" />
-                <stop offset="0.674" stop-color="#c55619" />
-                <stop offset="0.719" stop-color="#cd711b" />
-                <stop offset="0.78" stop-color="#d4872b" />
-                <stop offset="0.831" stop-color="#d78d31" />
-                <stop offset="0.904" stop-color="#cb8226" />
-                <stop offset="0.958" stop-color="#ad6614" />
-                <stop offset="1" stop-color="#86410c" />
+                <stop offset="0" stopColor="#dd983d" />
+                <stop offset="0.035" stopColor="#dd993e" />
+                <stop offset="0.047" stopColor="#df9f45" />
+                <stop offset="0.056" stopColor="#e3aa51" />
+                <stop offset="0.063" stopColor="#e9b962" />
+                <stop offset="0.07" stopColor="#f0cc78" />
+                <stop offset="0.073" stopColor="#f6db88" />
+                <stop offset="0.203" stopColor="#f5d986" />
+                <stop offset="0.25" stopColor="#f2d37f" />
+                <stop offset="0.284" stopColor="#eec873" />
+                <stop offset="0.311" stopColor="#e8b862" />
+                <stop offset="0.334" stopColor="#e0a44c" />
+                <stop offset="0.354" stopColor="#d68c32" />
+                <stop offset="0.362" stopColor="#d28126" />
+                <stop offset="0.494" stopColor="#cb6b1b" />
+                <stop offset="0.674" stopColor="#c55619" />
+                <stop offset="0.719" stopColor="#cd711b" />
+                <stop offset="0.78" stopColor="#d4872b" />
+                <stop offset="0.831" stopColor="#d78d31" />
+                <stop offset="0.904" stopColor="#cb8226" />
+                <stop offset="0.958" stopColor="#ad6614" />
+                <stop offset="1" stopColor="#86410c" />
               </linearGradient>
             </defs>
             <g id="그룹_430" data-name="그룹 430" opacity="0.65">
