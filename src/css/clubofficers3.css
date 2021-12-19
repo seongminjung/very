@@ -53,6 +53,8 @@
 .co3-gen__officer-profile {
   width: 150px;
   height: 150px;
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
   border-radius: 75px;
   margin-top: 40px;
 }

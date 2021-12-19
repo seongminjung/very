@@ -1,13 +1,16 @@
 import React from "react";
 import "css/clubofficers2.css";
-import coprofile from "img/picture/coprofile.png";
+import profile1 from "img/profile/임채현.png";
+import profile2 from "img/profile/김태윤.png";
+import profile3 from "img/profile/정유진.jpg";
+// import profile4 from "img/profile/장지원.jpg";
 
 const ClubOfficers2 = () => {
   return (
     <div className="container">
       <div className="co2-headofficer__wrapper">
         <div className="co2-officer">
-          <img className="co2-officer__profile" src={coprofile} alt="profile" />
+          <img className="co2-officer__profile" src={profile1} alt="profile" />
           <p className="co2-officer__name">
             34기 회장 <span>임채현</span>
           </p>
@@ -195,36 +198,36 @@ const ClubOfficers2 = () => {
           </svg>
         </div>
         <div className="co2-officer">
-          <img className="co2-officer__profile" src={coprofile} alt="profile" />
+          <img className="co2-officer__profile" src={profile2} alt="profile" />
           <p className="co2-officer__name">
-            34기 회장 <span>임채현</span>
+            34기 부회장 <span>김태윤</span>
           </p>
           <p className="co2-officer__detail">
             반갑습니다.
             <br />
-            임채현입니다.
+            김태윤입니다.
           </p>
         </div>
         <div className="co2-officer">
-          <img className="co2-officer__profile" src={coprofile} alt="profile" />
+          <img className="co2-officer__profile" src={profile3} alt="profile" />
           <p className="co2-officer__name">
-            34기 회장 <span>임채현</span>
+            34기 기획부장 <span>정유진</span>
           </p>
           <p className="co2-officer__detail">
             반갑습니다.
             <br />
-            임채현입니다.
+            정유진입니다.
           </p>
         </div>
         <div className="co2-officer">
-          <img className="co2-officer__profile" src={coprofile} alt="profile" />
+          <img className="co2-officer__profile" src={profile1} alt="profile" />
           <p className="co2-officer__name">
-            34기 회장 <span>임채현</span>
+            34기 총무 <span>장지원</span>
           </p>
           <p className="co2-officer__detail">
             반갑습니다.
             <br />
-            임채현입니다.
+            장지원입니다.
           </p>
         </div>
         <div>

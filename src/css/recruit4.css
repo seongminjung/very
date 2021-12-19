@@ -12,6 +12,27 @@
   text-align: center;
 }
 
+.r4-door__image-open {
+  width: 225px;
+  height: 249px;
+  background-image: url("img/asset/door-closed.png");
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.r4-door__image-open:hover {
+  background-image: url("img/asset/door-open.png");
+  /* transform: scale(1.1); */
+  transition: 0.3s;
+}
+
+.r4-door__image-closed {
+  width: 225px;
+  height: 249px;
+  background-image: url("img/asset/door-closed.png");
+  margin: 0 auto;
+}
+
 .r4-clickhere {
   position: absolute;
   top: 84px;

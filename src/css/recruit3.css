@@ -35,6 +35,26 @@
   transition: 0.2s ease-in-out;
 }
 
+.r3-process__date__closed {
+  width: 264px;
+  height: 264px;
+  border: 5px solid #707070;
+  background-color: #707070;
+  border-radius: 132px;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+
+.r3-process__date__closed p {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 20px;
+  color: #cacaca;
+  margin-top: 80px;
+  margin-bottom: 27px;
+}
+
 .r3-process__date p:first-child {
   font-family: NotoSans;
   font-weight: 700;

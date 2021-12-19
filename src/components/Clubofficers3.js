@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "css/clubofficers3.css";
-import coprofile from "img/picture/coprofile.png";
+import profile1 from "img/profile/임채현.png";
+import profile2 from "img/profile/김태윤.png";
+import profile3 from "img/profile/정유진.jpg";
+import profile4 from "img/profile/최현준.jpg";
+import profile5 from "img/profile/이동현.jpg";
+import profile6 from "img/profile/장덕민.jpg";
 import leftarrow from "img/asset/leftarrow.png";
 import rightarrow from "img/asset/rightarrow.png";
 import About2 from "components/About2";
@@ -91,7 +96,7 @@ const ClubOfficers3 = () => {
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile1}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
@@ -106,60 +111,46 @@ const ClubOfficers3 = () => {
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile2}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                34기 부회장 <span>김태윤</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                김태윤입니다.
               </p>
             </div>
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile3}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                34기 회장 <span>정유진</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                정유진입니다.
               </p>
             </div>
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile1}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
-              </p>
-              <p className="co3-gen__officer-detail">
-                반갑습니다.
-                <br /> 임채현입니다.
-              </p>
-            </div>
-            <div className="co3-gen__officer">
-              <img
-                className="co3-gen__officer-profile"
-                src={coprofile}
-                alt="profile"
-              />
-              <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                34기 총무 <span>장지원</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                장지원입니다.
               </p>
             </div>
           </Carousel>
@@ -239,11 +230,11 @@ const ClubOfficers3 = () => {
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile1}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                33기 회장 <span>임채현</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
@@ -254,60 +245,46 @@ const ClubOfficers3 = () => {
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile4}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                33기 부회장 <span>최현준</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                최현준입니다.
               </p>
             </div>
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile5}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                33기 부회장 <span>이동현</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                이동현입니다.
               </p>
             </div>
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={coprofile}
+                src={profile6}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
-              </p>
-              <p className="co3-gen__officer-detail">
-                반갑습니다.
-                <br /> 임채현입니다.
-              </p>
-            </div>
-            <div className="co3-gen__officer">
-              <img
-                className="co3-gen__officer-profile"
-                src={coprofile}
-                alt="profile"
-              />
-              <p className="co3-gen__officer-name">
-                34기 회장 <span>임채현</span>
+                34기 인사교류부장 <span>장덕민</span>
               </p>
               <p className="co3-gen__officer-detail">
                 반갑습니다.
                 <br />
-                임채현입니다.
+                장덕민입니다.
               </p>
             </div>
           </Carousel>
