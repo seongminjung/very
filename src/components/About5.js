@@ -45,7 +45,7 @@ const About5 = () => {
           swipeable={false}
           draggable={false}
           infinite={true}
-          arrows={false}
+          arrows={true}
           showDots={false}
           autoPlay={true}
           autoPlaySpeed={3000}
