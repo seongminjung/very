@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
-import search from "img/asset/search.png";
+// import search from "img/asset/search.png";
 import "css/companies2.css";
 
 const Companies2 = () => {

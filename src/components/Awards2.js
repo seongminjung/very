@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import ablockbackground from "img/picture/ablockbackground.png";
-import search from "img/asset/search.png";
+// import search from "img/asset/search.png";
 import "css/awards2.css";
 
 const Awards2 = () => {
