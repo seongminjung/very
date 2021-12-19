@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { dbService } from "fb_info";
 import "css/page3.css";
 import logobiggray from "img/logo/logo-big-gray.png";
 
 const Page3 = () => {
+  const [partners, setPartners] = useState([]);
+  useEffect(() => {
+    dbService.collection("partners").onSnapshot((snapshot) => {
+      const partnerArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setPartners(partnerArray);
+    });
+  }, []);
   return (
     <div className="container">
       <div className="p3-contactus">
@@ -66,62 +76,17 @@ const Page3 = () => {
           </svg>
         </div>
         <div className="p3-cooperates__grid">
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
-          <div className="p3-cooperates__item">
-            <img
-              className="p3-cooperates__img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
-              alt="logo"
-            />
-          </div>
+          {partners.map((partner) => (
+            <div className="p3-cooperates__item">
+              <a href={partner.url} target="_blank" rel="noreferrer">
+                <img
+                  className="p3-cooperates__img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>

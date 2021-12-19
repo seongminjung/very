@@ -51,14 +51,14 @@
   gap: 60px;
 }
 
-.a2-result__alumni {
+.a2-result__award {
   position: relative;
   text-align: center;
   height: 353px;
   overflow: hidden;
 }
 
-.a2-result__alumni:hover .a2-result__logo-background {
+.a2-result__award:hover .a2-result__logo-background {
   height: 41px;
   transition: 0.4s ease-in-out;
 }
@@ -92,11 +92,11 @@
   height: 312px;
 }
 
-.a2-result__alumni-bar {
+.a2-result__award-bar {
   padding-top: 17px;
 }
 
-.a2-result__alumni-name {
+.a2-result__award-name {
   font-family: NotoSansKR;
   font-weight: 700;
   font-size: 25px;
@@ -104,7 +104,7 @@
   color: #0074e8;
 }
 
-.a2-result__alumni-detail {
+.a2-result__award-detail {
   font-family: NotoSansKR;
   font-weight: 500;
   line-height: 30px;

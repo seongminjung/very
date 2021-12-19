@@ -7,8 +7,9 @@ import Awards from "routes/Awards";
 import Companies from "routes/Companies";
 import ClubOfficers from "routes/ClubOfficers";
 import ScrollToTop from "components/ScrollToTop";
+import Admin from "routes/Admin";
 
-const AppRouter = ({ userObj, refreshUser }) => {
+const AppRouter = ({ userObj }) => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
@@ -30,6 +31,9 @@ const AppRouter = ({ userObj, refreshUser }) => {
         </Route>
         <Route exact path="/clubofficers">
           <ClubOfficers />
+        </Route>
+        <Route exact path="/admin">
+          <Admin userObj={userObj} />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { dbService } from "fb_info";
 import "css/about2.css";
 import profile from "img/picture/profile.png";
 
 const About2 = () => {
+  const [president, setPresident] = useState([]);
+  const [gen, setGen] = useState([]);
+  useEffect(() => {
+    dbService.collection("clubofficers").onSnapshot((snapshot) => {
+      const pr_info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setPresident(pr_info[pr_info.length - 1]["president"]);
+      setGen(pr_info[pr_info.length - 1]["id"]);
+    });
+  }, []);
   return (
     <div className="container ab2-relative">
       <div className="ab2-text">
@@ -37,8 +50,8 @@ const About2 = () => {
         <p className="ab2-closing">VERY 34기 회장 임채현 올림</p>
       </div>
       <div className="ab2-namecard">
-        <p className="ab2-namecard__name">임채현</p>
-        <p className="ab2-namecard__detail">VERY 34기 회장</p>
+        <p className="ab2-namecard__name">{president.name}</p>
+        <p className="ab2-namecard__detail">VERY {gen}기 회장</p>
       </div>
       <div className="ab2-profile">
         <img src={profile} alt="profile" />

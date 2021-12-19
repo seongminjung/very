@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { dbService } from "fb_info";
 import { Link } from "react-router-dom";
 import "css/page2.css";
 
 const Page2 = () => {
+  const [awardNumber, setAwardNumber] = useState([]);
+  const [companyNumber, setCompanyNumber] = useState([]);
+  useEffect(() => {
+    dbService.collection("awards").onSnapshot((snapshot) => {
+      const awardArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setAwardNumber(awardArray.length);
+    });
+    dbService.collection("companies").onSnapshot((snapshot) => {
+      const companyArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setCompanyNumber(companyArray.length);
+    });
+  }, []);
   return (
     <div className="container">
       <div className="p2-sub__grid">
@@ -58,8 +75,8 @@ const Page2 = () => {
           </svg>
         </div>
         <div className="p2-sub__grid-r3">1997</div>
-        <div className="p2-sub__grid-r3">106</div>
-        <div className="p2-sub__grid-r3">36</div>
+        <div className="p2-sub__grid-r3">{awardNumber}</div>
+        <div className="p2-sub__grid-r3">{companyNumber}</div>
         <div className="p2-sub__grid-r4">
           <Link to="/about" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">

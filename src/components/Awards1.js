@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { dbService } from "fb_info";
 import Navigation from "components/Navigation";
 import abackground from "img/picture/abackground.png";
 import "css/awards1.css";
 
 const Awards1 = () => {
+  const [number, setNumber] = useState([]);
+  useEffect(() => {
+    dbService.collection("awards").onSnapshot((snapshot) => {
+      const awardArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setNumber(awardArray.length);
+    });
+  }, []);
   return (
     <>
       <div className="container">
@@ -37,7 +47,7 @@ const Awards1 = () => {
             />
           </svg>
         </div>
-        <p className="a1-stripe__number">106</p>
+        <p className="a1-stripe__number">{number}</p>
       </div>
     </>
   );

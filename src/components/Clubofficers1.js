@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "components/Navigation";
+import { dbService } from "fb_info";
 import cobackground from "img/picture/cobackground.png";
 import "css/clubofficers1.css";
 
 const ClubOfficers1 = () => {
+  const [gen, setGen] = useState([]);
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setGen(info[0].currentGen);
+    });
+  }, []);
   return (
     <>
       <div className="container">
@@ -41,7 +51,7 @@ const ClubOfficers1 = () => {
             />
           </svg>
         </div>
-        <p className="co1-stripe__number">34</p>
+        <p className="co1-stripe__number">{gen}</p>
       </div>
     </>
   );

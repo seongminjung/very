@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { dbService } from "fb_info";
 import Navigation from "components/Navigation";
 import cbackground from "img/picture/cbackground.png";
 import "css/companies1.css";
 
 const Companies1 = () => {
+  const [number, setNumber] = useState([]);
+  useEffect(() => {
+    dbService.collection("companies").onSnapshot((snapshot) => {
+      const awardArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setNumber(awardArray.length);
+    });
+  }, []);
   return (
     <>
       <div className="container">
@@ -37,7 +47,7 @@ const Companies1 = () => {
             />
           </svg>
         </div>
-        <p className="c1-stripe__number">36</p>
+        <p className="c1-stripe__number">{number}</p>
       </div>
     </>
   );
