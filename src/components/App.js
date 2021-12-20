@@ -12,6 +12,16 @@ library.add(faBars, faCaretDown);
 function App() {
   const [init, setInit] = useState(false);
   const [userObj, setUserObj] = useState(null);
+  const mobileWidth = 1920; // 쪼그라들기 시작할 시점
+  useEffect(() => {
+    const onResize = () => {
+      const zoom = window.innerWidth / mobileWidth;
+      document.documentElement.style.zoom = `${zoom}`;
+    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
       if (user) {
