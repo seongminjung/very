@@ -8,6 +8,7 @@ import profile3 from "img/profile/정유진.jpg";
 import profile4 from "img/profile/최현준.jpg";
 import profile5 from "img/profile/이동현.jpg";
 import profile6 from "img/profile/장덕민.jpg";
+import profile7 from "img/profile/장지원.jpg";
 import leftarrow from "img/asset/leftarrow.png";
 import rightarrow from "img/asset/rightarrow.png";
 import About2 from "components/About2";
@@ -141,7 +142,7 @@ const ClubOfficers3 = () => {
             <div className="co3-gen__officer">
               <img
                 className="co3-gen__officer-profile"
-                src={profile1}
+                src={profile7}
                 alt="profile"
               />
               <p className="co3-gen__officer-name">

@@ -3,7 +3,7 @@ import "css/clubofficers2.css";
 import profile1 from "img/profile/임채현.png";
 import profile2 from "img/profile/김태윤.png";
 import profile3 from "img/profile/정유진.jpg";
-// import profile4 from "img/profile/장지원.jpg";
+import profile4 from "img/profile/장지원.jpg";
 
 const ClubOfficers2 = () => {
   return (
@@ -220,7 +220,7 @@ const ClubOfficers2 = () => {
           </p>
         </div>
         <div className="co2-officer">
-          <img className="co2-officer__profile" src={profile1} alt="profile" />
+          <img className="co2-officer__profile" src={profile4} alt="profile" />
           <p className="co2-officer__name">
             34기 총무 <span>장지원</span>
           </p>

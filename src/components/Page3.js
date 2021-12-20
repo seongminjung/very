@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import "css/page3.css";
 import logobiggray from "img/logo/logo-big-gray.png";
+import yonseiventuremark from "img/picture/yonseiventuremark.png";
 
 const Page3 = () => {
   const [partners, setPartners] = useState([]);
@@ -58,7 +59,7 @@ const Page3 = () => {
         </div>
       </div>
       <div className="p3-cooperates">
-        <p className="p3-cooperates__title">협력 기업</p>
+        <p className="p3-cooperates__title">협력</p>
         <div className="p3-cooperates__bar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +82,7 @@ const Page3 = () => {
               <a href={partner.url} target="_blank" rel="noreferrer">
                 <img
                   className="p3-cooperates__img"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+                  src={yonseiventuremark}
                   alt="logo"
                 />
               </a>
