@@ -5,9 +5,14 @@ import Loading from "routes/Loading";
 import "css/reset.css";
 import "css/app.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBars, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCaretDown,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faCaretDown);
+library.add(faBars, faCaretDown, faChevronLeft, faChevronRight);
 
 function App() {
   const [init, setInit] = useState(false);

@@ -1,97 +1,56 @@
-.p3-contactus {
-  margin-top: 120px;
-  margin-bottom: 177px;
-}
-
-.p3-contactus__title {
+.p3-title {
   font-family: NotoSansKR;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 40px;
+  margin-top: 120px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.p3-contactus__bar {
+.p3-subtitle {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 100px;
+  color: #9b9b9b;
 }
 
-.p3-detail__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.p3-bar {
+  text-align: center;
+  margin-bottom: 45px;
 }
 
-.p3-detail__image {
+.p3-carousel {
   display: flex;
-  justify-content: right;
-  align-items: flex-end;
-  gap: 35px;
-  padding-right: 110px;
-  border-right: 0.5px solid #919191;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
 }
 
-.p3-detail__image img {
-  width: 126px;
-  height: 184px;
-}
-
-.p3-detail__image div p:first-child {
-  font-family: NotoSans;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.p3-detail__image div p:last-child {
-  font-family: NotoSansKR;
-  font-weight: 400;
-  font-size: 15px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.p3-detail__text {
-  display: grid;
-  grid-template-columns: 108px 300px;
-  margin-top: 8px;
-  margin-left: 110px;
-}
-
-.p3-detail__text p:nth-child(4) {
-  line-height: 24px;
-}
-
-.p3-detail__text-left {
-  font-family: NotoSans;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.p3-detail__text-right {
-  font-family: NotoSansKR;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-.p3-cooperates {
-  margin-top: 120px;
+.p3-carousel-ctrlbtn {
+  width: 50px;
+  height: 100px;
+  background-color: #f1f1f1;
   text-align: center;
+  cursor: pointer;
 }
 
-.p3-cooperates__title {
+.p3-carousel-ctrlbtn p {
+  color: #707070;
+  font-size: 24px;
+  line-height: 100px;
+}
+
+.p3-img {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.p3-imgtitle {
   font-family: NotoSansKR;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 21px;
-  margin-bottom: 20px;
-}
-
-.p3-cooperates__grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 65px 200px 166px;
-  row-gap: 80px;
-}
-
-.p3-cooperates__img {
-  max-width: 220px;
-  max-height: 100px;
+  text-decoration: underline;
+  text-align: center;
 }
