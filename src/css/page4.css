@@ -1,0 +1,61 @@
+.p4-relative {
+  position: relative;
+}
+
+.p4-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.p4-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding-top: 230px;
+  margin-bottom: 65px;
+}
+
+.p4-carousel-ctrlbtn {
+  width: 50px;
+  height: 100px;
+  background-color: #f1f1f1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.p4-carousel-ctrlbtn p {
+  color: #707070;
+  font-size: 24px;
+  line-height: 100px;
+}
+
+.p4-img-flex {
+  display: flex;
+  gap: 25px;
+}
+
+.p4-img {
+  text-align: center;
+  width: 330px;
+  height: 433px;
+}
+
+.p4-imgtitle {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 21px;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.p4-imgdot {
+  text-align: center;
+  padding-bottom: 40px;
+}

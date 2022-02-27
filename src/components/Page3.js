@@ -42,6 +42,60 @@ const Page3 = () => {
       <p className="p3-imgtitle">
         1주차 - 2021 한, 우간다 혁신창업 컨퍼러스 & 비즈니스 상담회
       </p>
+      <div className="p3-imgdot">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="140"
+          height="16"
+          viewBox="0 0 140 16"
+        >
+          <circle
+            id="타원_167"
+            data-name="타원 167"
+            cx="5"
+            cy="5"
+            r="5"
+            transform="translate(31 3)"
+            fill="#c3c3c3"
+          />
+          <circle
+            id="타원_171"
+            data-name="타원 171"
+            cx="5"
+            cy="5"
+            r="5"
+            transform="translate(130 3)"
+            fill="#c3c3c3"
+          />
+          <circle
+            id="타원_168"
+            data-name="타원 168"
+            cx="8"
+            cy="8"
+            r="8"
+            transform="translate(62)"
+            fill="#0074e8"
+          />
+          <circle
+            id="타원_169"
+            data-name="타원 169"
+            cx="5"
+            cy="5"
+            r="5"
+            transform="translate(0 3)"
+            fill="#c3c3c3"
+          />
+          <circle
+            id="타원_170"
+            data-name="타원 170"
+            cx="5"
+            cy="5"
+            r="5"
+            transform="translate(99 3)"
+            fill="#c3c3c3"
+          />
+        </svg>
+      </div>
     </div>
   );
 };

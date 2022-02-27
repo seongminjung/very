@@ -44,6 +44,8 @@
 
 .p3-img {
   text-align: center;
+  width: 972px;
+  height: 545px;
   margin-bottom: 40px;
 }
 
@@ -53,4 +55,10 @@
   font-size: 21px;
   text-decoration: underline;
   text-align: center;
+  margin-bottom: 70px;
+}
+
+.p3-imgdot {
+  text-align: center;
+  padding-bottom: 120px;
 }
