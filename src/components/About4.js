@@ -8,6 +8,7 @@ import icon3 from "img/asset/icon3.png";
 const About4 = () => {
   return (
     <div className="container-fluid ab4-relative">
+      <img src={ab4background} alt="background" className="ab4-background" />
       <div className="container">
         <div className="ab4-nav">
           <div>
@@ -32,13 +33,6 @@ const About4 = () => {
           </div>
         </div>
         <p className="ab4-title">Core Value</p>
-        <div className="ab4-background__wrapper">
-          <img
-            src={ab4background}
-            alt="background"
-            className="ab4-background"
-          />
-        </div>
         <div className="ab4-values__flex">
           <div className="ab4-value">
             <div className="ab4-icon__wrapper">

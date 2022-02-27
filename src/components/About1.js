@@ -9,7 +9,26 @@ const About1 = () => {
         <Navigation />
         <p className="ab1-title">- About VERY -</p>
       </div>
-      <div className="ab1-stripe" />
+      <div className="ab1-stripe">
+        <div>
+          <p className="ab1-stripe__text">창립 연도</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_318"
+              data-name="사각형 318"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
+        </div>
+        <p className="ab1-stripe__number">1997</p>
+      </div>
     </>
   );
 };

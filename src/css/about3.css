@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.ab3-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
 .ab3-nav {
   padding-top: 120px;
 }
@@ -43,13 +53,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 30px;
   padding-bottom: 142px;
 }
 
 .ab3-flex img {
-  width: 700px;
-  height: 388px;
+  width: 780px;
+  height: 444px;
+  margin-left: -80px;
 }
 
 .ab3-text {

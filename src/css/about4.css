@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.ab4-background {
+  position: absolute;
+  top: 360px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
 .ab4-nav {
   padding-top: 120px;
 }
@@ -19,17 +29,6 @@
   font-size: 60px;
   text-align: center;
   margin-top: 60px;
-}
-
-.ab4-background__wrapper {
-  position: absolute;
-  top: 357px;
-  left: 0;
-}
-
-.ab4-background {
-  width: 98.9vw;
-  height: 264px;
 }
 
 .ab4-icon__wrapper {
