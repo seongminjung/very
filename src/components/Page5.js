@@ -39,7 +39,7 @@ const Page5 = () => {
             <img src={logobiggray} alt="logobiggray" />
             <div>
               <p>VERY</p>
-              <p>34기 회장 임채현</p>
+              <p>36기 회장 김태윤</p>
             </div>
           </div>
           <div className="p5-detail__text">
@@ -52,9 +52,9 @@ const Page5 = () => {
               (연세대학교 신촌캠퍼스 제1공학관), 공A119
             </p>
             <p className="p5-detail__text-left">Phone.</p>
-            <p className="p5-detail__text-right">010-4129-3273</p>
+            <p className="p5-detail__text-right">010-4035-3745</p>
             <p className="p5-detail__text-left">Email.</p>
-            <p className="p5-detail__text-right">natebear9936@yonsei.ac.kr</p>
+            <p className="p5-detail__text-right">taeyun329@yonsei.ac.kr</p>
           </div>
         </div>
       </div>

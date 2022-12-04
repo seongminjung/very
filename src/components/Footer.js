@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import facebook from "img/asset/facebook.png";
 import instagram from "img/asset/instagram.png";
-import youtube from "img/asset/youtube.png";
 import "css/footer.css";
 
 const Footer = () => {
-  const [opened, setOpened] = useState(false);
-  const toggle = () => setOpened((prev) => !prev);
   return (
     <div className="">
       <div className="container-fluid footer-borderline">
@@ -34,20 +30,11 @@ const Footer = () => {
                 <p>Awards</p>
               </div>
             </Link>
-            <div className="footer-link__item footer-ac" onClick={toggle}>
-              <p>Alumni</p>
-              <FontAwesomeIcon icon="caret-down" />
-              {opened && (
-                <div className="footer-ac__flex">
-                  <Link to="/companies">
-                    <p className="footer-ac__item">Companines</p>
-                  </Link>
-                  <Link to="/clubofficers">
-                    <p className="footer-ac__item">Club Officers</p>
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/clubofficers">
+              <div className="footer-link__item">
+                <p>Club Officers</p>
+              </div>
+            </Link>
           </div>
           <div>
             <p className="footer-top__description">
@@ -68,12 +55,11 @@ const Footer = () => {
               src={instagram}
               alt="instagram"
             />
-            <img className="footer-social__img" src={youtube} alt="youtube" />
           </div>
         </div>
         <div className="footer-middle__right">
-          <p>회장 | 010-4129-3273</p>
-          <p>&lt;natebear9936@yonsei.ac.kr&gt;</p>
+          <p>회장 | 010-4035-3745</p>
+          <p>&lt;taeyun329@yonsei.ac.kr&gt;</p>
           <div className="footer-madeby">
             <Link to="/">
               <p>Director_임채현</p>

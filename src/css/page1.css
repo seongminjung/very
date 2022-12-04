@@ -66,21 +66,16 @@
   text-align: right;
 }
 
-.p1-hero__1 {
-  font-family: NotoSans;
-  font-weight: 400;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.6);
-}
-.p1-hero__2 {
+.p1-hero__txt {
   font-family: NotoSans;
   font-weight: 400;
   font-size: 35px;
   line-height: 55px;
   margin-top: 20px;
+  margin-bottom: 63px;
 }
 
-.p1-hero__2 span {
+.p1-hero__txt span {
   font-weight: bold;
 }
 

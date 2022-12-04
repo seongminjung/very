@@ -100,7 +100,7 @@
 }
 
 .footer-madeby a p {
-  color: #ffffff;
+  color: rgba(248, 249, 250, 0.8);
   text-decoration: underline;
   margin-top: 10px;
 }
@@ -111,7 +111,6 @@
 
 .footer-social {
   display: flex;
-  justify-content: space-between;
   gap: 50px;
   margin-top: 35px;
 }
