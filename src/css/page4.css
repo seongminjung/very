@@ -7,9 +7,31 @@
   top: 0;
   left: 0;
   width: 100%;
+  /* height: 453px; */
   z-index: -1;
   object-fit: cover;
   object-position: center;
+}
+
+.p4-title {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 40px;
+  padding-top: 95px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.p4-subtitle {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.p4-bar {
+  text-align: center;
 }
 
 .p4-carousel {
@@ -17,7 +39,7 @@
   justify-content: center;
   align-items: center;
   gap: 70px;
-  padding-top: 230px;
+  padding-top: 70px;
   margin-bottom: 65px;
 }
 

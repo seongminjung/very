@@ -11,6 +11,24 @@ const Page4 = () => {
     <div className="container-fluid p4-relative">
       <img className="p4-background" src={p4background} alt="background" />
       <div className="container">
+        <p className="p4-title">Activity Record</p>
+        <p className="p4-subtitle">활동 기록</p>
+        <div className="p4-bar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
+        </div>
         <div className="p4-carousel">
           <div className="p4-carousel-ctrlbtn">
             <p>

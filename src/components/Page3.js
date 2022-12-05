@@ -7,7 +7,7 @@ const Page3 = () => {
   return (
     <div className="container">
       <p className="p3-title">Curriculum</p>
-      <p className="p3-subtitle">주차별 커리큘럼</p>
+      <p className="p3-subtitle">활동 내용</p>
       <div className="p3-bar">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +39,7 @@ const Page3 = () => {
           </p>
         </div>
       </div>
-      <p className="p3-imgtitle">
-        1주차 - 2021 한, 우간다 혁신창업 컨퍼러스 & 비즈니스 상담회
-      </p>
+      <p className="p3-imgtitle">정규 세션 - 전문가 특강 및 네트워킹</p>
       <div className="p3-imgdot">
         <svg
           xmlns="http://www.w3.org/2000/svg"
