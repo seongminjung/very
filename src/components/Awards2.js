@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
+import Moment from "react-moment";
+import "moment/locale/ko";
 import ablockbackground from "img/picture/ablockbackground.png";
-// import search from "img/asset/search.png";
+// import search from "img/asset/search.png";import Moment from "react-moment";
 import "css/awards2.css";
 
 const Awards2 = () => {
+  // Moment.globalLocale = "ko";
+  // // Moment.globalLocale("ko");
   const [awards, setAwards] = useState([]);
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
@@ -14,6 +18,9 @@ const Awards2 = () => {
       setAwards(awardArray);
     });
   }, []);
+  const formatDate = (date) => {
+    return <Moment>{date}</Moment>;
+  };
   return (
     <div className="container">
       {/* <div className="a2-search__wrapper">
@@ -59,15 +66,15 @@ const Awards2 = () => {
                   />
                 </svg>
               </div>
-              <p className="a2-result__award-name">{award.contestname}</p>
+              <p className="a2-result__award-teamname">{award.teamname}</p>
               <p className="a2-result__award-detail">
-                일시: {award.date}
+                일시: {formatDate(award.date)}
                 <br />
                 대회명: {award.contestname}
                 <br />
                 상금액: {award.prizemoney}
                 <br />
-                제목: {award.itemname}
+                수상: {award.prizetype}
                 <br />
                 인원: {award.participants}
               </p>
