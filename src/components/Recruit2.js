@@ -19,7 +19,7 @@ const Recruit2 = () => {
               transform="translate(0 1)"
               fill="none"
               stroke="#fff"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               strokeWidth="2"
             />
           </svg>

@@ -31,7 +31,7 @@ const About5 = () => {
               transform="translate(0 1)"
               fill="none"
               stroke="#7c7c7c"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               strokeWidth="2"
             />
           </svg>
