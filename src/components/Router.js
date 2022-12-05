@@ -4,7 +4,6 @@ import Home from "routes/Home";
 import Recruit from "routes/Recruit";
 import About from "routes/About";
 import Awards from "routes/Awards";
-import Companies from "routes/Companies";
 import ClubOfficers from "routes/ClubOfficers";
 import ScrollToTop from "components/ScrollToTop";
 import Admin from "routes/Admin";
@@ -25,9 +24,6 @@ const AppRouter = ({ userObj }) => {
         </Route>
         <Route exact path="/awards">
           <Awards />
-        </Route>
-        <Route exact path="/companies">
-          <Companies />
         </Route>
         <Route exact path="/clubofficers">
           <ClubOfficers />
