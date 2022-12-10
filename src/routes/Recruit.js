@@ -1,7 +1,6 @@
 import React from "react";
 import Recruit1 from "components/Recruit1";
 import Recruit2 from "components/Recruit2";
-import Recruit3 from "components/Recruit3";
 import Recruit4 from "components/Recruit4";
 import Recruit5 from "components/Recruit5";
 import Footer from "components/Footer";
@@ -15,9 +14,6 @@ const Recruit = () => {
       </div>
       <div className="recruit2">
         <Recruit2 />
-      </div>
-      <div className="recruit3">
-        <Recruit3 />
       </div>
       <div className="recruit4">
         <Recruit4 />
