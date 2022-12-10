@@ -29,7 +29,7 @@ const ClubOfficers1 = () => {
           <p className="co1-hero__3">
             VERY의 모든 것들은 임원진의 손에서 시작됩니다.
             <br />
-            Club을 위해 이바지한 이들의 헌신을 VERY는 잊지 않겠습니다.
+            동아리의 얼굴이자 대표로서 헌신하는 이들을 소개합니다.
           </p>
         </div>
       </div>

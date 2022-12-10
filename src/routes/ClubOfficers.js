@@ -1,7 +1,7 @@
 import React from "react";
 import Clubofficers1 from "components/Clubofficers1";
 import Clubofficers2 from "components/Clubofficers2";
-import Clubofficers3 from "components/Clubofficers3";
+import About2 from "components/About2";
 import Footer from "components/Footer";
 import "css/clubofficers.css";
 
@@ -15,7 +15,7 @@ const Clubofficers = () => {
         <Clubofficers2 />
       </div>
       <div className="clubofficers3">
-        <Clubofficers3 />
+        <About2 />
       </div>
       <div className="footer">
         <Footer />
