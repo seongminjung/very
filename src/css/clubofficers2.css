@@ -22,6 +22,10 @@
 
 .co2-headofficer__wrapper {
   padding-top: 68px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  align-items: flex-end;
 }
 
 .co2-officer {
@@ -29,10 +33,6 @@
   background-color: #ffffff;
   width: 300px;
   box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
-}
-
-.co2-headofficer__wrapper .co2-officer {
-  margin: 0 auto;
 }
 
 .co2-officer__profile {
@@ -46,7 +46,7 @@
 
 .co2-officer__name {
   font-family: NotoSansKR;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   color: #747474;
   margin-top: 30px;
@@ -60,6 +60,10 @@
 }
 
 .co2-officer__detail {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-size: 16px;
+  color: #484848;
   margin-top: 10px;
   padding-bottom: 35px;
   line-height: 25px;

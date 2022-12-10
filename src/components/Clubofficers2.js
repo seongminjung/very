@@ -1,4 +1,5 @@
 import React from "react";
+import ClubofficerTile from "components/ClubofficerTile";
 import "css/clubofficers2.css";
 import profile1 from "img/profile/임채현.png";
 import profile2 from "img/profile/김태윤.png";
@@ -27,52 +28,36 @@ const ClubOfficers2 = () => {
         </svg>
       </div>
       <div className="co2-headofficer__wrapper">
-        <div className="co2-officer">
-          <img className="co2-officer__profile" src={profile1} alt="profile" />
-          <p className="co2-officer__name">
-            34기 회장 <span>임채현</span>
-          </p>
-          <p className="co2-officer__detail">
-            반갑습니다.
-            <br />
-            임채현입니다.
-          </p>
-        </div>
+        <ClubofficerTile
+          gen="36"
+          name="임채현"
+          contact="010-4129-3273"
+          email="natebear9936@gmail.com"
+          profileImg={profile1}
+        />
       </div>
       <div className="co2-viceofficer__wrapper">
-        <div className="co2-officer">
-          <img className="co2-officer__profile" src={profile2} alt="profile" />
-          <p className="co2-officer__name">
-            34기 부회장 <span>김태윤</span>
-          </p>
-          <p className="co2-officer__detail">
-            반갑습니다.
-            <br />
-            김태윤입니다.
-          </p>
-        </div>
-        <div className="co2-officer">
-          <img className="co2-officer__profile" src={profile3} alt="profile" />
-          <p className="co2-officer__name">
-            34기 기획부장 <span>정유진</span>
-          </p>
-          <p className="co2-officer__detail">
-            반갑습니다.
-            <br />
-            정유진입니다.
-          </p>
-        </div>
-        <div className="co2-officer">
-          <img className="co2-officer__profile" src={profile4} alt="profile" />
-          <p className="co2-officer__name">
-            34기 총무 <span>장지원</span>
-          </p>
-          <p className="co2-officer__detail">
-            반갑습니다.
-            <br />
-            장지원입니다.
-          </p>
-        </div>
+        <ClubofficerTile
+          gen="36"
+          name="임채현"
+          contact="010-4129-3273"
+          email="natebear9936@gmail.com"
+          profileImg={profile1}
+        />
+        <ClubofficerTile
+          gen="36"
+          name="임채현"
+          contact="010-4129-3273"
+          email="natebear9936@gmail.com"
+          profileImg={profile1}
+        />
+        <ClubofficerTile
+          gen="36"
+          name="임채현"
+          contact="010-4129-3273"
+          email="natebear9936@gmail.com"
+          profileImg={profile1}
+        />
       </div>
     </div>
   );
