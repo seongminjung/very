@@ -31,6 +31,15 @@ const ClubOfficers2 = () => {
         <ClubofficerTile
           gen="36"
           name="임채현"
+          pos="회장"
+          contact="010-4129-3273"
+          email="natebear9936@gmail.com"
+          profileImg={profile1}
+        />
+        <ClubofficerTile
+          gen="36"
+          name="임채현"
+          pos="부회장"
           contact="010-4129-3273"
           email="natebear9936@gmail.com"
           profileImg={profile1}
@@ -40,6 +49,7 @@ const ClubOfficers2 = () => {
         <ClubofficerTile
           gen="36"
           name="임채현"
+          pos="기획부장"
           contact="010-4129-3273"
           email="natebear9936@gmail.com"
           profileImg={profile1}
@@ -47,6 +57,7 @@ const ClubOfficers2 = () => {
         <ClubofficerTile
           gen="36"
           name="임채현"
+          pos="총무"
           contact="010-4129-3273"
           email="natebear9936@gmail.com"
           profileImg={profile1}
@@ -54,6 +65,7 @@ const ClubOfficers2 = () => {
         <ClubofficerTile
           gen="36"
           name="임채현"
+          pos="대외협력부장"
           contact="010-4129-3273"
           email="natebear9936@gmail.com"
           profileImg={profile1}
