@@ -57,8 +57,8 @@ const Page1 = () => {
                     id="지원하기"
                     transform="translate(483.066 3083.799)"
                     fill="#fff"
-                    font-size="15"
-                    font-family="SourceHanSansK-Regular, Source Han Sans K"
+                    fontSize="15"
+                    fontFamily="SourceHanSansK-Regular, Source Han Sans K"
                   >
                     <tspan x="0" y="17">
                       지원하기
@@ -70,7 +70,7 @@ const Page1 = () => {
                     transform="translate(420 3074)"
                     fill="none"
                     stroke="#fff"
-                    stroke-width="1"
+                    strokeWidth="1"
                   >
                     <rect width="150" height="45" stroke="none" />
                     <rect x="0.5" y="0.5" width="149" height="44" fill="none" />
@@ -82,8 +82,8 @@ const Page1 = () => {
                     transform="translate(164.695 2.088)"
                     fill="none"
                     stroke="#fff"
-                    stroke-linecap="round"
-                    stroke-width="1"
+                    strokeLinecap="round"
+                    strokeWidth="1"
                   />
                 </g>
               </svg>
