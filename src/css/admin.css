@@ -1,4 +1,20 @@
 @charset "UTF-8";
+
+.adm-flex {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.adm-title {
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 70px;
+  padding-top: 30px;
+  color: #646464;
+}
+
 .toggler-wrapper {
   display: block;
   width: 45px;
@@ -47,4 +63,49 @@
   left: 3px;
   top: 3px;
   background-color: #fff;
+}
+
+/* Editing Club Officers */
+.adm-co-rowtitle {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 35px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.adm-co-tilewrapper {
+  position: relative;
+}
+
+.adm-co-add {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.adm-co-editflex {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.adm-co-edititem {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.adm-co-edititem:hover {
+  background-color: #94e9a9;
 }

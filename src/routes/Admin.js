@@ -15,9 +15,11 @@ const Admin = ({ userObj }) => {
   };
   return (
     <>
-      <Link to="/">
+      <Link className="adm-flex" to="/">
         <img src={logo} alt="logo" />
+        <h1 className="adm-title">Admin Page</h1>
       </Link>
+      {userObj && <p onClick={onLogOutClick}>Logout</p>}
       {userObj ? (
         <div>
           <AddInfo userObj={userObj} />
@@ -28,7 +30,6 @@ const Admin = ({ userObj }) => {
           <br />
           <AddPartner userObj={userObj} />
           <br />
-          <button onClick={onLogOutClick}>Logout</button>
         </div>
       ) : (
         <LoginForm />

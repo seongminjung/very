@@ -10,9 +10,10 @@ import {
   faCaretDown,
   faChevronLeft,
   faChevronRight,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faCaretDown, faChevronLeft, faChevronRight);
+library.add(faBars, faCaretDown, faChevronLeft, faChevronRight, faPlus);
 
 function App() {
   const [init, setInit] = useState(false);

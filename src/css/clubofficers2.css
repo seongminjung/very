@@ -18,14 +18,15 @@
 
 .co2-bar {
   text-align: center;
+  padding-bottom: 33px;
 }
 
 .co2-headofficer__wrapper {
-  padding-top: 68px;
+  padding-top: 35px;
   display: flex;
   justify-content: center;
   gap: 35px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .co2-officer {
@@ -75,5 +76,5 @@
   display: flex;
   justify-content: center;
   gap: 35px;
-  align-items: flex-end;
+  align-items: center;
 }
