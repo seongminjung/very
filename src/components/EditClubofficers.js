@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/admin.css";
 import profile1 from "img/profile/임채현.png";
 
-const AddClubmembers = ({ userObj }) => {
+const EditClubofficers = ({ userObj }) => {
   const [row1, setRow1] = useState([]);
   const [row2, setRow2] = useState([]);
   const [row1Name, setRow1Name] = useState("");
@@ -278,4 +278,4 @@ const AddClubmembers = ({ userObj }) => {
   );
 };
 
-export default AddClubmembers;
+export default EditClubofficers;

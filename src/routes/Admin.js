@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { authService } from "fb_info";
 import LoginForm from "components/LoginForm";
-import AddInfo from "components/AddInfo";
-import AddAward from "components/AddAward";
-import AddClubmembers from "components/AddClubmembers";
-import AddPartner from "components/AddPartner";
+import EditInfo from "components/EditInfo";
+import EditAward from "components/EditAward";
+import EditClubofficers from "components/EditClubofficers";
+import EditPartner from "components/EditPartner";
 import "css/admin.css";
 import logo from "img/logo/logo-row-gray.png";
 
@@ -22,13 +22,13 @@ const Admin = ({ userObj }) => {
       {userObj && <p onClick={onLogOutClick}>Logout</p>}
       {userObj ? (
         <div>
-          <AddInfo userObj={userObj} />
+          <EditInfo userObj={userObj} />
           <br />
-          <AddAward userObj={userObj} />
+          <EditAward userObj={userObj} />
           <br />
-          <AddClubmembers userObj={userObj} />
+          <EditClubofficers userObj={userObj} />
           <br />
-          <AddPartner userObj={userObj} />
+          <EditPartner userObj={userObj} />
           <br />
         </div>
       ) : (

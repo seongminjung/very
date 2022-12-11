@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { dbService } from "fb_info";
 import "css/admin.css";
 
-const AddPartner = ({ userObj }) => {
+const EditPartner = ({ userObj }) => {
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
   const onChange = async (event) => {
@@ -57,4 +57,4 @@ const AddPartner = ({ userObj }) => {
   );
 };
 
-export default AddPartner;
+export default EditPartner;

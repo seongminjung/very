@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { dbService } from "fb_info";
 import "css/admin.css";
 
-const AddAward = ({ userObj }) => {
+const EditAward = ({ userObj }) => {
   const [contestname, setContestname] = useState("");
   const [host, setHost] = useState("");
   const [itemname, setItemname] = useState("");
@@ -128,4 +128,4 @@ const AddAward = ({ userObj }) => {
   );
 };
 
-export default AddAward;
+export default EditAward;

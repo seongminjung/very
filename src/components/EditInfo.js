@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { dbService } from "fb_info";
 import "css/admin.css";
 
-const AddInfo = ({ userObj }) => {
+const EditInfo = ({ userObj }) => {
   const [currentGen, setCurrentGen] = useState();
   const [isRecruiting, setIsRecruiting] = useState();
   useEffect(() => {
@@ -70,4 +70,4 @@ const AddInfo = ({ userObj }) => {
   );
 };
 
-export default AddInfo;
+export default EditInfo;
