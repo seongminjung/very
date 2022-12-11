@@ -121,6 +121,23 @@
   background-color: #fff;
 }
 
+/* Editing Awards */
+.adm-textform label {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  display: inline-block;
+  width: 120px;
+}
+
+.adm-textform input {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+}
+
 /* Editing Club Officers */
 .adm-co-rowtitle {
   font-family: NotoSansKR;

@@ -31,26 +31,46 @@ const EditPartner = ({ userObj }) => {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <h1>협력 기업 추가</h1>
+      <form className="adm-textform" onSubmit={onSubmit}>
+        <p className="adm-sectiontitle">협력 기업 수정</p>
+        <div className="adm-sectionbar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
+        </div>
+        <label htmlFor="name">기업명</label>
         <input
           type="text"
           name="name"
           value={name}
           onChange={onChange}
-          placeholder="협력 기업 명칭"
+          placeholder="기업명"
           autoComplete="off"
           required
         />
+        <br />
+        <label htmlFor="url">웹사이트 주소</label>
         <input
           type="text"
           name="url"
           value={url}
           onChange={onChange}
-          placeholder="협력 기업 홈페이지 주소"
+          placeholder="웹사이트 주소"
           autoComplete="off"
           required
         />
+        <br />
         <input type="submit" value="추가" />
       </form>
     </>

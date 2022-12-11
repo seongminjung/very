@@ -57,7 +57,7 @@ const EditAward = ({ userObj }) => {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form className="adm-textform" onSubmit={onSubmit}>
         <p className="adm-sectiontitle">공모전 추가</p>
         <div className="adm-sectionbar">
           <svg
@@ -75,8 +75,10 @@ const EditAward = ({ userObj }) => {
             />
           </svg>
         </div>
+        <label htmlFor="contestname">대회명</label>
         <input
           type="text"
+          id="contestname"
           name="contestname"
           value={contestname}
           onChange={onChange}
@@ -85,8 +87,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="host">주관</label>
         <input
           type="text"
+          id="host"
           name="host"
           value={host}
           onChange={onChange}
@@ -95,8 +99,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="itemname">아이템명</label>
         <input
           type="test"
+          id="itemname"
           name="itemname"
           value={itemname}
           onChange={onChange}
@@ -105,8 +111,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="teamname">팀명</label>
         <input
           type="text"
+          id="teamname"
           name="teamname"
           value={teamname}
           onChange={onChange}
@@ -115,8 +123,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="prizemoney">상금액</label>
         <input
           type="number"
+          id="prizemoney"
           name="prizemoney"
           value={prizemoney}
           onChange={onChange}
@@ -125,8 +135,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="prizetype">수상 종류</label>
         <input
           type="text"
+          id="prizetype"
           name="prizetype"
           value={prizetype}
           onChange={onChange}
@@ -135,8 +147,10 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        <label htmlFor="participants">인원</label>
         <input
           type="number"
+          id="participants"
           name="participants"
           value={participants}
           onChange={onChange}
