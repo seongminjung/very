@@ -19,7 +19,7 @@ const AddInfo = ({ userObj }) => {
       target: { name, value, checked },
     } = event;
     if (name === "currentGen") {
-      setCurrentGen(value);
+      setCurrentGen(Number(value));
     } else if (name === "isRecruiting") {
       setIsRecruiting(checked);
     }
