@@ -8,12 +8,22 @@ const About2 = () => {
   const [gen, setGen] = useState([]);
   useEffect(() => {
     dbService.collection("clubofficers").onSnapshot((snapshot) => {
-      const pr_info = snapshot.docs.map((doc) => ({
+      const row = snapshot.docs.map((doc) => ({
         ...doc.data(),
-        id: doc.id,
       }));
-      setPresident(pr_info[pr_info.length - 1]["president"]);
-      setGen(pr_info[pr_info.length - 1]["id"]);
+      row[0]["officers"].forEach((element) => {
+        if (element.position === "회장") {
+          setPresident(element);
+        }
+      });
+    });
+  }, []);
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setGen(info[0].currentGen);
     });
   }, []);
   return (
