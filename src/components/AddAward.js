@@ -4,8 +4,11 @@ import "css/admin.css";
 
 const AddAward = ({ userObj }) => {
   const [contestname, setContestname] = useState("");
+  const [host, setHost] = useState("");
   const [itemname, setItemname] = useState("");
   const [prizemoney, setPrizemoney] = useState("");
+  const [prizetype, setPrizetype] = useState("");
+  const [teamname, setTeamname] = useState("");
   const [participants, setParticipants] = useState("");
   const onChange = async (event) => {
     const {
@@ -13,10 +16,16 @@ const AddAward = ({ userObj }) => {
     } = event;
     if (name === "contestname") {
       setContestname(value);
+    } else if (name === "host") {
+      setHost(value);
     } else if (name === "itemname") {
       setItemname(value);
     } else if (name === "prizemoney") {
       setPrizemoney(value);
+    } else if (name === "prizetype") {
+      setPrizetype(value);
+    } else if (name === "teamname") {
+      setTeamname(value);
     } else if (name === "participants") {
       setParticipants(value);
     }
@@ -29,14 +38,20 @@ const AddAward = ({ userObj }) => {
     }
     await dbService.collection("awards").add({
       contestname,
+      host,
       itemname,
       prizemoney,
+      prizetype,
+      teamname,
       date: Date.now(),
       participants,
     });
     setContestname("");
+    setHost("");
     setItemname("");
     setPrizemoney("");
+    setPrizetype("");
+    setTeamname("");
     setParticipants("");
     alert("추가되었습니다.");
   };
@@ -55,10 +70,28 @@ const AddAward = ({ userObj }) => {
         />
         <input
           type="text"
+          name="host"
+          value={host}
+          onChange={onChange}
+          placeholder="주관"
+          autoComplete="off"
+          required
+        />
+        <input
+          type="number"
           name="itemname"
           value={itemname}
           onChange={onChange}
-          placeholder="제목"
+          placeholder="아이템명"
+          autoComplete="off"
+          required
+        />
+        <input
+          type="number"
+          name="teamname"
+          value={teamname}
+          onChange={onChange}
+          placeholder="팀명"
           autoComplete="off"
           required
         />
@@ -68,6 +101,15 @@ const AddAward = ({ userObj }) => {
           value={prizemoney}
           onChange={onChange}
           placeholder="상금액"
+          autoComplete="off"
+          required
+        />
+        <input
+          type="text"
+          name="prizetype"
+          value={prizetype}
+          onChange={onChange}
+          placeholder="수상 종류"
           autoComplete="off"
           required
         />
