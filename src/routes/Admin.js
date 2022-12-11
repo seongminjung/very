@@ -34,14 +34,13 @@ const Admin = ({ userObj }) => {
             <EditInfo userObj={userObj} />
             <br />
             <hr />
-            <br />
             <EditAward userObj={userObj} />
             <br />
             <hr />
             <EditClubofficers userObj={userObj} />
+            <br />
             <hr />
             <EditPartner userObj={userObj} />
-            <hr />
           </div>
         ) : (
           <LoginForm />

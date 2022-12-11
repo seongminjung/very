@@ -58,7 +58,23 @@ const EditAward = ({ userObj }) => {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <h1>공모전 추가</h1>
+        <p className="adm-sectiontitle">공모전 추가</p>
+        <div className="adm-sectionbar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="7"
+            viewBox="0 0 23 7"
+          >
+            <rect
+              id="사각형_227"
+              data-name="사각형 227"
+              width="23"
+              height="7"
+              fill="#d3d3d3"
+            />
+          </svg>
+        </div>
         <input
           type="text"
           name="contestname"
@@ -68,6 +84,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="text"
           name="host"
@@ -77,6 +94,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="test"
           name="itemname"
@@ -86,6 +104,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="text"
           name="teamname"
@@ -95,6 +114,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="number"
           name="prizemoney"
@@ -104,6 +124,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="text"
           name="prizetype"
@@ -113,6 +134,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input
           type="number"
           name="participants"
@@ -122,6 +144,7 @@ const EditAward = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
         <input type="submit" value="추가" />
       </form>
     </>

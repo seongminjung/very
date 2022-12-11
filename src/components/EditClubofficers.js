@@ -93,11 +93,11 @@ const EditClubofficers = ({ userObj }) => {
   };
   return (
     <div className="container">
-      <p className="co2-title">임원진 수정 - {gen}기</p>
-      <p className="co2-subtitle">
+      <p className="adm-sectiontitle">임원진 수정 - {gen}기</p>
+      <p className="adm-sectionsubtitle">
         {Math.floor((gen + 1) / 2) + 4}-{gen % 2 ? 1 : 2}학기
       </p>
-      <div className="co2-bar">
+      <div className="adm-sectionbar">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="23"
