@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { dbService } from "fb_info";
 import "css/admin.css";
 
 const AddInfo = ({ userObj }) => {
-  const [currentGen, setCurrentGen] = useState("");
+  const [currentGen, setCurrentGen] = useState();
   const [isRecruiting, setIsRecruiting] = useState();
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setCurrentGen(info[0].currentGen);
+      setIsRecruiting(info[0].isRecruiting);
+    });
+  }, []);
   const onChange = async (event) => {
     const {
-      target: { name, value },
+      target: { name, value, checked },
     } = event;
     if (name === "currentGen") {
       setCurrentGen(value);
     } else if (name === "isRecruiting") {
-      setIsRecruiting(value);
+      setIsRecruiting(checked);
     }
   };
   const onSubmit = async (event) => {
@@ -23,7 +32,7 @@ const AddInfo = ({ userObj }) => {
     }
     await dbService.collection("info").doc("info").update({
       currentGen,
-      // isRecruiting,
+      isRecruiting,
     });
     alert("수정되었습니다.");
   };
@@ -40,15 +49,21 @@ const AddInfo = ({ userObj }) => {
           autoComplete="off"
           required
         />
-        <input
-          type="checkbox"
-          name="isRecruiting"
-          value={isRecruiting}
-          onChange={onChange}
-          placeholder="모집 여부"
-          autoComplete="off"
-          required
-        />
+        <label class="toggler-wrapper style-1">
+          <input
+            type="checkbox"
+            id="isRecruiting"
+            name="isRecruiting"
+            checked={isRecruiting}
+            onChange={onChange}
+            placeholder="모집 여부"
+            autoComplete="off"
+          />
+          <div class="toggler-slider">
+            <div class="toggler-knob"></div>
+          </div>
+        </label>
+        <p>모집 중</p>
         <input type="submit" value="수정" />
       </form>
     </>

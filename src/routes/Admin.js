@@ -4,7 +4,6 @@ import { authService } from "fb_info";
 import LoginForm from "components/LoginForm";
 import AddInfo from "components/AddInfo";
 import AddAward from "components/AddAward";
-import AddCompany from "components/AddCompany";
 import AddPartner from "components/AddPartner";
 import "css/admin.css";
 import logo from "img/logo/logo-row-gray.png";
@@ -23,8 +22,6 @@ const Admin = ({ userObj }) => {
           <AddInfo userObj={userObj} />
           <br />
           <AddAward userObj={userObj} />
-          <br />
-          <AddCompany userObj={userObj} />
           <br />
           <AddPartner userObj={userObj} />
           <br />
