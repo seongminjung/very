@@ -25,7 +25,7 @@ const ClubOfficers1 = () => {
             alt="cobackground"
           />
           <p className="co1-hero__1">Club Officers</p>
-          <p className="co1-hero__2">역대 임원진</p>
+          <p className="co1-hero__2">임원진</p>
           <p className="co1-hero__3">
             VERY의 모든 것들은 임원진의 손에서 시작됩니다.
             <br />

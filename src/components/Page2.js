@@ -5,12 +5,21 @@ import "css/page2.css";
 
 const Page2 = () => {
   const [awardNumber, setAwardNumber] = useState([]);
+  const [gen, setGen] = useState([]);
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
       setAwardNumber(awardArray.length);
+    });
+  }, []);
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setGen(info[0].currentGen);
     });
   }, []);
   return (
@@ -69,7 +78,7 @@ const Page2 = () => {
         </div>
         <div className="p2-sub__grid-r3">1997</div>
         <div className="p2-sub__grid-r3">{awardNumber}</div>
-        <div className="p2-sub__grid-r3">36</div>
+        <div className="p2-sub__grid-r3">{gen}</div>
         <div className="p2-sub__grid-r4">
           <Link to="/about" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">

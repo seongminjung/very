@@ -5,7 +5,29 @@ import logobiggray from "img/logo/logo-big-gray.png";
 import yonseiventuremark from "img/picture/yonseiventuremark.png";
 
 const Page5 = () => {
+  const [president, setPresident] = useState([]);
+  const [gen, setGen] = useState([]);
   const [partners, setPartners] = useState([]);
+  useEffect(() => {
+    dbService.collection("clubofficers").onSnapshot((snapshot) => {
+      const row = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      row[0]["officers"].forEach((element) => {
+        if (element.position === "회장") {
+          setPresident(element);
+        }
+      });
+    });
+  }, []);
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setGen(info[0].currentGen);
+    });
+  }, []);
   useEffect(() => {
     dbService.collection("partners").onSnapshot((snapshot) => {
       const partnerArray = snapshot.docs.map((doc) => ({
@@ -39,7 +61,9 @@ const Page5 = () => {
             <img src={logobiggray} alt="logobiggray" />
             <div>
               <p>VERY</p>
-              <p>36기 회장 김태윤</p>
+              <p>
+                {gen}기 회장 {president.name}
+              </p>
             </div>
           </div>
           <div className="p5-detail__text">
@@ -52,9 +76,9 @@ const Page5 = () => {
               (연세대학교 신촌캠퍼스 제1공학관), 공A119
             </p>
             <p className="p5-detail__text-left">Phone.</p>
-            <p className="p5-detail__text-right">010-4035-3745</p>
+            <p className="p5-detail__text-right">{president.contact}</p>
             <p className="p5-detail__text-left">Email.</p>
-            <p className="p5-detail__text-right">taeyun329@yonsei.ac.kr</p>
+            <p className="p5-detail__text-right">{president.email}</p>
           </div>
         </div>
       </div>
