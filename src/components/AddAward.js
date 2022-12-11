@@ -78,7 +78,7 @@ const AddAward = ({ userObj }) => {
           required
         />
         <input
-          type="number"
+          type="test"
           name="itemname"
           value={itemname}
           onChange={onChange}
@@ -87,7 +87,7 @@ const AddAward = ({ userObj }) => {
           required
         />
         <input
-          type="number"
+          type="text"
           name="teamname"
           value={teamname}
           onChange={onChange}
@@ -114,7 +114,7 @@ const AddAward = ({ userObj }) => {
           required
         />
         <input
-          type="text"
+          type="number"
           name="participants"
           value={participants}
           onChange={onChange}
