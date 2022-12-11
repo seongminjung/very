@@ -5,19 +5,12 @@ import "css/page2.css";
 
 const Page2 = () => {
   const [awardNumber, setAwardNumber] = useState([]);
-  const [companyNumber, setCompanyNumber] = useState([]);
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
       setAwardNumber(awardArray.length);
-    });
-    dbService.collection("companies").onSnapshot((snapshot) => {
-      const companyArray = snapshot.docs.map((doc) => ({
-        ...doc.data(),
-      }));
-      setCompanyNumber(companyArray.length);
     });
   }, []);
   return (
