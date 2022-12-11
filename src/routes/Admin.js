@@ -15,25 +15,38 @@ const Admin = ({ userObj }) => {
   };
   return (
     <>
-      <Link className="adm-flex" to="/">
-        <img src={logo} alt="logo" />
-        <h1 className="adm-title">Admin Page</h1>
-      </Link>
-      {userObj && <p onClick={onLogOutClick}>Logout</p>}
-      {userObj ? (
-        <div>
-          <EditInfo userObj={userObj} />
-          <br />
-          <EditAward userObj={userObj} />
-          <br />
-          <EditClubofficers userObj={userObj} />
-          <br />
-          <EditPartner userObj={userObj} />
-          <br />
+      <div className="container">
+        <div className="adm-header">
+          <Link className="adm-flex" to="/">
+            <img src={logo} alt="logo" />
+            <h1 className="adm-title">Admin Page</h1>
+          </Link>
+          {userObj && (
+            <div>
+              <p className="adm-logout" onClick={onLogOutClick}>
+                Logout
+              </p>
+            </div>
+          )}
         </div>
-      ) : (
-        <LoginForm />
-      )}
+        {userObj ? (
+          <div>
+            <EditInfo userObj={userObj} />
+            <br />
+            <hr />
+            <br />
+            <EditAward userObj={userObj} />
+            <br />
+            <hr />
+            <EditClubofficers userObj={userObj} />
+            <hr />
+            <EditPartner userObj={userObj} />
+            <hr />
+          </div>
+        ) : (
+          <LoginForm />
+        )}
+      </div>
     </>
   );
 };

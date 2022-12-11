@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
+.adm-header {
+  display: flex;
+  margin-top: 100px;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
 .adm-flex {
-  padding-top: 100px;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -13,6 +19,19 @@
   font-size: 70px;
   padding-top: 30px;
   color: #646464;
+}
+
+.adm-logout {
+  margin-top: 90px;
+  font-family: NotoSans;
+  font-weight: 700;
+  font-size: 18px;
+  color: #646464;
+  cursor: pointer;
+  border: 2px solid #646464;
+  background-color: #e5e5e5;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .toggler-wrapper {
