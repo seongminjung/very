@@ -109,3 +109,50 @@
 .adm-co-edititem:hover {
   background-color: #94e9a9;
 }
+
+.adm-co-addofficertile {
+  text-align: center;
+  background-color: #ffffff;
+  width: 300px;
+  height: 345.86px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.16);
+}
+
+.adm-co-addofficertile form {
+  padding: 40px 40px 0;
+}
+
+.adm-co-form-label {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.adm-co-addofficertile form input {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 98%;
+  margin-bottom: 15px;
+}
+
+.adm-co-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.adm-co-buttons button {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #d4d4d4;
+}

@@ -49,7 +49,7 @@ const AddInfo = ({ userObj }) => {
           autoComplete="off"
           required
         />
-        <label class="toggler-wrapper style-1">
+        <label className="toggler-wrapper style-1">
           <input
             type="checkbox"
             id="isRecruiting"
@@ -59,8 +59,8 @@ const AddInfo = ({ userObj }) => {
             placeholder="모집 여부"
             autoComplete="off"
           />
-          <div class="toggler-slider">
-            <div class="toggler-knob"></div>
+          <div className="toggler-slider">
+            <div className="toggler-knob"></div>
           </div>
         </label>
         <p>모집 중</p>
