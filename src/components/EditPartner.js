@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import "css/admin.css";
+import yonseiventuremark from "img/picture/yonseiventuremark.png";
 
 const EditPartner = ({ userObj }) => {
+  const [partners, setPartners] = useState([]);
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
+  useEffect(() => {
+    dbService.collection("partners").onSnapshot((snapshot) => {
+      const partnerArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setPartners(partnerArray);
+    });
+  }, []);
   const onChange = async (event) => {
     const {
       target: { name, value },
@@ -49,6 +59,21 @@ const EditPartner = ({ userObj }) => {
             />
           </svg>
         </div>
+        <p className="adm-editpartner-subtitle">현재 기업 목록</p>
+        <div className="adm-partners-grid">
+          {partners.map((partner) => (
+            <div className="adm-partner-wrapper" key={partner.name}>
+              <p className="adm-partner-info">{partner.name}</p>
+              <p className="adm-partner-info">{partner.url}</p>
+              <img
+                className="p5-cooperates__img"
+                src={yonseiventuremark}
+                alt="logo"
+              />
+            </div>
+          ))}
+        </div>
+        <p className="adm-editpartner-subtitle">협력 기업 추가</p>
         <label htmlFor="name">기업명</label>
         <input
           type="text"

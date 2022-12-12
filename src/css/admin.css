@@ -229,3 +229,30 @@
   cursor: pointer;
   background-color: #d4d4d4;
 }
+
+.adm-editpartner-subtitle {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.adm-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 80px;
+  padding-bottom: 30px;
+}
+
+.adm-partner-wrapper {
+  border: 1px solid #323232;
+  padding: 20px;
+}
+
+.adm-partner-info {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 20px;
+}

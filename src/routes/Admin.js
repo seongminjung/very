@@ -8,6 +8,7 @@ import EditClubofficers from "components/EditClubofficers";
 import EditPartner from "components/EditPartner";
 import "css/admin.css";
 import logo from "img/logo/logo-row-gray.png";
+import Footer from "components/Footer";
 
 const Admin = ({ userObj }) => {
   const onLogOutClick = () => {
@@ -41,10 +42,15 @@ const Admin = ({ userObj }) => {
             <br />
             <hr />
             <EditPartner userObj={userObj} />
+            <br />
+            <br />
           </div>
         ) : (
           <LoginForm />
         )}
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </>
   );
