@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import "css/about2.css";
-import profile from "img/picture/profile.png";
 
 const About2 = () => {
   const [president, setPresident] = useState([]);
@@ -34,7 +33,7 @@ const About2 = () => {
             열심히와 <span className="ab2-title__blue">꾸준히</span>는 다르다.
           </p>
           <div className="ab2-profile">
-            <img src={profile} alt="profile" />
+            <img src={president.url} alt="profile" />
           </div>
           <div className="ab2-namecard">
             <p className="ab2-namecard__name">{president.name}</p>

@@ -28,15 +28,17 @@
 
 .ab2-profile {
   margin-top: 70px;
-  width: 644px;
-  height: 644px;
+  width: 529px;
+  height: 485px;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-.ab2-profile image {
+.ab2-profile img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .ab2-greeting-top {
@@ -68,21 +70,6 @@
   font-size: 21px;
   padding-top: 70px;
   line-height: 30px;
-}
-
-.ab2-profile {
-  margin-top: 70px;
-  width: 529px;
-  height: 485px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.ab2-profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .ab2-namecard {
