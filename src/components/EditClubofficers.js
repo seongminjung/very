@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { dbService } from "fb_info";
+import { dbService, storageService } from "fb_info";
 import ClubofficerTile from "components/ClubofficerTile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/admin.css";
@@ -94,11 +94,21 @@ const EditClubofficers = ({ userObj }) => {
   const onclearPhoto2 = () => setRow2Img(null);
   const onAdd = async (event, row) => {
     event.preventDefault();
+    const imgInCurrentRow = row === 1 ? row1Img : row2Img;
+    var url = null;
+    if (imgInCurrentRow) {
+      const fileRef = storageService
+        .ref()
+        .child(`profile/${row === 1 ? row1Name : row2Name}.png`);
+      const response = await fileRef.putString(imgInCurrentRow, "data_url");
+      url = await response.ref.getDownloadURL();
+    }
     const item = {
       name: row === 1 ? row1Name : row2Name,
       position: row === 1 ? row1Position : row2Position,
       contact: row === 1 ? row1Contact : row2Contact,
       email: row === 1 ? row1Email : row2Email,
+      url: imgInCurrentRow ? url : null,
     };
     const targetRow = row === 1 ? row1 : row2;
     await dbService
@@ -108,6 +118,7 @@ const EditClubofficers = ({ userObj }) => {
         officers: [...targetRow, item],
       });
     row === 1 ? toggleAddRow1Form() : toggleAddRow2Form();
+    row === 1 ? onclearPhoto1() : onclearPhoto2();
   };
   const onDelete = async (row, index) => {
     const ok = window.confirm("정말 삭제하시겠습니까?");
