@@ -54,7 +54,7 @@ const About2 = () => {
         <div className="ab2-right">
           <p className="ab2-greeting-top">&lt; 인 사 말 &gt;</p>
           <p className="ab2-greeting-bottom">{title}</p>
-          <textarea className="ab2-body" value={body}></textarea>
+          <textarea className="ab2-body" defaultValue={body}></textarea>
           <p className="ab2-closing">
             VERY {gen}기 회장 {president.name} 올림
           </p>
