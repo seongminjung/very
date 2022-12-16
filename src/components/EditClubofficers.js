@@ -12,10 +12,12 @@ const EditClubofficers = ({ userObj }) => {
   const [row1Position, setRow1Position] = useState("");
   const [row1Contact, setRow1Contact] = useState("");
   const [row1Email, setRow1Email] = useState("");
+  const [row1Img, setRow1Img] = useState(null);
   const [row2Name, setRow2Name] = useState("");
   const [row2Position, setRow2Position] = useState("");
   const [row2Contact, setRow2Contact] = useState("");
   const [row2Email, setRow2Email] = useState("");
+  const [row2Img, setRow2Img] = useState("");
   const [gen, setGen] = useState([]);
   const [addRow1FormOpened, setAddRow1FormOpened] = useState(false);
   const [addRow2FormOpened, setAddRow2FormOpened] = useState(false);
@@ -60,9 +62,38 @@ const EditClubofficers = ({ userObj }) => {
       setRow2Email(value);
     }
   };
+  const onFile1Change = async (event) => {
+    const {
+      target: { files },
+    } = event;
+    const theFile = files[0];
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      } = finishedEvent;
+      setRow1Img(result);
+    };
+    reader.readAsDataURL(theFile);
+  };
+  const onFile2Change = async (event) => {
+    const {
+      target: { files },
+    } = event;
+    const theFile = files[0];
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      } = finishedEvent;
+      setRow2Img(result);
+    };
+    reader.readAsDataURL(theFile);
+  };
+  const onclearPhoto1 = () => setRow1Img(null);
+  const onclearPhoto2 = () => setRow2Img(null);
   const onAdd = async (event, row) => {
     event.preventDefault();
-    console.log(row);
     const item = {
       name: row === 1 ? row1Name : row2Name,
       position: row === 1 ? row1Position : row2Position,
@@ -142,50 +173,78 @@ const EditClubofficers = ({ userObj }) => {
         {addRow1FormOpened ? (
           <div className="adm-co-addofficertile">
             <form onSubmit={(e) => onAdd(e, 1)}>
-              <div className="adm-co-inputs">
-                <p className="adm-co-form-label">이름: </p>
-                <input
-                  id="name"
-                  name="row1Name"
-                  type="text"
-                  placeholder="ex) 홍길동"
-                  onChange={onChange}
-                  required
-                />
-                <br />
-                <p className="adm-co-form-label">직책: </p>
-                <input
-                  id="position"
-                  name="row1Position"
-                  type="text"
-                  placeholder="ex) 회장"
-                  onChange={onChange}
-                  required
-                />
-                <br />
-                <p className="adm-co-form-label">전화번호: </p>
-                <input
-                  id="contact"
-                  name="row1Contact"
-                  type="text"
-                  placeholder="ex) 010-1234-5678"
-                  onChange={onChange}
-                  required
-                />
-                <br />
-                <p className="adm-co-form-label">이메일: </p>
-                <input
-                  id="email"
-                  name="row1Email"
-                  type="email"
-                  placeholder="ex) abc@gmail.com"
-                  onChange={onChange}
-                  required
-                />
-              </div>
-              <div className="adm-co-buttons">
-                <button onClick={toggleAddRow1Form}>취소</button>
-                <button onClick={(e) => onAdd(e, 1)}>추가</button>
+              <p className="adm-co-form-label">이름: </p>
+              <input
+                id="name"
+                name="row1Name"
+                type="text"
+                placeholder="ex) 홍길동"
+                onChange={onChange}
+                required
+              />
+              <br />
+              <p className="adm-co-form-label">직책: </p>
+              <input
+                id="position"
+                name="row1Position"
+                type="text"
+                placeholder="ex) 회장"
+                onChange={onChange}
+                required
+              />
+              <br />
+              <p className="adm-co-form-label">전화번호: </p>
+              <input
+                id="contact"
+                name="row1Contact"
+                type="text"
+                placeholder="ex) 010-1234-5678"
+                onChange={onChange}
+                required
+              />
+              <br />
+              <p className="adm-co-form-label">이메일: </p>
+              <input
+                id="email"
+                name="row1Email"
+                type="email"
+                placeholder="ex) abc@gmail.com"
+                onChange={onChange}
+                required
+              />
+              {row1Img ? (
+                <div className="adm-co-profilepreview">
+                  <img src={row1Img} alt="profile" />
+                  <p onClick={onclearPhoto1}>이미지 삭제</p>
+                </div>
+              ) : (
+                <div>
+                  <label className="adm-co-imgupload" htmlFor="adm-co-profile">
+                    프로필 사진 업로드
+                  </label>
+                  <input
+                    id="adm-co-profile"
+                    type="file"
+                    accept="image/*"
+                    onChange={onFile1Change}
+                    required
+                  />
+                </div>
+              )}
+              <div className="adm-co-editflex">
+                <button
+                  type="button"
+                  className="adm-co-editbutton"
+                  onClick={() => {
+                    toggleAddRow1Form();
+                    onclearPhoto1();
+                  }}
+                >
+                  취소
+                </button>
+                <button className="adm-co-editbutton" type="submit">
+                  추가
+                </button>
               </div>
             </form>
           </div>
@@ -222,7 +281,7 @@ const EditClubofficers = ({ userObj }) => {
           ))}
         {addRow2FormOpened ? (
           <div className="adm-co-addofficertile">
-            <form>
+            <form onSubmit={(e) => onAdd(e, 2)}>
               <p className="adm-co-form-label">이름: </p>
               <input
                 id="name"
@@ -262,9 +321,39 @@ const EditClubofficers = ({ userObj }) => {
                 onChange={onChange}
                 required
               />
-              <div className="adm-co-buttons">
-                <button onClick={toggleAddRow2Form}>취소</button>
-                <button onClick={(e) => onAdd(e, 2)}>추가</button>
+              {row2Img ? (
+                <div className="adm-co-profilepreview">
+                  <img src={row2Img} alt="profile" />
+                  <p onClick={onclearPhoto2}>이미지 삭제</p>
+                </div>
+              ) : (
+                <div>
+                  <label className="adm-co-imgupload" htmlFor="adm-co-profile">
+                    프로필 사진 업로드
+                  </label>
+                  <input
+                    id="adm-co-profile"
+                    type="file"
+                    accept="image/*"
+                    onChange={onFile2Change}
+                    required
+                  />
+                </div>
+              )}
+              <div className="adm-co-editflex">
+                <button
+                  type="button"
+                  className="adm-co-editbutton"
+                  onClick={() => {
+                    toggleAddRow1Form();
+                    onclearPhoto1();
+                  }}
+                >
+                  취소
+                </button>
+                <button className="adm-co-editbutton" type="submit">
+                  추가
+                </button>
               </div>
             </form>
           </div>
