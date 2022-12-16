@@ -9,6 +9,7 @@ import EditPartner from "components/EditPartner";
 import "css/admin.css";
 import logo from "img/logo/logo-row-gray.png";
 import Footer from "components/Footer";
+import EditMessage from "components/EditMessage";
 
 const Admin = ({ userObj }) => {
   const onLogOutClick = () => {
@@ -36,6 +37,9 @@ const Admin = ({ userObj }) => {
             <br />
             <hr />
             <EditAward userObj={userObj} />
+            <br />
+            <hr />
+            <EditMessage userObj={userObj} />
             <br />
             <hr />
             <EditClubofficers userObj={userObj} />
