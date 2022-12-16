@@ -26,26 +26,30 @@ const ClubOfficers2 = () => {
   }, []);
   return (
     <div className="container">
-      <p className="co2-title">{gen}기</p>
-      <p className="co2-subtitle">
-        {Math.floor((gen + 1) / 2) + 4}-{gen % 2 ? 1 : 2}학기
-      </p>
-      <div className="co2-bar">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="23"
-          height="7"
-          viewBox="0 0 23 7"
-        >
-          <rect
-            id="사각형_227"
-            data-name="사각형 227"
-            width="23"
-            height="7"
-            fill="#d3d3d3"
-          />
-        </svg>
-      </div>
+      {gen.length !== 0 && (
+        <>
+          <p className="co2-title">{gen}기</p>
+          <p className="co2-subtitle">
+            {Math.floor((gen + 1) / 2) + 4}-{gen % 2 ? 1 : 2}학기
+          </p>
+          <div className="co2-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="7"
+              viewBox="0 0 23 7"
+            >
+              <rect
+                id="사각형_227"
+                data-name="사각형 227"
+                width="23"
+                height="7"
+                fill="#d3d3d3"
+              />
+            </svg>
+          </div>
+        </>
+      )}
       <div className="co2-headofficer__wrapper">
         {row1.length !== 0 &&
           row1.map((item) => (
