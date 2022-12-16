@@ -94,7 +94,7 @@ const EditClubofficers = ({ userObj }) => {
   const onAdd = async (event, row) => {
     event.preventDefault();
     const imgInCurrentRow = row === 1 ? row1Img : row2Img;
-    var url = null;
+    let url = null;
     if (imgInCurrentRow) {
       const fileRef = storageService
         .ref()
@@ -119,7 +119,7 @@ const EditClubofficers = ({ userObj }) => {
     row === 1 ? toggleAddRow1Form() : toggleAddRow2Form();
     row === 1 ? onclearPhoto1() : onclearPhoto2();
   };
-  const onDelete = async (row, index) => {
+  const onDelete = async (row, index, imgUrl) => {
     const ok = window.confirm("정말 삭제하시겠습니까?");
     if (ok) {
       const targetRow = row === 1 ? row1 : row2;
@@ -130,6 +130,7 @@ const EditClubofficers = ({ userObj }) => {
         .update({
           officers: targetRow,
         });
+      await storageService.refFromURL(imgUrl).delete();
     }
   };
   return (
@@ -158,9 +159,8 @@ const EditClubofficers = ({ userObj }) => {
       <div className="co2-headofficer__wrapper">
         {row1.length !== 0 &&
           row1.map((item, index) => (
-            <div className="adm-co-tilewrapper">
+            <div className="adm-co-tilewrapper" key={item.contact}>
               <ClubofficerTile
-                key={item.contact}
                 gen={gen}
                 name={item.name}
                 pos={item.position}
@@ -173,7 +173,7 @@ const EditClubofficers = ({ userObj }) => {
                 {/* <p className="adm-co-edititem">수정</p> */}
                 <p
                   className="adm-co-edititem"
-                  onClick={() => onDelete(1, index)}
+                  onClick={() => onDelete(1, index, item.url)}
                 >
                   삭제
                 </p>
@@ -237,7 +237,6 @@ const EditClubofficers = ({ userObj }) => {
                     type="file"
                     accept="image/*"
                     onChange={onFile1Change}
-                    required
                   />
                 </div>
               )}
@@ -268,9 +267,8 @@ const EditClubofficers = ({ userObj }) => {
       <div className="co2-viceofficer__wrapper">
         {row2.length !== 0 &&
           row2.map((item, index) => (
-            <div className="adm-co-tilewrapper">
+            <div className="adm-co-tilewrapper" key={item.contact}>
               <ClubofficerTile
-                key={item.contact}
                 gen={gen}
                 name={item.name}
                 pos={item.position}
@@ -282,7 +280,7 @@ const EditClubofficers = ({ userObj }) => {
                 {/* <p className="adm-co-edititem">수정</p> */}
                 <p
                   className="adm-co-edititem"
-                  onClick={() => onDelete(2, index)}
+                  onClick={() => onDelete(2, index, item.url)}
                 >
                   삭제
                 </p>
@@ -346,7 +344,6 @@ const EditClubofficers = ({ userObj }) => {
                     type="file"
                     accept="image/*"
                     onChange={onFile2Change}
-                    required
                   />
                 </div>
               )}

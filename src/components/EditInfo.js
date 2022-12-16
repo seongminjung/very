@@ -62,7 +62,7 @@ const EditInfo = ({ userObj }) => {
             className="adm-editinfo-gen"
             type="number"
             name="currentGen"
-            value={currentGen}
+            value={currentGen ? currentGen : 0}
             onChange={onChange}
             placeholder="현재 기수"
             autoComplete="off"
@@ -76,9 +76,8 @@ const EditInfo = ({ userObj }) => {
               type="checkbox"
               id="isRecruiting"
               name="isRecruiting"
-              checked={isRecruiting}
+              checked={isRecruiting ? isRecruiting : false}
               onChange={onChange}
-              placeholder="모집 여부"
               autoComplete="off"
             />
             <div className="toggler-slider">
