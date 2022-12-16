@@ -3,7 +3,6 @@ import { dbService, storageService } from "fb_info";
 import ClubofficerTile from "components/ClubofficerTile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "css/admin.css";
-import profile1 from "img/profile/임채현.png";
 
 const EditClubofficers = ({ userObj }) => {
   const [row1, setRow1] = useState([]);
@@ -167,7 +166,7 @@ const EditClubofficers = ({ userObj }) => {
                 pos={item.position}
                 contact={item.contact}
                 email={item.email}
-                profileImg={profile1}
+                profileImg={item.url}
               />
               <div className="adm-co-editflex">
                 {/* TODO: 수정 기능 */}
@@ -277,7 +276,7 @@ const EditClubofficers = ({ userObj }) => {
                 pos={item.position}
                 contact={item.contact}
                 email={item.email}
-                profileImg={profile1}
+                profileImg={item.url}
               />
               <div className="adm-co-editflex">
                 {/* <p className="adm-co-edititem">수정</p> */}

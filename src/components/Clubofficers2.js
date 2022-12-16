@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import ClubofficerTile from "components/ClubofficerTile";
 import "css/clubofficers2.css";
-import profile1 from "img/profile/임채현.png";
 
 const ClubOfficers2 = () => {
   const [row1, setRow1] = useState([]);
@@ -57,7 +56,7 @@ const ClubOfficers2 = () => {
               pos={item.position}
               contact={item.contact}
               email={item.email}
-              profileImg={profile1}
+              profileImg={item.url}
             />
           ))}
       </div>
@@ -71,7 +70,7 @@ const ClubOfficers2 = () => {
               pos={item.position}
               contact={item.contact}
               email={item.email}
-              profileImg={profile1}
+              profileImg={item.url}
             />
           ))}
       </div>
