@@ -10,14 +10,6 @@ const AwardTile = ({ award }) => {
           src={award.imgUrl ? award.imgUrl : defaultAward}
           alt="defaultAward"
         />
-        <p className="a2-result__logo-text">
-          15기 김둘리
-          <br />
-          16기 김또치
-          <br />
-          <br />
-          축하드립니다!
-        </p>
       </div>
       <div className="a2-result__text-background">
         <div className="a2-result__award-bar">
