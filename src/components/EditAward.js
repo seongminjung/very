@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { dbService } from "fb_info";
+import { dbService, storageService } from "fb_info";
 import AwardTile from "components/AwardTile";
 import "css/admin.css";
 
@@ -13,6 +13,7 @@ const EditAward = ({ userObj }) => {
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
+        id: doc.id,
         ...doc.data(),
       }));
       setAwards(awardArray);
@@ -55,6 +56,15 @@ const EditAward = ({ userObj }) => {
     setGen("");
     alert("추가되었습니다.");
   };
+  const onDelete = async (id, imgUrl) => {
+    const ok = window.confirm("정말 삭제하시겠습니까?");
+    if (ok) {
+      await dbService.collection("awards").doc(id).delete();
+      if (imgUrl) {
+        await storageService.refFromURL(imgUrl).delete();
+      }
+    }
+  };
   return (
     <>
       <form className="adm-textform" onSubmit={onSubmit}>
@@ -78,7 +88,15 @@ const EditAward = ({ userObj }) => {
         <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
         <div className="adm-awards-grid">
           {awards.map((award) => (
-            <AwardTile award={award} key={award.createdAt} />
+            <div className="adm-awards-itemwrapper">
+              <AwardTile award={award} key={award.createdAt} />
+              <p
+                className="adm-awards-edititem"
+                onClick={() => onDelete(award.id, null)}
+              >
+                삭제
+              </p>
+            </div>
           ))}
         </div>
         <p className="adm-editpartner-subtitle">공모전 추가</p>

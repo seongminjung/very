@@ -146,8 +146,27 @@
   text-align: left;
 }
 
-/* Editing Message */
+.adm-awards-itemwrapper {
+  position: relative;
+}
 
+.adm-awards-edititem {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.adm-awards-edititem:hover {
+  background-color: #94e9a9;
+}
+
+/* Editing Message */
 .adm-editmsg-label {
   font-family: NotoSansKR;
   font-weight: 400;
