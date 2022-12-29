@@ -63,14 +63,22 @@ const Footer = () => {
           <p>very.official.kr@gmail.com</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
-            <a href="https://www.facebook.com/veryyonsei">
+            <a
+              href="https://www.facebook.com/veryyonsei"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="footer-social__img"
                 src={facebook}
                 alt="facebook"
               />
             </a>
-            <a href="https://instagram.com/very_yonsei/">
+            <a
+              href="https://instagram.com/very_yonsei/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="footer-social__img"
                 src={instagram}
