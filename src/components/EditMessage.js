@@ -44,7 +44,7 @@ const EditMessage = ({ userObj }) => {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">회장 인사말 수정</p>
+        <p className="adm-sectiontitle">회장 인사말</p>
         <div className="adm-sectionbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"

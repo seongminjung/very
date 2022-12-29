@@ -42,11 +42,9 @@ const AwardTile = ({ award }) => {
           <br />
           대회명: {award.contestname}
           <br />
-          상금액: {award.prizemoney}
+          결과: {award.result}
           <br />
-          수상: {award.prizetype}
-          <br />
-          인원: {award.participants}
+          기수: {award.gen}
         </p>
       </div>
     </div>

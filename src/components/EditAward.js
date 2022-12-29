@@ -1,33 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
+import AwardTile from "components/AwardTile";
 import "css/admin.css";
 
 const EditAward = ({ userObj }) => {
+  const [awards, setAwards] = useState([]);
   const [contestname, setContestname] = useState("");
-  const [host, setHost] = useState("");
-  const [itemname, setItemname] = useState("");
-  const [prizemoney, setPrizemoney] = useState("");
-  const [prizetype, setPrizetype] = useState("");
   const [teamname, setTeamname] = useState("");
-  const [participants, setParticipants] = useState("");
+  const [result, setResult] = useState("");
+  const [host, setHost] = useState("");
+  const [gen, setGen] = useState("");
+  useEffect(() => {
+    dbService.collection("awards").onSnapshot((snapshot) => {
+      const awardArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setAwards(awardArray);
+    });
+  }, []);
   const onChange = async (event) => {
     const {
       target: { name, value },
     } = event;
     if (name === "contestname") {
       setContestname(value);
-    } else if (name === "host") {
-      setHost(value);
-    } else if (name === "itemname") {
-      setItemname(value);
-    } else if (name === "prizemoney") {
-      setPrizemoney(value);
-    } else if (name === "prizetype") {
-      setPrizetype(value);
+    } else if (name === "result") {
+      setResult(value);
     } else if (name === "teamname") {
       setTeamname(value);
-    } else if (name === "participants") {
-      setParticipants(value);
+    } else if (name === "host") {
+      setHost(value);
+    } else if (name === "gen") {
+      setGen(value);
     }
   };
   const onSubmit = async (event) => {
@@ -38,27 +42,23 @@ const EditAward = ({ userObj }) => {
     }
     await dbService.collection("awards").add({
       contestname,
-      host,
-      itemname,
-      prizemoney,
-      prizetype,
+      result,
       teamname,
+      host,
       createdAt: Date.now(),
-      participants,
+      gen,
     });
     setContestname("");
-    setHost("");
-    setItemname("");
-    setPrizemoney("");
-    setPrizetype("");
+    setResult("");
     setTeamname("");
-    setParticipants("");
+    setHost("");
+    setGen("");
     alert("추가되었습니다.");
   };
   return (
     <>
       <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">공모전 추가</p>
+        <p className="adm-sectiontitle">공모전</p>
         <div className="adm-sectionbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +75,13 @@ const EditAward = ({ userObj }) => {
             />
           </svg>
         </div>
+        <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
+        <div className="adm-awards-grid">
+          {awards.map((award) => (
+            <AwardTile award={award} key={award.createdAt} />
+          ))}
+        </div>
+        <p className="adm-editpartner-subtitle">공모전 추가</p>
         <label htmlFor="contestname">대회명</label>
         <input
           type="text"
@@ -83,30 +90,6 @@ const EditAward = ({ userObj }) => {
           value={contestname}
           onChange={onChange}
           placeholder="대회명"
-          autoComplete="off"
-          required
-        />
-        <br />
-        <label htmlFor="host">주관</label>
-        <input
-          type="text"
-          id="host"
-          name="host"
-          value={host}
-          onChange={onChange}
-          placeholder="주관"
-          autoComplete="off"
-          required
-        />
-        <br />
-        <label htmlFor="itemname">아이템명</label>
-        <input
-          type="test"
-          id="itemname"
-          name="itemname"
-          value={itemname}
-          onChange={onChange}
-          placeholder="아이템명"
           autoComplete="off"
           required
         />
@@ -123,38 +106,38 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
-        <label htmlFor="prizemoney">상금액</label>
-        <input
-          type="number"
-          id="prizemoney"
-          name="prizemoney"
-          value={prizemoney}
-          onChange={onChange}
-          placeholder="상금액"
-          autoComplete="off"
-          required
-        />
-        <br />
-        <label htmlFor="prizetype">수상 종류</label>
+        <label htmlFor="result">상격 & 결과</label>
         <input
           type="text"
-          id="prizetype"
-          name="prizetype"
-          value={prizetype}
+          id="result"
+          name="result"
+          value={result}
           onChange={onChange}
-          placeholder="수상 종류"
+          placeholder="상격 & 결과"
           autoComplete="off"
           required
         />
         <br />
-        <label htmlFor="participants">인원</label>
+        <label htmlFor="host">주최</label>
+        <input
+          type="text"
+          id="host"
+          name="host"
+          value={host}
+          onChange={onChange}
+          placeholder="주최"
+          autoComplete="off"
+          required
+        />
+        <br />
+        <label htmlFor="gen">기수</label>
         <input
           type="number"
-          id="participants"
-          name="participants"
-          value={participants}
+          id="gen"
+          name="gen"
+          value={gen}
           onChange={onChange}
-          placeholder="인원"
+          placeholder="기수"
           autoComplete="off"
           required
         />

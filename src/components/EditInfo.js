@@ -39,7 +39,7 @@ const EditInfo = ({ userObj }) => {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">기본 정보 수정</p>
+        <p className="adm-sectiontitle">기본 정보</p>
         <div className="adm-sectionbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"

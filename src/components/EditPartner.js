@@ -76,7 +76,7 @@ const EditPartner = ({ userObj }) => {
   return (
     <>
       <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">협력 기업 수정</p>
+        <p className="adm-sectiontitle">협력 기업</p>
         <div className="adm-sectionbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -122,6 +122,14 @@
 }
 
 /* Editing Awards */
+.adm-awards-grid {
+  margin-top: 10px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
 .adm-textform label {
   font-family: NotoSansKR;
   font-weight: 400;
