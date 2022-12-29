@@ -43,7 +43,7 @@ const EditAward = ({ userObj }) => {
       prizemoney,
       prizetype,
       teamname,
-      date: Date.now(),
+      createdAt: Date.now(),
       participants,
     });
     setContestname("");
