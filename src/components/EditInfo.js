@@ -85,7 +85,9 @@ const EditInfo = ({ userObj }) => {
             </div>
           </label>
         </div>
-        <input type="submit" value="수정" />
+        <button className="adm-co-editbutton" type="submit">
+          수정
+        </button>
       </form>
     </>
   );

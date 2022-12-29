@@ -91,7 +91,9 @@ const EditMessage = ({ userObj }) => {
           value={body}
           onChange={onChange}
         ></textarea>
-        <input className="adm-message-submit" type="submit" value="수정" />
+        <button className="adm-co-editbutton" type="submit">
+          수정
+        </button>
       </form>
     </>
   );

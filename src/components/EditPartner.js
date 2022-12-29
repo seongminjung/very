@@ -155,7 +155,9 @@ const EditPartner = ({ userObj }) => {
           </div>
         )}
         <br />
-        <input type="submit" value="추가" />
+        <button className="adm-co-editbutton" type="submit">
+          추가
+        </button>
       </form>
     </>
   );

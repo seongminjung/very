@@ -239,7 +239,9 @@ const EditAward = ({ userObj }) => {
             />
           </div>
         )}
-        <input type="submit" value="추가" />
+        <button className="adm-co-editbutton" type="submit">
+          추가
+        </button>
       </form>
     </>
   );
