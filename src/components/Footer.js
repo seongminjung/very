@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { dbService } from "fb_info";
 import facebook from "img/asset/facebook.png";
 import instagram from "img/asset/instagram.png";
 import "css/footer.css";
 
 const Footer = () => {
+  const [president, setPresident] = useState([]);
+  useEffect(() => {
+    dbService.collection("clubofficers").onSnapshot((snapshot) => {
+      const row = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      row[0]["officers"].forEach((element) => {
+        if (element.position === "회장") {
+          setPresident(element);
+        }
+      });
+    });
+  }, []);
   return (
     <div className="">
       <div className="container-fluid footer-borderline">
@@ -66,8 +80,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-middle__right">
-          <p>회장 | 010-4035-3745</p>
-          <p>&lt;taeyun329@yonsei.ac.kr&gt;</p>
+          <p>회장 | {president.contact}</p>
+          <p>&lt;{president.email}&gt;</p>
           <div className="footer-madeby">
             <Link to="/">
               <p>Director_임채현</p>
