@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { dbService } from "fb_info";
+import { dbService, storageService } from "fb_info";
 import "css/admin.css";
-import yonseiventuremark from "img/picture/yonseiventuremark.png";
+import defaultCompany from "img/picture/defaultCompany.jpg";
 
 const EditPartner = ({ userObj }) => {
   const [partners, setPartners] = useState([]);
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
+  const [partnerLogo, setPartnerLogo] = useState(null);
   useEffect(() => {
     dbService.collection("partners").onSnapshot((snapshot) => {
       const partnerArray = snapshot.docs.map((doc) => ({
+        id: doc.id,
         ...doc.data(),
       }));
       setPartners(partnerArray);
@@ -25,19 +27,51 @@ const EditPartner = ({ userObj }) => {
       setUrl(value);
     }
   };
+  const onFileChange = async (event) => {
+    const {
+      target: { files },
+    } = event;
+    const theFile = files[0];
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      } = finishedEvent;
+      setPartnerLogo(result);
+    };
+    reader.readAsDataURL(theFile);
+  };
+  const onclearPhoto = () => setPartnerLogo(null);
   const onSubmit = async (event) => {
     event.preventDefault();
     if (!userObj) {
       alert("로그인 후 이용 가능합니다.");
       return;
     }
+    let logoUrl = null;
+    if (partnerLogo) {
+      const fileRef = storageService.ref().child(`partnerLogo/${name}.png`);
+      const response = await fileRef.putString(partnerLogo, "data_url");
+      logoUrl = await response.ref.getDownloadURL();
+    }
     await dbService.collection("partners").add({
       name,
       url,
+      logoUrl,
     });
     setName("");
     setUrl("");
+    onclearPhoto();
     alert("추가되었습니다.");
+  };
+  const onDelete = async (id, imgUrl) => {
+    const ok = window.confirm("정말 삭제하시겠습니까?");
+    if (ok) {
+      await dbService.collection("partners").doc(id).delete();
+      if (imgUrl) {
+        await storageService.refFromURL(imgUrl).delete();
+      }
+    }
   };
   return (
     <>
@@ -67,9 +101,15 @@ const EditPartner = ({ userObj }) => {
               <p className="adm-partner-info">{partner.url}</p>
               <img
                 className="p5-cooperates__img"
-                src={yonseiventuremark}
+                src={partner.logoUrl ? partner.logoUrl : defaultCompany}
                 alt="logo"
               />
+              <p
+                className="adm-partner-edititem"
+                onClick={() => onDelete(partner.id, partner.logoUrl)}
+              >
+                삭제
+              </p>
             </div>
           ))}
         </div>
@@ -95,6 +135,25 @@ const EditPartner = ({ userObj }) => {
           autoComplete="off"
           required
         />
+        <br />
+        {partnerLogo ? (
+          <div className="adm-partner-logopreview">
+            <img src={partnerLogo} alt="profile" />
+            <p onClick={onclearPhoto}>이미지 삭제</p>
+          </div>
+        ) : (
+          <div>
+            <label className="adm-partner-imgupload" htmlFor="adm-partner-logo">
+              로고 이미지 업로드
+            </label>
+            <input
+              id="adm-partner-logo"
+              type="file"
+              accept="image/*"
+              onChange={onFileChange}
+            />
+          </div>
+        )}
         <br />
         <input type="submit" value="추가" />
       </form>

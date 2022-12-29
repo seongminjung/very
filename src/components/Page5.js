@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import "css/page5.css";
 import logobiggray from "img/logo/logo-big-gray.png";
-import yonseiventuremark from "img/picture/yonseiventuremark.png";
+import defaultCompany from "img/picture/defaultCompany.jpg";
 
 const Page5 = () => {
   const [president, setPresident] = useState([]);
@@ -106,7 +106,7 @@ const Page5 = () => {
               <a href={partner.url} target="_blank" rel="noreferrer">
                 <img
                   className="p5-cooperates__img"
-                  src={yonseiventuremark}
+                  src={partner.logoUrl ? partner.logoUrl : defaultCompany}
                   alt="logo"
                 />
               </a>

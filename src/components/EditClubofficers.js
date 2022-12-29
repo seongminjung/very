@@ -130,7 +130,9 @@ const EditClubofficers = ({ userObj }) => {
         .update({
           officers: targetRow,
         });
-      await storageService.refFromURL(imgUrl).delete();
+      if (imgUrl) {
+        await storageService.refFromURL(imgUrl).delete();
+      }
     }
   };
   return (
