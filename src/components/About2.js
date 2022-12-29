@@ -5,6 +5,7 @@ import "css/about2.css";
 const About2 = () => {
   const [president, setPresident] = useState([]);
   const [gen, setGen] = useState([]);
+  const [phrase, setPhrase] = useState("");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   useEffect(() => {
@@ -32,6 +33,7 @@ const About2 = () => {
       const message = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
+      setPhrase(message[0].phrase);
       setTitle(message[0].title);
       setBody(message[0].body);
     });
@@ -40,9 +42,7 @@ const About2 = () => {
     <div className="container">
       <div className="ab2-flex">
         <div className="ab2-left">
-          <p className="ab2-title">
-            열심히와 <span className="ab2-title__blue">꾸준히</span>는 다르다.
-          </p>
+          <p className="ab2-title">{phrase}</p>
           <div className="ab2-profile">
             <img src={president.url} alt="profile" />
           </div>

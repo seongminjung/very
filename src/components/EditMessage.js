@@ -3,6 +3,7 @@ import { dbService } from "fb_info";
 import "css/admin.css";
 
 const EditMessage = ({ userObj }) => {
+  const [phrase, setPhrase] = useState("");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   useEffect(() => {
@@ -10,6 +11,7 @@ const EditMessage = ({ userObj }) => {
       const message = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
+      setPhrase(message[0].phrase);
       setTitle(message[0].title);
       setBody(message[0].body);
     });
@@ -18,7 +20,9 @@ const EditMessage = ({ userObj }) => {
     const {
       target: { name, value },
     } = event;
-    if (name === "title") {
+    if (name === "phrase") {
+      setPhrase(value);
+    } else if (name === "title") {
       setTitle(value);
     } else if (name === "body") {
       setBody(value);
@@ -31,6 +35,7 @@ const EditMessage = ({ userObj }) => {
       return;
     }
     await dbService.collection("message").doc("message").update({
+      phrase,
       title,
       body,
     });
@@ -56,6 +61,16 @@ const EditMessage = ({ userObj }) => {
             />
           </svg>
         </div>
+        <label className="adm-editmsg-label" htmlFor="adm-editmsg-phrase">
+          대표문구
+        </label>
+        <textarea
+          className="adm-editmsg-phrase"
+          id="adm-editmsg-phrase"
+          name="phrase"
+          value={phrase}
+          onChange={onChange}
+        ></textarea>
         <label className="adm-editmsg-label" htmlFor="adm-editmsg-title">
           제목
         </label>
