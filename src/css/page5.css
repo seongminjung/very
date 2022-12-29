@@ -86,7 +86,7 @@
 
 .p5-cooperates__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 65px 200px 166px;
   row-gap: 80px;
 }
