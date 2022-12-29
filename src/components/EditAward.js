@@ -5,6 +5,8 @@ import "css/admin.css";
 
 const EditAward = ({ userObj }) => {
   const [awards, setAwards] = useState([]);
+  const [year, setYear] = useState("");
+  const [month, setMonth] = useState("");
   const [contestname, setContestname] = useState("");
   const [teamname, setTeamname] = useState("");
   const [result, setResult] = useState("");
@@ -24,7 +26,11 @@ const EditAward = ({ userObj }) => {
     const {
       target: { name, value },
     } = event;
-    if (name === "contestname") {
+    if (name === "year") {
+      setYear(value);
+    } else if (name === "month") {
+      setMonth(value);
+    } else if (name === "contestname") {
       setContestname(value);
     } else if (name === "result") {
       setResult(value);
@@ -64,7 +70,9 @@ const EditAward = ({ userObj }) => {
       const response = await fileRef.putString(teamImg, "data_url");
       imgUrl = await response.ref.getDownloadURL();
     }
-    await dbService.collection("awards").add({
+    await dbService.collection("awards").doc(String(createdAt)).set({
+      year,
+      month,
       contestname,
       result,
       teamname,
@@ -73,6 +81,8 @@ const EditAward = ({ userObj }) => {
       gen,
       imgUrl,
     });
+    setYear("");
+    setMonth("");
     setContestname("");
     setResult("");
     setTeamname("");
@@ -113,8 +123,8 @@ const EditAward = ({ userObj }) => {
         <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
         <div className="adm-awards-grid">
           {awards.map((award) => (
-            <div className="adm-awards-itemwrapper">
-              <AwardTile award={award} key={award.createdAt} />
+            <div className="adm-awards-itemwrapper" key={award.createdAt}>
+              <AwardTile award={award} />
               <p
                 className="adm-awards-edititem"
                 onClick={() => onDelete(award.id, award.imgUrl)}
@@ -125,6 +135,32 @@ const EditAward = ({ userObj }) => {
           ))}
         </div>
         <p className="adm-editpartner-subtitle">공모전 추가</p>
+        <label htmlFor="year">일시</label>
+        <input
+          type="number"
+          id="year"
+          name="year"
+          value={year}
+          onChange={onChange}
+          placeholder="년"
+          autoComplete="off"
+          required
+          max="9999"
+          min="0"
+        />
+        <input
+          type="number"
+          id="month"
+          name="month"
+          value={month}
+          onChange={onChange}
+          placeholder="월"
+          autoComplete="off"
+          required
+          max="12"
+          min="1"
+        />
+        <br />
         <label htmlFor="contestname">대회명</label>
         <input
           type="text"

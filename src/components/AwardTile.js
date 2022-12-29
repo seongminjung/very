@@ -30,7 +30,7 @@ const AwardTile = ({ award }) => {
         </div>
         <p className="a2-result__award-teamname">{award.teamname}</p>
         <p className="a2-result__award-detail">
-          일시: {award.createdAt}
+          일시: {award.year}년 {award.month}월
           <br />
           대회명: {award.contestname}
           <br />
