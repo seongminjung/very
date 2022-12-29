@@ -10,6 +10,7 @@ const EditAward = ({ userObj }) => {
   const [result, setResult] = useState("");
   const [host, setHost] = useState("");
   const [gen, setGen] = useState("");
+  const [teamImg, setTeamImg] = useState(null);
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
@@ -35,25 +36,49 @@ const EditAward = ({ userObj }) => {
       setGen(value);
     }
   };
+  const onFileChange = async (event) => {
+    const {
+      target: { files },
+    } = event;
+    const theFile = files[0];
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      } = finishedEvent;
+      setTeamImg(result);
+    };
+    reader.readAsDataURL(theFile);
+  };
+  const onclearPhoto = () => setTeamImg(null);
   const onSubmit = async (event) => {
     event.preventDefault();
     if (!userObj) {
       alert("로그인 후 이용 가능합니다.");
       return;
     }
+    let imgUrl = null;
+    const createdAt = Date.now();
+    if (teamImg) {
+      const fileRef = storageService.ref().child(`awards/${createdAt}.png`);
+      const response = await fileRef.putString(teamImg, "data_url");
+      imgUrl = await response.ref.getDownloadURL();
+    }
     await dbService.collection("awards").add({
       contestname,
       result,
       teamname,
       host,
-      createdAt: Date.now(),
+      createdAt,
       gen,
+      imgUrl,
     });
     setContestname("");
     setResult("");
     setTeamname("");
     setHost("");
     setGen("");
+    onclearPhoto();
     alert("추가되었습니다.");
   };
   const onDelete = async (id, imgUrl) => {
@@ -92,7 +117,7 @@ const EditAward = ({ userObj }) => {
               <AwardTile award={award} key={award.createdAt} />
               <p
                 className="adm-awards-edititem"
-                onClick={() => onDelete(award.id, null)}
+                onClick={() => onDelete(award.id, award.imgUrl)}
               >
                 삭제
               </p>
@@ -160,6 +185,24 @@ const EditAward = ({ userObj }) => {
           required
         />
         <br />
+        {teamImg ? (
+          <div className="adm-partner-logopreview">
+            <img src={teamImg} alt="profile" />
+            <p onClick={onclearPhoto}>이미지 삭제</p>
+          </div>
+        ) : (
+          <div>
+            <label className="adm-partner-imgupload" htmlFor="adm-partner-logo">
+              팀 사진 업로드
+            </label>
+            <input
+              id="adm-partner-logo"
+              type="file"
+              accept="image/*"
+              onChange={onFileChange}
+            />
+          </div>
+        )}
         <input type="submit" value="추가" />
       </form>
     </>

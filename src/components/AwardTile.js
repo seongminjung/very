@@ -1,5 +1,5 @@
 import React from "react";
-import ablockbackground from "img/picture/ablockbackground.png";
+import defaultAward from "img/picture/defaultAward.png";
 
 const AwardTile = ({ award }) => {
   return (
@@ -7,8 +7,8 @@ const AwardTile = ({ award }) => {
       <div className="a2-result__logo-background">
         <img
           className="a2-result__logo"
-          src={ablockbackground}
-          alt="ablockbackground"
+          src={award.imgUrl ? award.imgUrl : defaultAward}
+          alt="defaultAward"
         />
         <p className="a2-result__logo-text">
           15기 김둘리

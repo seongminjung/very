@@ -71,6 +71,11 @@
   overflow: hidden;
 }
 
+.a2-result__logo-background img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .a2-result__logo {
   width: 100%;
   height: 263px;

@@ -93,6 +93,10 @@ const EditClubofficers = ({ userObj }) => {
   const onclearPhoto2 = () => setRow2Img(null);
   const onAdd = async (event, row) => {
     event.preventDefault();
+    if (!userObj) {
+      alert("로그인 후 이용 가능합니다.");
+      return;
+    }
     const imgInCurrentRow = row === 1 ? row1Img : row2Img;
     let url = null;
     if (imgInCurrentRow) {
