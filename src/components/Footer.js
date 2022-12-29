@@ -49,12 +49,20 @@ const Footer = () => {
           <p>very.official.kr@gmail.com</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
-            <img className="footer-social__img" src={facebook} alt="facebook" />
-            <img
-              className="footer-social__img"
-              src={instagram}
-              alt="instagram"
-            />
+            <a href="https://www.facebook.com/veryyonsei">
+              <img
+                className="footer-social__img"
+                src={facebook}
+                alt="facebook"
+              />
+            </a>
+            <a href="https://instagram.com/very_yonsei/">
+              <img
+                className="footer-social__img"
+                src={instagram}
+                alt="instagram"
+              />
+            </a>
           </div>
         </div>
         <div className="footer-middle__right">

@@ -92,8 +92,12 @@ const Page1 = () => {
         </div>
         <div className="p1-bottom">
           <div className="p1-social">
-            <img className="p1-social__img" src={facebook} alt="facebook" />
-            <img className="p1-social__img" src={instagram} alt="instagram" />
+            <a href="https://www.facebook.com/veryyonsei">
+              <img className="p1-social__img" src={facebook} alt="facebook" />
+            </a>
+            <a href="https://instagram.com/very_yonsei/">
+              <img className="p1-social__img" src={instagram} alt="instagram" />
+            </a>
           </div>
         </div>
       </div>
