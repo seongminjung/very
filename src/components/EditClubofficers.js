@@ -16,7 +16,7 @@ const EditClubofficers = ({ userObj }) => {
   const [row2Position, setRow2Position] = useState("");
   const [row2Contact, setRow2Contact] = useState("");
   const [row2Email, setRow2Email] = useState("");
-  const [row2Img, setRow2Img] = useState("");
+  const [row2Img, setRow2Img] = useState(null);
   const [gen, setGen] = useState([]);
   const [addRow1FormOpened, setAddRow1FormOpened] = useState(false);
   const [addRow2FormOpened, setAddRow2FormOpened] = useState(false);
@@ -352,8 +352,8 @@ const EditClubofficers = ({ userObj }) => {
                   type="button"
                   className="adm-co-editbutton"
                   onClick={() => {
-                    toggleAddRow1Form();
-                    onclearPhoto1();
+                    toggleAddRow2Form();
+                    onclearPhoto2();
                   }}
                 >
                   취소
