@@ -68,6 +68,13 @@
   height: 433px;
 }
 
+.p4-img img {
+  width: 330px;
+  height: 433px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .p4-imgtitle {
   font-family: NotoSansKR;
   font-weight: 400;

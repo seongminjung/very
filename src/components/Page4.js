@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { dbService } from "fb_info";
 import "css/page4.css";
 import p4image1 from "img/picture/p4image1.png";
-import p4image2 from "img/picture/p4image2.png";
-import p4image3 from "img/picture/p4image3.png";
 import p4background from "img/picture/p4background.png";
 
 const Page4 = () => {
+  const [images, setImages] = useState();
+  useEffect(() => {
+    dbService.collection("activity").onSnapshot((snapshot) => {
+      const activityArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      const imageUrls = activityArray.reverse().map((activity) => activity.url);
+      if (imageUrls.length < 3) {
+        imageUrls.unshift(p4image1);
+      }
+      setImages(imageUrls);
+    });
+  }, []);
   return (
     <div className="container-fluid p4-relative">
       <img className="p4-background" src={p4background} alt="background" />
@@ -37,13 +49,13 @@ const Page4 = () => {
           </div>
           <div className="p4-img-flex">
             <div className="p4-img">
-              <img src={p4image1} alt="p4mainimage1" />
+              <img src={images[0]} alt="p4mainimage1" />
             </div>
             <div className="p4-img">
-              <img src={p4image2} alt="p4mainimage2" />
+              <img src={images[1]} alt="p4mainimage2" />
             </div>
             <div className="p4-img">
-              <img src={p4image3} alt="p4mainimage3" />
+              <img src={images[2]} alt="p4mainimage3" />
             </div>
           </div>
           <div className="p4-carousel-ctrlbtn">

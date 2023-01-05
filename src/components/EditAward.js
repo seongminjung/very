@@ -4,6 +4,7 @@ import AwardTile from "components/AwardTile";
 import "css/admin.css";
 
 const EditAward = ({ userObj }) => {
+  // TODO: 시간대별 소팅 알고리즘 필요
   const [awards, setAwards] = useState([]);
   const [year, setYear] = useState("");
   const [month, setMonth] = useState("");
