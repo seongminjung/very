@@ -38,7 +38,7 @@ const AwardTile = ({ award }) => {
           <br />
           주최: {award.host}
           <br />
-          인원: {award.contestname}
+          인원: {award.participants}명
           <br />
           기수: {award.gen}기
         </p>

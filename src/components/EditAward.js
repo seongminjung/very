@@ -12,6 +12,7 @@ const EditAward = ({ userObj }) => {
   const [teamname, setTeamname] = useState("");
   const [result, setResult] = useState("");
   const [host, setHost] = useState("");
+  const [participants, setParticipants] = useState();
   const [gen, setGen] = useState("");
   const [teamImg, setTeamImg] = useState(null);
   useEffect(() => {
@@ -39,6 +40,8 @@ const EditAward = ({ userObj }) => {
       setTeamname(value);
     } else if (name === "host") {
       setHost(value);
+    } else if (name === "participants") {
+      setParticipants(value);
     } else if (name === "gen") {
       setGen(value);
     }
@@ -78,6 +81,7 @@ const EditAward = ({ userObj }) => {
       result,
       teamname,
       host,
+      participants,
       createdAt,
       gen,
       imgUrl,
@@ -88,6 +92,7 @@ const EditAward = ({ userObj }) => {
     setResult("");
     setTeamname("");
     setHost("");
+    setParticipants("");
     setGen("");
     onclearPhoto();
     alert("추가되었습니다.");
@@ -192,6 +197,18 @@ const EditAward = ({ userObj }) => {
           value={host}
           onChange={onChange}
           placeholder="주최"
+          autoComplete="off"
+          required
+        />
+        <br />
+        <label htmlFor="participants">인원</label>
+        <input
+          type="text"
+          id="participants"
+          name="participants"
+          value={participants}
+          onChange={onChange}
+          placeholder="인원"
           autoComplete="off"
           required
         />
