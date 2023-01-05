@@ -49,13 +49,13 @@ const Page4 = () => {
           </div>
           <div className="p4-img-flex">
             <div className="p4-img">
-              <img src={images[0]} alt="p4mainimage1" />
+              <img src={images && images[0]} alt="p4mainimage1" />
             </div>
             <div className="p4-img">
-              <img src={images[1]} alt="p4mainimage2" />
+              <img src={images && images[1]} alt="p4mainimage2" />
             </div>
             <div className="p4-img">
-              <img src={images[2]} alt="p4mainimage3" />
+              <img src={images && images[2]} alt="p4mainimage3" />
             </div>
           </div>
           <div className="p4-carousel-ctrlbtn">

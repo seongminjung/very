@@ -25,6 +25,8 @@
 }
 
 .p1-img__left-top {
+  min-width: 330px;
+  min-height: 330px;
   width: 330px;
   height: 330px;
   object-fit: cover;
@@ -53,6 +55,8 @@
 }
 
 .p1-img__right-top {
+  min-width: 330px;
+  min-height: 217px;
   width: 330px;
   height: 217px;
   object-fit: cover;
