@@ -66,7 +66,7 @@ const EditActivity = ({ userObj }) => {
   const onDelete = async (id, imgUrl) => {
     const ok = window.confirm("정말 삭제하시겠습니까?");
     if (ok) {
-      await dbService.collection("curriculum").doc(id).delete();
+      await dbService.collection("activity").doc(id).delete();
       if (imgUrl) {
         await storageService.refFromURL(imgUrl).delete();
       }
