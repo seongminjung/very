@@ -61,9 +61,11 @@ const EditMessage = ({ userObj }) => {
             />
           </svg>
         </div>
+        <br />
         <label className="adm-editmsg-label" htmlFor="adm-editmsg-phrase">
           대표문구
         </label>
+        <br />
         <textarea
           className="adm-editmsg-phrase"
           id="adm-editmsg-phrase"
@@ -71,9 +73,11 @@ const EditMessage = ({ userObj }) => {
           value={phrase}
           onChange={onChange}
         ></textarea>
+        <br />
         <label className="adm-editmsg-label" htmlFor="adm-editmsg-title">
           제목
         </label>
+        <br />
         <textarea
           className="adm-editmsg-title"
           id="adm-editmsg-title"
@@ -81,9 +85,11 @@ const EditMessage = ({ userObj }) => {
           value={title}
           onChange={onChange}
         ></textarea>
+        <br />
         <label className="adm-editmsg-label" htmlFor="adm-editmsg-textarea">
           내용
         </label>
+        <br />
         <textarea
           className="adm-editmsg-textarea"
           id="adm-editmsg-textarea"
@@ -91,6 +97,7 @@ const EditMessage = ({ userObj }) => {
           value={body}
           onChange={onChange}
         ></textarea>
+        <br />
         <button className="adm-co-editbutton" type="submit">
           수정
         </button>

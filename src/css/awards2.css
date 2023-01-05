@@ -54,6 +54,7 @@
 .a2-result__award {
   position: relative;
   text-align: center;
+  width: 335px;
   height: 353px;
   overflow: hidden;
 }
