@@ -32,11 +32,15 @@ const AwardTile = ({ award }) => {
         <p className="a2-result__award-detail">
           일시: {award.year}년 {award.month}월
           <br />
+          수상 종류: {award.result}
+          <br />
           대회명: {award.contestname}
           <br />
-          결과: {award.result}
+          주최: {award.host}
           <br />
-          기수: {award.gen}
+          인원: {award.contestname}
+          <br />
+          기수: {award.gen}기
         </p>
       </div>
     </div>
