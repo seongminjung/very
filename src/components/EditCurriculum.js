@@ -45,6 +45,7 @@ const EditCurriculum = ({ userObj }) => {
       return;
     }
     let url = null;
+    const createdAt = Date.now();
     if (newImage) {
       const fileRef = storageService
         .ref()
@@ -52,9 +53,10 @@ const EditCurriculum = ({ userObj }) => {
       const response = await fileRef.putString(newImage, "data_url");
       url = await response.ref.getDownloadURL();
     }
-    await dbService.collection("curriculum").add({
+    await dbService.collection("curriculum").doc(String(createdAt)).set({
       name,
       url,
+      createdAt,
     });
     setName("");
     onclearPhoto();

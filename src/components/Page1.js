@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { dbService } from "fb_info";
 import Navigation from "components/Navigation";
 import "css/page1.css";
-import activity1 from "img/picture/activity1.jpg";
-import activity2 from "img/picture/activity2.jpg";
+import activitybg from "img/picture/activitybg.jpg";
 import facebook from "img/asset/facebook.png";
 import instagram from "img/asset/instagram.png";
-import { Link } from "react-router-dom";
 
 const Page1 = () => {
+  const [images, setImages] = useState();
+  useEffect(() => {
+    dbService.collection("activity").onSnapshot((snapshot) => {
+      const activityArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      if (activityArray.length > 2) {
+        setImages(activityArray.slice(-2).reverse());
+      } else {
+        setImages(activityArray.reverse());
+      }
+    });
+  }, []);
+  const sliceString = (str) => {
+    if (str.length > 24) {
+      return str.slice(0, 24) + "...";
+    } else {
+      return str;
+    }
+  };
   return (
     <div className="container-fluid p1-relative">
-      <img className="p1-background" src={activity2} alt="background" />
+      <img className="p1-background" src={activitybg} alt="background" />
       <div className="container">
         <Navigation />
         <div className="p1-wrapper">
@@ -18,18 +38,18 @@ const Page1 = () => {
             <div className="p1-img__left">
               <img
                 className="p1-img__left-top"
-                src={activity1}
+                src={images && images[0].url}
                 alt="activity1"
               />
               <div className="p1-img__left-bottom">
-                <p>2021 한-우간다 혁신창업</p>
-                <p>2021 한-우간다 혁신창업 컨퍼런스 & 비 ...</p>
+                <p>{images && images[0].name}</p>
+                <p>{images && sliceString(images[0].detail)}</p>
               </div>
             </div>
             <div className="p1-img__right">
               <img
                 className="p1-img__right-top"
-                src={activity2}
+                src={images && images[1].url}
                 alt="activity2"
               />
               <p className="p1-img__right-bottom">...</p>

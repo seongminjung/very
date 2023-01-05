@@ -48,15 +48,17 @@ const EditActivity = ({ userObj }) => {
       return;
     }
     let url = null;
+    const createdAt = Date.now();
     if (newImage) {
       const fileRef = storageService.ref().child(`activity/${Date.now()}.png`);
       const response = await fileRef.putString(newImage, "data_url");
       url = await response.ref.getDownloadURL();
     }
-    await dbService.collection("activity").add({
+    await dbService.collection("activity").doc(String(createdAt)).set({
       name,
       detail,
       url,
+      createdAt,
     });
     setName("");
     setDetail("");
@@ -141,22 +143,26 @@ const EditActivity = ({ userObj }) => {
       </form>
       <p className="adm-editpartner-subtitle">현재 활동 목록</p>
       <div className="adm-partners-grid">
-        {images.map((image) => (
-          <div className="adm-partner-wrapper" key={image.name}>
-            <p className="adm-partner-info">{image.name}</p>
-            <img
-              className="p5-cooperates__img"
-              src={image.url ? image.url : null}
-              alt="logo"
-            />
-            <p
-              className="adm-partner-edititem"
-              onClick={() => onDelete(image.id, image.url)}
-            >
-              삭제
-            </p>
-          </div>
-        ))}
+        {images
+          .slice(0)
+          .reverse()
+          .map((image) => (
+            <div className="adm-partner-wrapper" key={image.createdAt}>
+              <p className="adm-partner-info">{image.name}</p>
+              <p className="adm-partner-info">{image.detail}</p>
+              <img
+                className="p5-cooperates__img"
+                src={image.url ? image.url : null}
+                alt="logo"
+              />
+              <p
+                className="adm-partner-edititem"
+                onClick={() => onDelete(image.id, image.url)}
+              >
+                삭제
+              </p>
+            </div>
+          ))}
       </div>
     </>
   );

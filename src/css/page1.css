@@ -41,7 +41,15 @@
 .p1-img__left-bottom p:first-child {
   margin-top: 24px;
   margin-bottom: 20px;
+  font-family: NotoSansKR;
   font-size: 20px;
+  font-weight: 400;
+}
+
+.p1-img__left-bottom p:last-child {
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .p1-img__right-top {
@@ -56,6 +64,7 @@
   height: 215px;
   background-color: #0074e8;
   border: 1px solid #434343;
+  font-family: NotoSansKR;
   font-size: 60px;
   text-align: center;
   line-height: 170px;
