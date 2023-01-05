@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { dbService } from "fb_info";
 import "css/page3.css";
-import p3image from "img/picture/p3image.png";
 
 const Page3 = () => {
+  const [curriculums, setCurriculums] = useState();
+  useEffect(() => {
+    dbService.collection("curriculum").onSnapshot((snapshot) => {
+      const curriArray = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setCurriculums(curriArray.reverse());
+    });
+  }, []);
   return (
     <div className="container">
       <p className="p3-title">Curriculum</p>
@@ -31,7 +40,7 @@ const Page3 = () => {
           </p>
         </div>
         <div className="p3-img">
-          <img src={p3image} alt="p3mainimage" />
+          <img src={curriculums && curriculums[0].url} alt="curriculum" />
         </div>
         <div className="p3-carousel-ctrlbtn">
           <p>
@@ -39,7 +48,7 @@ const Page3 = () => {
           </p>
         </div>
       </div>
-      <p className="p3-imgtitle">정규 세션 - 전문가 특강 및 네트워킹</p>
+      <p className="p3-imgtitle">{curriculums && curriculums[0].name}</p>
       <div className="p3-imgdot">
         <svg
           xmlns="http://www.w3.org/2000/svg"

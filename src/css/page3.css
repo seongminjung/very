@@ -49,6 +49,13 @@
   margin-bottom: 40px;
 }
 
+.p3-img img {
+  width: 972px;
+  height: 545px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .p3-imgtitle {
   font-family: NotoSansKR;
   font-weight: 400;
