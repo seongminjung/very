@@ -129,22 +129,25 @@ const EditCurriculum = ({ userObj }) => {
       </form>
       <p className="adm-editpartner-subtitle">현재 커리큘럼 목록</p>
       <div className="adm-partners-grid">
-        {images.map((image) => (
-          <div className="adm-partner-wrapper" key={image.name}>
-            <p className="adm-partner-info">{image.name}</p>
-            <img
-              className="p5-cooperates__img"
-              src={image.url ? image.url : null}
-              alt="logo"
-            />
-            <p
-              className="adm-partner-edititem"
-              onClick={() => onDelete(image.id, image.url)}
-            >
-              삭제
-            </p>
-          </div>
-        ))}
+        {images
+          .slice(0)
+          .reverse()
+          .map((image) => (
+            <div className="adm-partner-wrapper" key={image.name}>
+              <p className="adm-partner-info">{image.name}</p>
+              <img
+                className="p5-cooperates__img"
+                src={image.url ? image.url : null}
+                alt="logo"
+              />
+              <p
+                className="adm-partner-edititem"
+                onClick={() => onDelete(image.id, image.url)}
+              >
+                삭제
+              </p>
+            </div>
+          ))}
       </div>
     </>
   );
