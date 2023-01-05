@@ -4,10 +4,11 @@ import { authService } from "fb_info";
 import LoginForm from "components/LoginForm";
 import EditInfo from "components/EditInfo";
 import EditAward from "components/EditAward";
+import EditCurriculum from "components/EditCurriculum";
+import EditActivity from "components/EditActivity";
+import EditMessage from "components/EditMessage";
 import EditClubofficers from "components/EditClubofficers";
 import EditPartner from "components/EditPartner";
-import EditMessage from "components/EditMessage";
-import EditCurriculum from "components/EditCurriculum";
 import Footer from "components/Footer";
 import "css/admin.css";
 import logo from "img/logo/logo-row-gray.png";
@@ -56,6 +57,12 @@ const Admin = ({ userObj }) => {
                 커리큘럼
               </p>
               <p
+                onClick={() => changeTab("activity")}
+                className={tab === "activity" ? "active" : "nonactive"}
+              >
+                활동 기록
+              </p>
+              <p
                 onClick={() => changeTab("message")}
                 className={tab === "message" ? "active" : "nonactive"}
               >
@@ -79,6 +86,7 @@ const Admin = ({ userObj }) => {
               {tab === "info" && <EditInfo userObj={userObj} />}
               {tab === "award" && <EditAward userObj={userObj} />}
               {tab === "curriculum" && <EditCurriculum userObj={userObj} />}
+              {tab === "activity" && <EditActivity userObj={userObj} />}
               {tab === "message" && <EditMessage userObj={userObj} />}
               {tab === "clubofficers" && <EditClubofficers userObj={userObj} />}
               {tab === "partner" && <EditPartner userObj={userObj} />}

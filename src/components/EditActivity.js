@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import { dbService, storageService } from "fb_info";
 import "css/admin.css";
 
-const EditCurriculum = ({ userObj }) => {
+const EditActivity = ({ userObj }) => {
   const [images, setImages] = useState([]);
   const [name, setName] = useState("");
+  const [detail, setDetail] = useState("");
   const [newImage, setNewImage] = useState(null);
   useEffect(() => {
-    dbService.collection("curriculum").onSnapshot((snapshot) => {
-      const curriculumArray = snapshot.docs.map((doc) => ({
+    dbService.collection("activity").onSnapshot((snapshot) => {
+      const activityArray = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setImages(curriculumArray);
+      setImages(activityArray);
     });
   }, []);
   const onChange = async (event) => {
@@ -21,6 +22,8 @@ const EditCurriculum = ({ userObj }) => {
     } = event;
     if (name === "name") {
       setName(value);
+    } else if (name === "detail") {
+      setDetail(value);
     }
   };
   const onFileChange = async (event) => {
@@ -46,17 +49,17 @@ const EditCurriculum = ({ userObj }) => {
     }
     let url = null;
     if (newImage) {
-      const fileRef = storageService
-        .ref()
-        .child(`curriculum/${Date.now()}.png`);
+      const fileRef = storageService.ref().child(`activity/${Date.now()}.png`);
       const response = await fileRef.putString(newImage, "data_url");
       url = await response.ref.getDownloadURL();
     }
-    await dbService.collection("curriculum").add({
+    await dbService.collection("activity").add({
       name,
+      detail,
       url,
     });
     setName("");
+    setDetail("");
     onclearPhoto();
     alert("추가되었습니다.");
   };
@@ -71,7 +74,7 @@ const EditCurriculum = ({ userObj }) => {
   };
   return (
     <>
-      <p className="adm-sectiontitle">커리큘럼</p>
+      <p className="adm-sectiontitle">활동 기록</p>
       <div className="adm-sectionbar">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -89,14 +92,25 @@ const EditCurriculum = ({ userObj }) => {
         </svg>
       </div>
       <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-editpartner-subtitle">커리큘럼 이미지 추가</p>
-        <label htmlFor="name">커리큘럼 명칭</label>
+        <p className="adm-editpartner-subtitle">활동 기록 이미지 추가</p>
+        <label htmlFor="name">활동 명칭</label>
         <input
           type="text"
           name="name"
           value={name}
           onChange={onChange}
-          placeholder="커리큘럼 명칭"
+          placeholder="활동 명칭"
+          autoComplete="off"
+          required
+        />
+        <br />
+        <label htmlFor="detail">활동 설명</label>
+        <input
+          type="text"
+          name="detail"
+          value={detail}
+          onChange={onChange}
+          placeholder="활동 설명"
           autoComplete="off"
           required
         />
@@ -109,7 +123,7 @@ const EditCurriculum = ({ userObj }) => {
         ) : (
           <div>
             <label className="adm-partner-imgupload" htmlFor="adm-partner-logo">
-              커리큘럼 이미지 업로드
+              활동 이미지 업로드
             </label>
             <input
               id="adm-partner-logo"
@@ -125,7 +139,7 @@ const EditCurriculum = ({ userObj }) => {
           추가
         </button>
       </form>
-      <p className="adm-editpartner-subtitle">현재 커리큘럼 목록</p>
+      <p className="adm-editpartner-subtitle">현재 활동 목록</p>
       <div className="adm-partners-grid">
         {images.map((image) => (
           <div className="adm-partner-wrapper" key={image.name}>
@@ -148,4 +162,4 @@ const EditCurriculum = ({ userObj }) => {
   );
 };
 
-export default EditCurriculum;
+export default EditActivity;
