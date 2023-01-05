@@ -61,7 +61,7 @@ const EditCurriculum = ({ userObj }) => {
   const onDelete = async (id, imgUrl) => {
     const ok = window.confirm("정말 삭제하시겠습니까?");
     if (ok) {
-      await dbService.collection("partners").doc(id).delete();
+      await dbService.collection("curriculum").doc(id).delete();
       if (imgUrl) {
         await storageService.refFromURL(imgUrl).delete();
       }
@@ -69,43 +69,24 @@ const EditCurriculum = ({ userObj }) => {
   };
   return (
     <>
-      <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">커리큘럼</p>
-        <div className="adm-sectionbar">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+      <p className="adm-sectiontitle">커리큘럼</p>
+      <div className="adm-sectionbar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="23"
+          height="7"
+          viewBox="0 0 23 7"
+        >
+          <rect
+            id="사각형_227"
+            data-name="사각형 227"
             width="23"
             height="7"
-            viewBox="0 0 23 7"
-          >
-            <rect
-              id="사각형_227"
-              data-name="사각형 227"
-              width="23"
-              height="7"
-              fill="#d3d3d3"
-            />
-          </svg>
-        </div>
-        <p className="adm-editpartner-subtitle">현재 커리큘럼 이미지 목록</p>
-        <div className="adm-partners-grid">
-          {images.map((image) => (
-            <div className="adm-partner-wrapper" key={image.name}>
-              <p className="adm-partner-info">{image.name}</p>
-              <img
-                className="p5-cooperates__img"
-                src={image.url ? image.url : null}
-                alt="logo"
-              />
-              <p
-                className="adm-partner-edititem"
-                onClick={() => onDelete(image.id, image.url)}
-              >
-                삭제
-              </p>
-            </div>
-          ))}
-        </div>
+            fill="#d3d3d3"
+          />
+        </svg>
+      </div>
+      <form className="adm-textform" onSubmit={onSubmit}>
         <p className="adm-editpartner-subtitle">커리큘럼 이미지 추가</p>
         <label htmlFor="name">커리큘럼 명칭</label>
         <input
@@ -142,6 +123,25 @@ const EditCurriculum = ({ userObj }) => {
           추가
         </button>
       </form>
+      <p className="adm-editpartner-subtitle">현재 커리큘럼 이미지 목록</p>
+      <div className="adm-partners-grid">
+        {images.map((image) => (
+          <div className="adm-partner-wrapper" key={image.name}>
+            <p className="adm-partner-info">{image.name}</p>
+            <img
+              className="p5-cooperates__img"
+              src={image.url ? image.url : null}
+              alt="logo"
+            />
+            <p
+              className="adm-partner-edititem"
+              onClick={() => onDelete(image.id, image.url)}
+            >
+              삭제
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

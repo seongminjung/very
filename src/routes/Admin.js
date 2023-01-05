@@ -39,37 +39,37 @@ const Admin = ({ userObj }) => {
             <div className="admin-left">
               <p
                 onClick={() => changeTab("info")}
-                className={tab === "info" && "active"}
+                className={tab === "info" ? "active" : "nonactive"}
               >
                 기본 정보
               </p>
               <p
                 onClick={() => changeTab("award")}
-                className={tab === "award" && "active"}
+                className={tab === "award" ? "active" : "nonactive"}
               >
                 공모전 수상 내역
               </p>
               <p
                 onClick={() => changeTab("curriculum")}
-                className={tab === "curriculum" && "active"}
+                className={tab === "curriculum" ? "active" : "nonactive"}
               >
                 커리큘럼
               </p>
               <p
                 onClick={() => changeTab("message")}
-                className={tab === "message" && "active"}
+                className={tab === "message" ? "active" : "nonactive"}
               >
                 회장 인사말
               </p>
               <p
                 onClick={() => changeTab("clubofficers")}
-                className={tab === "clubofficers" && "active"}
+                className={tab === "clubofficers" ? "active" : "nonactive"}
               >
                 임원진
               </p>
               <p
                 onClick={() => changeTab("partner")}
-                className={tab === "partner" && "active"}
+                className={tab === "partner" ? "active" : "nonactive"}
               >
                 협력 기업
               </p>

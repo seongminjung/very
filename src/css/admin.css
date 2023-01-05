@@ -164,10 +164,13 @@
 /* Editing Awards */
 .adm-awards-grid {
   margin-top: 10px;
-  padding-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+}
+
+.adm-textform {
+  padding-bottom: 50px;
 }
 
 .adm-textform label {
@@ -385,7 +388,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 80px;
-  padding-bottom: 30px;
 }
 
 .adm-partner-wrapper {

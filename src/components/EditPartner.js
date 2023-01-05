@@ -75,44 +75,24 @@ const EditPartner = ({ userObj }) => {
   };
   return (
     <>
-      <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">협력 기업</p>
-        <div className="adm-sectionbar">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+      <p className="adm-sectiontitle">협력 기업</p>
+      <div className="adm-sectionbar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="23"
+          height="7"
+          viewBox="0 0 23 7"
+        >
+          <rect
+            id="사각형_227"
+            data-name="사각형 227"
             width="23"
             height="7"
-            viewBox="0 0 23 7"
-          >
-            <rect
-              id="사각형_227"
-              data-name="사각형 227"
-              width="23"
-              height="7"
-              fill="#d3d3d3"
-            />
-          </svg>
-        </div>
-        <p className="adm-editpartner-subtitle">현재 기업 목록</p>
-        <div className="adm-partners-grid">
-          {partners.map((partner) => (
-            <div className="adm-partner-wrapper" key={partner.name}>
-              <p className="adm-partner-info">{partner.name}</p>
-              <p className="adm-partner-info">{partner.url}</p>
-              <img
-                className="p5-cooperates__img"
-                src={partner.logoUrl ? partner.logoUrl : defaultCompany}
-                alt="logo"
-              />
-              <p
-                className="adm-partner-edititem"
-                onClick={() => onDelete(partner.id, partner.logoUrl)}
-              >
-                삭제
-              </p>
-            </div>
-          ))}
-        </div>
+            fill="#d3d3d3"
+          />
+        </svg>
+      </div>
+      <form className="adm-textform" onSubmit={onSubmit}>
         <p className="adm-editpartner-subtitle">협력 기업 추가</p>
         <label htmlFor="name">기업명</label>
         <input
@@ -159,6 +139,26 @@ const EditPartner = ({ userObj }) => {
           추가
         </button>
       </form>
+      <p className="adm-editpartner-subtitle">현재 기업 목록</p>
+      <div className="adm-partners-grid">
+        {partners.map((partner) => (
+          <div className="adm-partner-wrapper" key={partner.name}>
+            <p className="adm-partner-info">{partner.name}</p>
+            <p className="adm-partner-info">{partner.url}</p>
+            <img
+              className="p5-cooperates__img"
+              src={partner.logoUrl ? partner.logoUrl : defaultCompany}
+              alt="logo"
+            />
+            <p
+              className="adm-partner-edititem"
+              onClick={() => onDelete(partner.id, partner.logoUrl)}
+            >
+              삭제
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

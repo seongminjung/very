@@ -102,38 +102,24 @@ const EditAward = ({ userObj }) => {
   };
   return (
     <>
-      <form className="adm-textform" onSubmit={onSubmit}>
-        <p className="adm-sectiontitle">공모전</p>
-        <div className="adm-sectionbar">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+      <p className="adm-sectiontitle">공모전</p>
+      <div className="adm-sectionbar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="23"
+          height="7"
+          viewBox="0 0 23 7"
+        >
+          <rect
+            id="사각형_227"
+            data-name="사각형 227"
             width="23"
             height="7"
-            viewBox="0 0 23 7"
-          >
-            <rect
-              id="사각형_227"
-              data-name="사각형 227"
-              width="23"
-              height="7"
-              fill="#d3d3d3"
-            />
-          </svg>
-        </div>
-        <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
-        <div className="adm-awards-grid">
-          {awards.map((award) => (
-            <div className="adm-awards-itemwrapper" key={award.createdAt}>
-              <AwardTile award={award} />
-              <p
-                className="adm-awards-edititem"
-                onClick={() => onDelete(award.id, award.imgUrl)}
-              >
-                삭제
-              </p>
-            </div>
-          ))}
-        </div>
+            fill="#d3d3d3"
+          />
+        </svg>
+      </div>
+      <form className="adm-textform" onSubmit={onSubmit}>
         <p className="adm-editpartner-subtitle">공모전 추가</p>
         <label htmlFor="year">일시</label>
         <input
@@ -243,6 +229,20 @@ const EditAward = ({ userObj }) => {
           추가
         </button>
       </form>
+      <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
+      <div className="adm-awards-grid">
+        {awards.map((award) => (
+          <div className="adm-awards-itemwrapper" key={award.createdAt}>
+            <AwardTile award={award} />
+            <p
+              className="adm-awards-edititem"
+              onClick={() => onDelete(award.id, award.imgUrl)}
+            >
+              삭제
+            </p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
