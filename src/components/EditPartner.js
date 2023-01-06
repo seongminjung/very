@@ -141,23 +141,26 @@ const EditPartner = ({ userObj }) => {
       </form>
       <p className="adm-editpartner-subtitle">현재 기업 목록</p>
       <div className="adm-partners-grid">
-        {partners.map((partner) => (
-          <div className="adm-partner-wrapper" key={partner.name}>
-            <p className="adm-partner-info">{partner.name}</p>
-            <p className="adm-partner-info">{partner.url}</p>
-            <img
-              className="p5-cooperates__img"
-              src={partner.logoUrl ? partner.logoUrl : defaultCompany}
-              alt="logo"
-            />
-            <p
-              className="adm-partner-edititem"
-              onClick={() => onDelete(partner.id, partner.logoUrl)}
-            >
-              삭제
-            </p>
-          </div>
-        ))}
+        {partners
+          .slice(0)
+          .reverse()
+          .map((partner) => (
+            <div className="adm-partner-wrapper" key={partner.name}>
+              <p className="adm-partner-info">{partner.name}</p>
+              <p className="adm-partner-info">{partner.url}</p>
+              <img
+                className="p5-cooperates__img"
+                src={partner.logoUrl ? partner.logoUrl : defaultCompany}
+                alt="logo"
+              />
+              <p
+                className="adm-partner-edititem"
+                onClick={() => onDelete(partner.id, partner.logoUrl)}
+              >
+                삭제
+              </p>
+            </div>
+          ))}
       </div>
     </>
   );
