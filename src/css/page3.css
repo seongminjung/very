@@ -1,3 +1,7 @@
+.p3-relative {
+  position: relative;
+}
+
 .p3-title {
   font-family: NotoSansKR;
   font-weight: 700;
@@ -26,9 +30,13 @@
   justify-content: center;
   align-items: center;
   gap: 70px;
+  padding-bottom: 250px;
 }
 
-.p3-carousel-ctrlbtn {
+.p3-carousel-ctrlbtn-left {
+  position: absolute;
+  top: 500px;
+  left: 100px;
   width: 50px;
   height: 100px;
   background-color: #f1f1f1;
@@ -36,7 +44,19 @@
   cursor: pointer;
 }
 
-.p3-carousel-ctrlbtn p {
+.p3-carousel-ctrlbtn-right {
+  position: absolute;
+  top: 500px;
+  right: 100px;
+  width: 50px;
+  height: 100px;
+  background-color: #f1f1f1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.p3-carousel-ctrlbtn-left p,
+.p3-carousel-ctrlbtn-right p {
   color: #707070;
   font-size: 24px;
   line-height: 100px;
@@ -46,7 +66,6 @@
   text-align: center;
   width: 972px;
   height: 545px;
-  margin-bottom: 40px;
 }
 
 .p3-img img {
@@ -54,6 +73,7 @@
   height: 545px;
   object-fit: cover;
   object-position: center;
+  margin-bottom: 40px;
 }
 
 .p3-imgtitle {
@@ -63,9 +83,4 @@
   text-decoration: underline;
   text-align: center;
   margin-bottom: 70px;
-}
-
-.p3-imgdot {
-  text-align: center;
-  padding-bottom: 120px;
 }
