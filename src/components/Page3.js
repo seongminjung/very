@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { dbService } from "fb_info";
 import "css/page3.css";
 
@@ -21,22 +21,22 @@ const Page3 = () => {
       items: 1,
     },
   };
-  const ButtonGroup = ({ next, previous }) => {
-    return (
-      <div className="carousel-button-group">
-        <div onclick={() => previous()} className="p3-carousel-ctrlbtn-left">
-          <p>
-            <FontAwesomeIcon icon="chevron-left" />
-          </p>
-        </div>
-        <div onclick={() => next()} className="p3-carousel-ctrlbtn-right">
-          <p>
-            <FontAwesomeIcon icon="chevron-right" />
-          </p>
-        </div>
-      </div>
-    );
-  };
+  // const ButtonGroup = ({ next, previous }) => {
+  //   return (
+  //     <div className="carousel-button-group">
+  //       <div onclick={() => previous()} className="p3-carousel-ctrlbtn-left">
+  //         <p>
+  //           <FontAwesomeIcon icon="chevron-left" />
+  //         </p>
+  //       </div>
+  //       <div onclick={() => next()} className="p3-carousel-ctrlbtn-right">
+  //         <p>
+  //           <FontAwesomeIcon icon="chevron-right" />
+  //         </p>
+  //       </div>
+  //     </div>
+  //   );
+  // };
   return (
     <div className="container p3-relative">
       <p className="p3-title">Curriculum</p>

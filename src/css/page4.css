@@ -40,7 +40,7 @@
   align-items: center;
   gap: 70px;
   padding-top: 70px;
-  margin-bottom: 65px;
+  margin-bottom: 300px;
 }
 
 .p4-carousel-ctrlbtn {
@@ -57,14 +57,9 @@
   line-height: 100px;
 }
 
-.p4-img-flex {
-  display: flex;
-  gap: 25px;
-}
-
 .p4-img {
   text-align: center;
-  width: 330px;
+  width: 1200px;
   height: 433px;
 }
 
@@ -73,6 +68,7 @@
   height: 433px;
   object-fit: cover;
   object-position: center;
+  padding-bottom: 100px;
 }
 
 .p4-imgtitle {
@@ -82,9 +78,4 @@
   text-decoration: underline;
   text-align: center;
   margin-bottom: 70px;
-}
-
-.p4-imgdot {
-  text-align: center;
-  padding-bottom: 40px;
 }
