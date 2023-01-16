@@ -40,7 +40,7 @@
   align-items: center;
   gap: 70px;
   margin-top: -30px;
-  margin-bottom: 300px;
+  margin-bottom: 350px;
 }
 
 .p4-carousel-ctrlbtn {
@@ -70,13 +70,4 @@
   object-position: center;
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.p4-imgtitle {
-  font-family: NotoSansKR;
-  font-weight: 400;
-  font-size: 21px;
-  text-decoration: underline;
-  text-align: center;
-  margin-bottom: 70px;
 }
