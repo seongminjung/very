@@ -58,7 +58,7 @@ const EditAlumni = ({ userObj }) => {
       const response = await fileRef.putString(alumniLogo, "data_url");
       logoUrl = await response.ref.getDownloadURL();
     }
-    await dbService.collection("alumni").add({
+    await dbService.collection("alumni").doc(String(createdAt)).set({
       name,
       url,
       description,

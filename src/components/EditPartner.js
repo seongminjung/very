@@ -57,7 +57,7 @@ const EditPartner = ({ userObj }) => {
       const response = await fileRef.putString(partnerLogo, "data_url");
       logoUrl = await response.ref.getDownloadURL();
     }
-    await dbService.collection("partners").add({
+    await dbService.collection("partners").doc(String(createdAt)).set({
       name,
       url,
       logoUrl,
