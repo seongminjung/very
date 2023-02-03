@@ -20,7 +20,9 @@ const Recruit4 = () => {
       <div className="r4-door">
         {isRecruiting ? (
           <>
-            <div className="r4-door__image-open" />
+            <a href="https://instagram.com/very_yonsei/">
+              <div className="r4-door__image-open" />
+            </a>
             <div className="r4-clickhere">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +37,7 @@ const Recruit4 = () => {
                   transform="translate(2658.378 5665.998) rotate(90)"
                   fill="#fff"
                   stroke="#000"
-                  stroke-width="1"
+                  strokeWidth="1"
                 />
               </svg>
               <p>Click here</p>
