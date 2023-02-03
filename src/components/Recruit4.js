@@ -46,7 +46,7 @@ const Recruit4 = () => {
         )}
       </div>
       {isRecruiting ? (
-        <p className="r4-detail">VERY {currentGen + 1}기 모집중입니다.</p>
+        <p className="r4-detail">VERY {currentGen}기 모집중입니다.</p>
       ) : (
         <p className="r4-detail">VERY {currentGen}기 모집이 마감되었습니다.</p>
       )}
