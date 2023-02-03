@@ -5,7 +5,7 @@ import "css/page2.css";
 
 const Page2 = () => {
   const [awardNumber, setAwardNumber] = useState([]);
-  const [gen, setGen] = useState([]);
+  const [alumniNumber, setAlumniNumber] = useState([]);
   useEffect(() => {
     dbService.collection("awards").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
@@ -15,11 +15,11 @@ const Page2 = () => {
     });
   }, []);
   useEffect(() => {
-    dbService.collection("info").onSnapshot((snapshot) => {
-      const info = snapshot.docs.map((doc) => ({
+    dbService.collection("alumni").onSnapshot((snapshot) => {
+      const alumniArray = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
-      setGen(info[0].currentGen);
+      setAlumniNumber(alumniArray.length);
     });
   }, []);
   return (
@@ -27,7 +27,7 @@ const Page2 = () => {
       <div className="p2-sub__grid">
         <p className="p2-sub__grid-r1">창립 연도</p>
         <p className="p2-sub__grid-r1">공모전 입상 수</p>
-        <p className="p2-sub__grid-r1">현재 기수</p>
+        <p className="p2-sub__grid-r1">알럼나이 기업 수</p>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Page2 = () => {
         </div>
         <div className="p2-sub__grid-r3">1997</div>
         <div className="p2-sub__grid-r3">{awardNumber}</div>
-        <div className="p2-sub__grid-r3">{gen}</div>
+        <div className="p2-sub__grid-r3">{alumniNumber}</div>
         <div className="p2-sub__grid-r4">
           <Link to="/about" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">
@@ -128,7 +128,7 @@ const Page2 = () => {
           </Link>
         </div>
         <div className="p2-sub__grid-r4">
-          <Link to="/recruit" className="p2-sub__btn-border">
+          <Link to="/alumni" className="p2-sub__btn-border">
             <div className="p2-sub__btn-arrow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
