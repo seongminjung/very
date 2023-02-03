@@ -42,6 +42,15 @@ function App() {
       setInit(true);
     });
   }, []);
+  useEffect(() => {
+    const handleContextmenu = (e) => {
+      e.preventDefault();
+    };
+    document.addEventListener("contextmenu", handleContextmenu);
+    return function cleanup() {
+      document.removeEventListener("contextmenu", handleContextmenu);
+    };
+  }, []);
   return <>{init ? <AppRouter userObj={userObj} /> : <Loading />}</>;
 }
 
