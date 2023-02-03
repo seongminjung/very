@@ -68,7 +68,7 @@ const Page5 = () => {
           </div>
           <div className="p5-detail__text">
             <p className="p5-detail__text-left">Email.</p>
-            <p className="p5-detail__text-right">very.official.kr@gmail.com</p>
+            <p className="p5-detail__text-right">official@veryyonsei.co.kr</p>
             <p className="p5-detail__text-left">Address.</p>
             <p className="p5-detail__text-right">
               서울특별시 서대문구 연세로 50
