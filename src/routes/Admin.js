@@ -8,6 +8,7 @@ import EditCurriculum from "components/EditCurriculum";
 import EditActivity from "components/EditActivity";
 import EditMessage from "components/EditMessage";
 import EditClubofficers from "components/EditClubofficers";
+import EditAlumni from "components/EditAlumni";
 import EditPartner from "components/EditPartner";
 import Footer from "components/Footer";
 import "css/admin.css";
@@ -75,6 +76,12 @@ const Admin = ({ userObj }) => {
                 임원진
               </p>
               <p
+                onClick={() => changeTab("alumni")}
+                className={tab === "alumni" ? "active" : "nonactive"}
+              >
+                알럼나이 기업
+              </p>
+              <p
                 onClick={() => changeTab("partner")}
                 className={tab === "partner" ? "active" : "nonactive"}
               >
@@ -89,6 +96,7 @@ const Admin = ({ userObj }) => {
               {tab === "activity" && <EditActivity userObj={userObj} />}
               {tab === "message" && <EditMessage userObj={userObj} />}
               {tab === "clubofficers" && <EditClubofficers userObj={userObj} />}
+              {tab === "alumni" && <EditAlumni userObj={userObj} />}
               {tab === "partner" && <EditPartner userObj={userObj} />}
             </div>
           </div>
