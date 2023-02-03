@@ -80,6 +80,13 @@ const EditAlumni = ({ userObj }) => {
       }
     }
   };
+  const sliceString = (str) => {
+    if (str.length > 24) {
+      return str.slice(0, 24) + "...";
+    } else {
+      return str;
+    }
+  };
   return (
     <>
       <p className="adm-sectiontitle">알럼나이 기업</p>
@@ -165,10 +172,12 @@ const EditAlumni = ({ userObj }) => {
           .slice(0)
           .reverse()
           .map((alumni) => (
-            <div className="adm-partner-wrapper" key={alumni.name}>
+            <div className="adm-partner-wrapper" key={alumni.createdAt}>
               <p className="adm-partner-info">{alumni.name}</p>
               <p className="adm-partner-info">{alumni.description}</p>
-              <p className="adm-partner-info">{alumni.url}</p>
+              <a href={alumni.url}>
+                <p className="adm-partner-info">{sliceString(alumni.url)}</p>
+              </a>
               <img
                 className="p5-cooperates__img"
                 src={alumni.logoUrl ? alumni.logoUrl : defaultCompany}
