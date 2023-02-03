@@ -167,6 +167,7 @@ const EditAlumni = ({ userObj }) => {
           .map((alumni) => (
             <div className="adm-partner-wrapper" key={alumni.name}>
               <p className="adm-partner-info">{alumni.name}</p>
+              <p className="adm-partner-info">{alumni.description}</p>
               <p className="adm-partner-info">{alumni.url}</p>
               <img
                 className="p5-cooperates__img"
