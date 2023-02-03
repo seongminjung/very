@@ -49,8 +49,11 @@ const EditPartner = ({ userObj }) => {
       return;
     }
     let logoUrl = null;
+    const createdAt = Date.now();
     if (partnerLogo) {
-      const fileRef = storageService.ref().child(`partnerLogo/${name}.png`);
+      const fileRef = storageService
+        .ref()
+        .child(`partnerLogo/${createdAt}.png`);
       const response = await fileRef.putString(partnerLogo, "data_url");
       logoUrl = await response.ref.getDownloadURL();
     }

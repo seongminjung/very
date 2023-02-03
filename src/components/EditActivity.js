@@ -50,7 +50,7 @@ const EditActivity = ({ userObj }) => {
     let url = null;
     const createdAt = Date.now();
     if (newImage) {
-      const fileRef = storageService.ref().child(`activity/${Date.now()}.png`);
+      const fileRef = storageService.ref().child(`activity/${createdAt}.png`);
       const response = await fileRef.putString(newImage, "data_url");
       url = await response.ref.getDownloadURL();
     }
