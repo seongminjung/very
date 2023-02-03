@@ -5,6 +5,7 @@ import Recruit from "routes/Recruit";
 import About from "routes/About";
 import Awards from "routes/Awards";
 import ClubOfficers from "routes/ClubOfficers";
+import Alumni from "routes/Alumni";
 import ScrollToTop from "components/ScrollToTop";
 import Admin from "routes/Admin";
 
@@ -27,6 +28,9 @@ const AppRouter = ({ userObj }) => {
         </Route>
         <Route exact path="/clubofficers">
           <ClubOfficers />
+        </Route>
+        <Route exact path="/alumni">
+          <Alumni />
         </Route>
         <Route exact path="/admin">
           <Admin userObj={userObj} />
