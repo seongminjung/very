@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 // import search from "img/asset/search.png";
 import "css/alumni2.css";
+import defaultCompany from "img/picture/defaultCompany.jpg";
 
 const Alumni2 = () => {
-  const [companies, setCompanies] = useState([]);
+  const [alumni, setAlumni] = useState([]);
   useEffect(() => {
-    dbService.collection("companies").onSnapshot((snapshot) => {
-      const companyArray = snapshot.docs.map((doc) => ({
+    dbService.collection("alumni").onSnapshot((snapshot) => {
+      const alumniArray = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
-      setCompanies(companyArray);
+      setAlumni(alumniArray);
     });
   }, []);
   return (
@@ -24,13 +25,13 @@ const Alumni2 = () => {
       <p className="c2-result__title">Alumni Companies</p>
       <div className="c2-result__bar" />
       <div className="c2-result__grid">
-        {companies.map((company) => (
-          <div className="c2-result__alumni">
+        {alumni.map((company) => (
+          <div className="c2-result__alumni" key={company.createdAt}>
             <a href={company.url} target="_blank" rel="noreferrer">
               <div className="c2-result__logo-background">
                 <img
                   className="c2-result__logo"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
+                  src={company.logoUrl ? company.logoUrl : defaultCompany}
                   alt="logo"
                 />
               </div>
