@@ -7,6 +7,7 @@ import "css/footer.css";
 
 const Footer = () => {
   const [president, setPresident] = useState([]);
+  const [officialEmail, setOfficialEmail] = useState("");
   useEffect(() => {
     dbService.collection("clubofficers").onSnapshot((snapshot) => {
       const row = snapshot.docs.map((doc) => ({
@@ -17,6 +18,14 @@ const Footer = () => {
           setPresident(element);
         }
       });
+    });
+  }, []);
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setOfficialEmail(info[0].officialEmail);
     });
   }, []);
   return (
@@ -65,7 +74,7 @@ const Footer = () => {
       <div className="container footer-middle">
         <div className="footer-middle__left">
           <p>CONTACT</p>
-          <p>very.official.kr@gmail.com</p>
+          <p>{officialEmail}</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
             <a

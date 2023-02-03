@@ -5,8 +5,9 @@ import logobiggray from "img/logo/logo-big-gray.png";
 import defaultCompany from "img/picture/defaultCompany.jpg";
 
 const Page5 = () => {
-  const [president, setPresident] = useState([]);
-  const [gen, setGen] = useState([]);
+  const [president, setPresident] = useState("");
+  const [gen, setGen] = useState("");
+  const [officialEmail, setOfficialEmail] = useState("");
   const [partners, setPartners] = useState([]);
   useEffect(() => {
     dbService.collection("clubofficers").onSnapshot((snapshot) => {
@@ -26,6 +27,7 @@ const Page5 = () => {
         ...doc.data(),
       }));
       setGen(info[0].currentGen);
+      setOfficialEmail(info[0].officialEmail);
     });
   }, []);
   useEffect(() => {
@@ -68,7 +70,7 @@ const Page5 = () => {
           </div>
           <div className="p5-detail__text">
             <p className="p5-detail__text-left">Email.</p>
-            <p className="p5-detail__text-right">official@veryyonsei.co.kr</p>
+            <p className="p5-detail__text-right">{officialEmail}</p>
             <p className="p5-detail__text-left">Address.</p>
             <p className="p5-detail__text-right">
               서울특별시 서대문구 연세로 50

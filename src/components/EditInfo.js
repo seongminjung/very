@@ -5,6 +5,7 @@ import "css/admin.css";
 const EditInfo = ({ userObj }) => {
   const [currentGen, setCurrentGen] = useState();
   const [isRecruiting, setIsRecruiting] = useState();
+  const [officialEmail, setOfficialEmail] = useState();
   useEffect(() => {
     dbService.collection("info").onSnapshot((snapshot) => {
       const info = snapshot.docs.map((doc) => ({
@@ -12,6 +13,7 @@ const EditInfo = ({ userObj }) => {
       }));
       setCurrentGen(info[0].currentGen);
       setIsRecruiting(info[0].isRecruiting);
+      setOfficialEmail(info[0].officialEmail);
     });
   }, []);
   const onChange = async (event) => {
@@ -22,6 +24,8 @@ const EditInfo = ({ userObj }) => {
       setCurrentGen(Number(value));
     } else if (name === "isRecruiting") {
       setIsRecruiting(checked);
+    } else if (name === "officialEmail") {
+      setOfficialEmail(value);
     }
   };
   const onSubmit = async (event) => {
@@ -33,6 +37,7 @@ const EditInfo = ({ userObj }) => {
     await dbService.collection("info").doc("info").update({
       currentGen,
       isRecruiting,
+      officialEmail,
     });
     alert("수정되었습니다.");
   };
@@ -84,6 +89,19 @@ const EditInfo = ({ userObj }) => {
               <div className="toggler-knob"></div>
             </div>
           </label>
+        </div>
+        <div className="adm-editinfo-input-wrapper">
+          <p>공식 이메일</p>
+          <input
+            className="adm-editinfo-email"
+            type="email"
+            name="officialEmail"
+            value={officialEmail}
+            onChange={onChange}
+            placeholder="공식 이메일"
+            autoComplete="off"
+            required
+          />
         </div>
         <button className="adm-co-editbutton" type="submit">
           수정
