@@ -49,6 +49,11 @@ const Footer = () => {
                 <p>Club Officers</p>
               </div>
             </Link>
+            <Link to="/alumni">
+              <div className="footer-link__item">
+                <p>Alumni</p>
+              </div>
+            </Link>
           </div>
           <div>
             <p className="footer-top__description">

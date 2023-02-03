@@ -35,6 +35,11 @@ const Navigation = () => {
             <p>Club Officers</p>
           </div>
         </Link>
+        <Link to="/alumni">
+          <div className="nav-link__item">
+            <p>Alumni</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
