@@ -7,7 +7,7 @@ import "css/alumni1.css";
 const Alumni1 = () => {
   const [number, setNumber] = useState([]);
   useEffect(() => {
-    dbService.collection("companies").onSnapshot((snapshot) => {
+    dbService.collection("alumni").onSnapshot((snapshot) => {
       const awardArray = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
