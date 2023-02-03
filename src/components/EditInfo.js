@@ -6,6 +6,8 @@ const EditInfo = ({ userObj }) => {
   const [currentGen, setCurrentGen] = useState();
   const [isRecruiting, setIsRecruiting] = useState();
   const [officialEmail, setOfficialEmail] = useState();
+  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialInstagram, setOfficialInstagram] = useState();
   useEffect(() => {
     dbService.collection("info").onSnapshot((snapshot) => {
       const info = snapshot.docs.map((doc) => ({
@@ -14,6 +16,8 @@ const EditInfo = ({ userObj }) => {
       setCurrentGen(info[0].currentGen);
       setIsRecruiting(info[0].isRecruiting);
       setOfficialEmail(info[0].officialEmail);
+      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialInstagram(info[0].officialInstagram);
     });
   }, []);
   const onChange = async (event) => {
@@ -26,6 +30,10 @@ const EditInfo = ({ userObj }) => {
       setIsRecruiting(checked);
     } else if (name === "officialEmail") {
       setOfficialEmail(value);
+    } else if (name === "officialFacebook") {
+      setOfficialFacebook(value);
+    } else if (name === "officialInstagram") {
+      setOfficialInstagram(value);
     }
   };
   const onSubmit = async (event) => {
@@ -38,6 +46,8 @@ const EditInfo = ({ userObj }) => {
       currentGen,
       isRecruiting,
       officialEmail,
+      officialFacebook,
+      officialInstagram,
     });
     alert("수정되었습니다.");
   };
@@ -99,6 +109,32 @@ const EditInfo = ({ userObj }) => {
             value={officialEmail}
             onChange={onChange}
             placeholder="공식 이메일"
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div className="adm-editinfo-input-wrapper">
+          <p>공식 페이스북 링크</p>
+          <input
+            className="adm-editinfo-email"
+            type="text"
+            name="officialFacebook"
+            value={officialFacebook}
+            onChange={onChange}
+            placeholder="공식 페이스북 링크"
+            autoComplete="off"
+            required
+          />
+        </div>
+        <div className="adm-editinfo-input-wrapper">
+          <p>공식 인스타그램 링크</p>
+          <input
+            className="adm-editinfo-email"
+            type="text"
+            name="officialInstagram"
+            value={officialInstagram}
+            onChange={onChange}
+            placeholder="공식 인스타그램 링크"
             autoComplete="off"
             required
           />

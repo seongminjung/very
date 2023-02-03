@@ -9,6 +9,17 @@ import instagram from "img/asset/instagram.png";
 
 const Page1 = () => {
   const [images, setImages] = useState();
+  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialInstagram, setOfficialInstagram] = useState();
+  useEffect(() => {
+    dbService.collection("info").onSnapshot((snapshot) => {
+      const info = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+      }));
+      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialInstagram(info[0].officialInstagram);
+    });
+  }, []);
   useEffect(() => {
     dbService.collection("activity").onSnapshot((snapshot) => {
       const activityArray = snapshot.docs.map((doc) => ({
@@ -112,18 +123,10 @@ const Page1 = () => {
         </div>
         <div className="p1-bottom">
           <div className="p1-social">
-            <a
-              href="https://www.facebook.com/veryyonsei"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={officialFacebook} target="_blank" rel="noreferrer">
               <img className="p1-social__img" src={facebook} alt="facebook" />
             </a>
-            <a
-              href="https://instagram.com/very_yonsei/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={officialInstagram} target="_blank" rel="noreferrer">
               <img className="p1-social__img" src={instagram} alt="instagram" />
             </a>
           </div>

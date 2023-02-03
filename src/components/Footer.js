@@ -8,6 +8,8 @@ import "css/footer.css";
 const Footer = () => {
   const [president, setPresident] = useState([]);
   const [officialEmail, setOfficialEmail] = useState("");
+  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialInstagram, setOfficialInstagram] = useState();
   useEffect(() => {
     dbService.collection("clubofficers").onSnapshot((snapshot) => {
       const row = snapshot.docs.map((doc) => ({
@@ -26,6 +28,8 @@ const Footer = () => {
         ...doc.data(),
       }));
       setOfficialEmail(info[0].officialEmail);
+      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialInstagram(info[0].officialInstagram);
     });
   }, []);
   return (
@@ -77,22 +81,14 @@ const Footer = () => {
           <p>{officialEmail}</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
-            <a
-              href="https://www.facebook.com/veryyonsei"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={officialFacebook} target="_blank" rel="noreferrer">
               <img
                 className="footer-social__img"
                 src={facebook}
                 alt="facebook"
               />
             </a>
-            <a
-              href="https://instagram.com/very_yonsei/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={officialInstagram} target="_blank" rel="noreferrer">
               <img
                 className="footer-social__img"
                 src={instagram}
