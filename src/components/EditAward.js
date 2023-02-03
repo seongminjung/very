@@ -249,17 +249,20 @@ const EditAward = ({ userObj }) => {
       </form>
       <p className="adm-editpartner-subtitle">현재 공모전 목록</p>
       <div className="adm-awards-grid">
-        {awards.map((award) => (
-          <div className="adm-awards-itemwrapper" key={award.createdAt}>
-            <AwardTile award={award} />
-            <p
-              className="adm-awards-edititem"
-              onClick={() => onDelete(award.id, award.imgUrl)}
-            >
-              삭제
-            </p>
-          </div>
-        ))}
+        {awards
+          .slice(0)
+          .reverse()
+          .map((award) => (
+            <div className="adm-awards-itemwrapper" key={award.createdAt}>
+              <AwardTile award={award} />
+              <p
+                className="adm-awards-edititem"
+                onClick={() => onDelete(award.id, award.imgUrl)}
+              >
+                삭제
+              </p>
+            </div>
+          ))}
       </div>
     </>
   );

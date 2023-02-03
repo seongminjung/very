@@ -25,9 +25,12 @@ const Awards2 = () => {
       <p className="a2-result__title">Awards</p>
       <div className="a2-result__bar" />
       <div className="a2-result__grid">
-        {awards.map((award) => (
-          <AwardTile award={award} key={award.createdAt} />
-        ))}
+        {awards
+          .slice(0)
+          .reverse()
+          .map((award) => (
+            <AwardTile award={award} key={award.createdAt} />
+          ))}
       </div>
     </div>
   );
