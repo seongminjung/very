@@ -61,6 +61,7 @@ const EditPartner = ({ userObj }) => {
       name,
       url,
       logoUrl,
+      createdAt,
     });
     setName("");
     setUrl("");

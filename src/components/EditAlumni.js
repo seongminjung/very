@@ -63,6 +63,7 @@ const EditAlumni = ({ userObj }) => {
       url,
       description,
       logoUrl,
+      createdAt,
     });
     setName("");
     setUrl("");
