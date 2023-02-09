@@ -1,21 +1,10 @@
-.ab6-text {
-  padding-top: 65px;
-  width: 840px;
-  margin: 0 auto;
+.ab6-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-.ab6-text__title {
-  font-family: NotoSansKr;
-  font-size: 21px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.ab6-text__detail {
-  margin-top: 40px;
-  font-family: NotoSansKr;
-  font-size: 16px;
-  font-weight: 400;
-  padding-bottom: 100px;
-  line-height: 33px;
+.ab6-flex img {
+  width: 300px;
 }

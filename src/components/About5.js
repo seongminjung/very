@@ -1,19 +1,9 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import "css/about5.css";
-import logodots from "img/asset/logo-dots.png";
-import logolines from "img/asset/logo-lines.png";
-import logofaces from "img/asset/logo-faces.png";
-import logofix from "img/asset/logo-fix.png";
+import image1 from "img/logo/로고_정사각형_문구_검정.png";
+import image2 from "img/logo/로고_정사각형_문구_파랑.png";
 
 const About5 = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 4000, min: 0 },
-      items: 1,
-    },
-  };
   return (
     <div className="container ab5-relative">
       <div className="ab5-nav">
@@ -39,33 +29,9 @@ const About5 = () => {
         </div>
       </div>
       <p className="ab5-title">Symbol</p>
-      <div className="ab5-images__left">
-        <Carousel
-          responsive={responsive}
-          swipeable={false}
-          draggable={false}
-          infinite={true}
-          arrows={true}
-          showDots={false}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          // keyBoardControl={false}
-          // ssr={true} // means to render carousel on server-side.
-          // customTransition="all .5"
-          // transitionDuration={500}
-          // containerClass="carousel-container"
-          // removeArrowOnDeviceType={["tablet", "mobile"]}
-          // deviceType={this.props.deviceType}
-          // dotListClass="custom-dot-list-style"
-          // itemClass="carousel-item-padding-40-px"
-        >
-          <img src={logodots} alt="logodots" />
-          <img src={logolines} alt="logolines" />
-          <img src={logofaces} alt="logofaces" />
-        </Carousel>
-      </div>
-      <div className="ab5-images__right">
-        <img src={logofix} alt="logo" />
+      <div className="ab5-flex">
+        <img src={image1} alt="logo" />
+        <img src={image2} alt="logo" />
       </div>
     </div>
   );

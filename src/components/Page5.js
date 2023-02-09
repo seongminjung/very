@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "fb_info";
 import "css/page5.css";
-import logobiggray from "img/logo/logo-big-gray.png";
+import logobiggray from "img/logo/로고_정사각형_그림_검정.png";
 import defaultCompany from "img/picture/defaultCompany.jpg";
 
 const Page5 = () => {
