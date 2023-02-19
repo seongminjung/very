@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "img/logo/로고_가로형_검정.png";
+import logo from "img/logo/로고_가로형_흰색.png";
 import "css/navigation.css";
 
 const Navigation = () => {
