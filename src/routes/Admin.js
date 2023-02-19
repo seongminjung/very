@@ -12,7 +12,7 @@ import EditAlumni from "components/EditAlumni";
 import EditPartner from "components/EditPartner";
 import Footer from "components/Footer";
 import "css/admin.css";
-import logo from "img/logo/logo-row-gray.png";
+import logo from "img/logo/로고_가로형_검정.png";
 
 const Admin = ({ userObj }) => {
   const [tab, setTab] = useState("info");
