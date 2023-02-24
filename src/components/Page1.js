@@ -4,19 +4,19 @@ import { dbService } from "fb_info";
 import Navigation from "components/Navigation";
 import "css/page1.css";
 import activitybg from "img/picture/activitybg.jpg";
-import facebook from "img/asset/facebook.png";
+import notion from "img/asset/notion.png";
 import instagram from "img/asset/instagram.png";
 
 const Page1 = () => {
   const [images, setImages] = useState();
-  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialNotion, setOfficialNotion] = useState();
   const [officialInstagram, setOfficialInstagram] = useState();
   useEffect(() => {
     dbService.collection("info").onSnapshot((snapshot) => {
       const info = snapshot.docs.map((doc) => ({
         ...doc.data(),
       }));
-      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialNotion(info[0].officialNotion);
       setOfficialInstagram(info[0].officialInstagram);
     });
   }, []);
@@ -123,8 +123,8 @@ const Page1 = () => {
         </div>
         <div className="p1-bottom">
           <div className="p1-social">
-            <a href={officialFacebook} target="_blank" rel="noreferrer">
-              <img className="p1-social__img" src={facebook} alt="facebook" />
+            <a href={officialNotion} target="_blank" rel="noreferrer">
+              <img className="p1-social__img" src={notion} alt="notion" />
             </a>
             <a href={officialInstagram} target="_blank" rel="noreferrer">
               <img className="p1-social__img" src={instagram} alt="instagram" />

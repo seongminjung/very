@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { dbService } from "fb_info";
-import facebook from "img/asset/facebook.png";
+import notion from "img/asset/notion.png";
 import instagram from "img/asset/instagram.png";
 import "css/footer.css";
 
 const Footer = () => {
   const [president, setPresident] = useState([]);
   const [officialEmail, setOfficialEmail] = useState("");
-  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialNotion, setOfficialNotion] = useState();
   const [officialInstagram, setOfficialInstagram] = useState();
   useEffect(() => {
     dbService.collection("clubofficers").onSnapshot((snapshot) => {
@@ -28,7 +28,7 @@ const Footer = () => {
         ...doc.data(),
       }));
       setOfficialEmail(info[0].officialEmail);
-      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialNotion(info[0].officialNotion);
       setOfficialInstagram(info[0].officialInstagram);
     });
   }, []);
@@ -81,12 +81,8 @@ const Footer = () => {
           <p>{officialEmail}</p>
           <p>&copy; 2021, VERY, ALL RIGHTS RESERVED.</p>
           <div className="footer-social">
-            <a href={officialFacebook} target="_blank" rel="noreferrer">
-              <img
-                className="footer-social__img"
-                src={facebook}
-                alt="facebook"
-              />
+            <a href={officialNotion} target="_blank" rel="noreferrer">
+              <img className="footer-social__img" src={notion} alt="facebook" />
             </a>
             <a href={officialInstagram} target="_blank" rel="noreferrer">
               <img

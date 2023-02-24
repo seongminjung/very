@@ -6,7 +6,7 @@ const EditInfo = ({ userObj }) => {
   const [currentGen, setCurrentGen] = useState();
   const [isRecruiting, setIsRecruiting] = useState();
   const [officialEmail, setOfficialEmail] = useState();
-  const [officialFacebook, setOfficialFacebook] = useState();
+  const [officialNotion, setOfficialNotion] = useState();
   const [officialInstagram, setOfficialInstagram] = useState();
   useEffect(() => {
     dbService.collection("info").onSnapshot((snapshot) => {
@@ -16,7 +16,7 @@ const EditInfo = ({ userObj }) => {
       setCurrentGen(info[0].currentGen);
       setIsRecruiting(info[0].isRecruiting);
       setOfficialEmail(info[0].officialEmail);
-      setOfficialFacebook(info[0].officialFacebook);
+      setOfficialNotion(info[0].officialNotion);
       setOfficialInstagram(info[0].officialInstagram);
     });
   }, []);
@@ -30,8 +30,8 @@ const EditInfo = ({ userObj }) => {
       setIsRecruiting(checked);
     } else if (name === "officialEmail") {
       setOfficialEmail(value);
-    } else if (name === "officialFacebook") {
-      setOfficialFacebook(value);
+    } else if (name === "officialNotion") {
+      setOfficialNotion(value);
     } else if (name === "officialInstagram") {
       setOfficialInstagram(value);
     }
@@ -46,7 +46,7 @@ const EditInfo = ({ userObj }) => {
       currentGen,
       isRecruiting,
       officialEmail,
-      officialFacebook,
+      officialNotion,
       officialInstagram,
     });
     alert("수정되었습니다.");
@@ -114,14 +114,14 @@ const EditInfo = ({ userObj }) => {
           />
         </div>
         <div className="adm-editinfo-input-wrapper">
-          <p>공식 페이스북 링크</p>
+          <p>공식 노션 링크</p>
           <input
             className="adm-editinfo-email"
             type="text"
-            name="officialFacebook"
-            value={officialFacebook}
+            name="officialNotion"
+            value={officialNotion}
             onChange={onChange}
-            placeholder="공식 페이스북 링크"
+            placeholder="공식 노션 링크"
             autoComplete="off"
             required
           />
